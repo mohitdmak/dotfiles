@@ -1,0 +1,46 @@
+# Main Colors
+unrecognized_file: lightslategray
+recognized_file:   '#568a3f' #slate brownish 
+executable_file:   '#00b300' #slate lime
+dir:               mediumslateblue 
+
+# Link
+dead_link: red
+link:      cyan
+
+# special files
+socket:    green
+blockdev:  green
+chardev:   green
+
+# Access Modes
+write:     darkkhaki
+read:      limegreen
+exec:      red
+no_access: indianred
+
+# Age
+day_old:     mediumspringgreen
+hour_old:    lime
+no_modifier: seagreen
+
+# File Size
+file_large:  sandybrown
+file_medium: sandybrown
+file_small:  sandybrown
+
+# Random
+report: sandybrown 
+user:   sandybrown 
+tree:   cyan
+empty:  yellow
+error:  red
+normal: darkkhaki
+
+# Git
+addition:     lime
+modification: sandybrown
+deletion:     crimson
+untracked:    sandybrown
+unchanged:    gray
+ignored:      lightslategray
