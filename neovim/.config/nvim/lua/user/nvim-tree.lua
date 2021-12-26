@@ -10,7 +10,7 @@ vim.g.nvim_tree_icons = {
     renamed = "➜",
     deleted = "",
     untracked = "?",
-    ignored = "●",
+    ignored = "",
   },
   folder = {
     default = "",
@@ -74,7 +74,8 @@ nvim_tree.setup {
   },
   git = {
     enable = true,
-    ignore = true,
+    -- remember to set "filter_ignored" property of function M.setup(opts) in ~/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/lua/nvim-tree/populate.lua to false
+    -- ignore = false,
     timeout = 500,
   },
   view = {
@@ -104,9 +105,9 @@ nvim_tree.setup {
   disable_window_picker = 0,
   root_folder_modifier = ":t",
   show_icons = {
-    git = 1,
     folders = 1,
     files = 1,
+    git = 1,
     folder_arrows = 1,
     tree_width = 30,
   },
