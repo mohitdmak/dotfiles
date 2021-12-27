@@ -89,6 +89,11 @@ nvm install --lts || die "Could not install lts version node using nvm."
 node --version || die "Node was not installed properly."
 npm --version || die "NPM was not installed properly."
 
+# Install relevent node and py packages
+sudo npm install -g neovim || die "Could not install neovim npm package."
+echo Assuming you have Python3 installed . . .
+sudo apt install python3-pip || die "Could not install pip manager."
+pip3 install pynvim || die "Could not install pynvim."
 
 # NOTE: Redundant configs : Lua does not require home locs
 # editing home dir for init.vim 
