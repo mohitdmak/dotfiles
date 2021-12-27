@@ -10,7 +10,8 @@ die(){
 # install vim plugs plugin manager
 echo Installing Packer as Vim Plugin Manager . . .
 # transitioning from vim-plug to packer for pure lua based neovim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim || die "Could not install packer vim plugin manager."
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\ 
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim || die "Could not install packer vim plugin manager."
 
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'\
 
