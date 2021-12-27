@@ -24,7 +24,7 @@ fi
 
 # provide exec perms (app image must reside in home after stowing)
 echo Setting up Nvim appimage . . .
-cd $HOME && chmod u+x nvim.appimage && ./nvim.appimage || die "Could not execute app image."
+cd $HOME && chmod u+x nightly_nvim.appimage && ./nightly_nvim.appimage || die "Could not execute app image."
 
 echo Preparing squashfs-root and extracting appimage . . .
 # execute app image, generate squashfs-root roo
