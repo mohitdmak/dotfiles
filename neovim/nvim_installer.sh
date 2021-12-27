@@ -28,7 +28,7 @@ cd $HOME && chmod u+x nightly_nvim.appimage && ./nightly_nvim.appimage || die "C
 
 echo Preparing squashfs-root and extracting appimage . . .
 # execute app image, generate squashfs-root roo
-./nvim.appimage --appimage-extract && ./squashfs-root/AppRun --version || die "Could not generate squashfs-root and extract from appimage."
+./nightly_nvim.appimage --appimage-extract && ./squashfs-root/AppRun --version || die "Could not generate squashfs-root and extract from appimage."
 
 echo Exposing nvim globally . . .
 # expose nvim globally
