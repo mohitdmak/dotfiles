@@ -78,6 +78,10 @@ lazydocker --version || die "Lazydocker was not installed properly."
 # Install node and npm support with build-essential
 # We are using nvm as version manager for node/npm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash || die "Could not install nvm."
+# reloading nvm 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm --version || die "NVM was not installed properly."
 nvm install node || die "Could not install latest node using nvm."
 nvm install 8.10.0 || die "Could not install prev version node using nvm."
