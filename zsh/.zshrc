@@ -1,12 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
 # This lets you set the title of your terminal tab
 precmd () { print -Pn "\e]0;$TITLE\a" }
 title() { export TITLE="$*" }
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mohitdmak/.oh-my-zsh"
+# adding rofi scripts to path
+export PATH=$HOME/.config/rofi/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

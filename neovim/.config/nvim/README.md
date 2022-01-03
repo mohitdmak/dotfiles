@@ -1,9 +1,6 @@
 # TODOS
 * LSP doesnt asynchronously check for each file in background, only the ones open.
-* Have snippets custom
-* Have custom sessions
 * sudo apt udpate && sudo apt upgrade
-* redi pay
 
 # Neovim from scratch
 

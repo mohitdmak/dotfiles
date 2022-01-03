@@ -21,7 +21,9 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: alacritty
+  # TERM: alacritty
+  # TODO: NOTE: THIS IS REMOVABLE______________________________
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -183,6 +185,9 @@ draw_bold_text_with_bright_colors: false
   #primary:
   #  background: '#1d1f21'
   #  foreground: '#c5c8c6'
+    # foreground:   #c2c2b0
+    # background:   #202020
+# cursorColor:  #c2c2b0
 
     # Bright and dim foreground colors
     #
@@ -254,7 +259,6 @@ draw_bold_text_with_bright_colors: false
   # search and vi mode.
   #
   # By default, these will use the opposing primary color.
-  #line_indicator:
   #  foreground: None
   #  background: None
 
@@ -262,6 +266,7 @@ draw_bold_text_with_bright_colors: false
   #
   # Colors which should be used to draw the selection area.
   #
+  #line_indicator:
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
   #selection:
@@ -269,7 +274,7 @@ draw_bold_text_with_bright_colors: false
   #  background: CellForeground
 
   # Normal colors
-  #normal:
+  # normal:
   #  black:   '#1d1f21'
   #  red:     '#cc6666'
   #  green:   '#b5bd68'
@@ -278,7 +283,31 @@ draw_bold_text_with_bright_colors: false
   #  magenta: '#b294bb'
   #  cyan:    '#8abeb7'
   #  white:   '#c5c8c6'
-
+  #! special
+# ! black
+# *.color0:       #151515
+# *.color8:       #3f3639
+# ! red
+# *.color1:       #b44242
+# *.color9:       #dc7671
+# ! green
+# *.color2:       #95a328
+# *.color10:      #e8e85a
+# ! yellow
+# *.color3:       #e1c135
+# *.color11:      #9e9052
+# ! blue
+# *.color4:       #60928f
+# *.color12:      #76c39b
+# ! magenta
+# *.color5:       #7c435a
+# *.color13:      #86596c
+# ! cyan
+# *.color6:       #a48b4a
+# *.color14:      #ceb34f
+# ! white
+# *.color7:       #c2c2b0
+# *.color15:      #b0afa8
   # Bright colors
   #bright:
   #  black:   '#666666'
@@ -421,10 +450,10 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /usr/bin/zsh
+  # args:
+    # - -c tmux
 
 # Startup directory
 #
