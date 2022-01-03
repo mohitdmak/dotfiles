@@ -74,6 +74,7 @@ return packer.startup(function(use)
   use "marko-cerovac/material.nvim"
   use "rafamadriz/neon"
   use "glepnir/zephyr-nvim"
+  use "fenetikm/falcon"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

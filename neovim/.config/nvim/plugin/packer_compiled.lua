@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
+  falcon = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/falcon",
+    url = "https://github.com/fenetikm/falcon"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/friendly-snippets",

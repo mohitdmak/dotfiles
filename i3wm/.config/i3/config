@@ -36,7 +36,9 @@ bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
 # powermenu shortcut
 bindsym $mod+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
 # wallpaper
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/wallhaven-z8odwg_1920x1080.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/wallhaven-z8odwg_1920x1080.png
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/wallpaper.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/wallhaven-wq1wlr_1920x1080.png
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -85,7 +87,7 @@ bindsym $mod+Shift+q kill
 for_window [class="^.*"] border pixel 4
 # for_window [con_id="__focused__"] border pixel 2
 # gaps inner 20
-gaps inner 8
+gaps inner 6
 gaps outer 0
 smart_gaps on
 # new_window pixel 3
@@ -121,7 +123,7 @@ bindsym $mod+d exec /home/mohitdmak/.config/rofi/bin/applet_apps
 # bindsym $mod+d exec bash ~/.config/rofi/launchers/misc/launcher.sh 
 # Start compton
 # exec_always --no-startup-id compton --backend glx --vsync opengl --config ~/.config/compton.conf
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
@@ -197,12 +199,12 @@ for_window [window_role="task_dialog"] floating enable
 #assign apps to workspaces	
 assign [class = "urxvt"] 
 # assign [class = "urxvt"] $ws2
-# assign [class = "Brave Web Browser"] 
-assign [class = "Brave Web Browser"] $ws3
+assign [class = "Brave Web Browser"] 
+# assign [class = "Brave Web Browser"] $ws3
 assign [class = "Simplescreenrecorder"] 
 assign [class = "Google Play Music Desktop Player"] 
 assign [class = "focuswriter"] 
-exec --no-startup-id i3-msg '$ws1:Web; exec /usr/bin/firefox'
+# exec --no-startup-id i3-msg '$ws1:Web; exec /usr/bin/firefox'
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
