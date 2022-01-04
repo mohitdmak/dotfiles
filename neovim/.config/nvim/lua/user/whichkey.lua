@@ -46,7 +46,7 @@ local setup = {
     border = "rounded", -- none, single, double, shadow
     position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
-    padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+    padding = { 0, 0, 0, 0 }, -- extra window padding [top, right, bottom, left]
     winblend = 0,
   },
   layout = {
@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["a"] = { "<cmd>Startify<cr>", "Startify" },
   --["b"] = {
   --  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   --  "Buffers",
