@@ -1,6 +1,8 @@
 # TODOS
 * LSP doesnt asynchronously check for each file in background, only the ones open.
 * sudo apt udpate && sudo apt upgrade
+* nvim-tree doesnt copy to clipboard
+* fix lua-snips
 
 # Neovim from scratch
 

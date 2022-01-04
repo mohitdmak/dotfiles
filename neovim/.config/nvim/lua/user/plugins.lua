@@ -40,27 +40,33 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+
+  --  General use plugins, used by most other plugins
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+
+  -- Utility Plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   --use "numToStr/Comment.nvim" -- Easily comment stuff
   use "terrortylor/nvim-comment" -- easy commenting
-  use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
-  use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
-  use "ahmedkhalf/project.nvim"
-  use "lewis6991/impatient.nvim"
-  use "goolord/alpha-nvim"
+  use "kyazdani42/nvim-web-devicons" -- devicon icons for nvim-tree
+  use "kyazdani42/nvim-tree.lua" -- file tree manager
+  use "akinsho/bufferline.nvim" -- bufferline for display
+  use "moll/vim-bbye" -- proper buffer closing without messing up current window
+  use "nvim-lualine/lualine.nvim" -- quick status line in lua
+  use "akinsho/toggleterm.nvim" -- floating terminal manager
+  use "ahmedkhalf/project.nvim" -- project finder (based on .git dirs probably)
+  use "lewis6991/impatient.nvim" -- speeds up neovim loading by using an efficient execution of "require" in lua
+  -- use "goolord/alpha-nvim" -- startup dashboard (currently use startify instead)
+  use "mhinz/vim-startify" -- vim startify, dashboard manager for bookmarks, settings, mru, history, etc
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim"
+  use "folke/which-key.nvim" -- helpful keybindings guider
 
-  -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "godlygeek/tabular"
+
+  -- Colorschemes (Removed all default ones, trying out only custom gh cloned colorshemes)
+  use "lunarvim/colorschemes" 
   use "lunarvim/darkplus.nvim"
   use "lunarvim/onedarker.nvim"
   use "folke/tokyonight.nvim"
@@ -82,7 +88,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lsp" -- lsp support 
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -95,18 +101,18 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope.nvim" -- heavily used finder menu
 
   -- Treesitter
   use {
-    "nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/nvim-treesitter", -- syntax highlighting support
     run = ":TSUpdate",
   }
-  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- helps to mark comment strings for commenting binding
 
   -- Git
-  use "lewis6991/gitsigns.nvim"
-  use "mhinz/vim-startify"
+  use "lewis6991/gitsigns.nvim" -- git sign support near line number
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

@@ -6,9 +6,16 @@
     # EG: 2vi" or va" in the same above case elects: "mohit makwana"
     # EG: 2va" in the same above case selects: ""mohit makwana""
 
-# Also use substitution more frequently
+# Also use substitution more frequently:
     # In 1 line in 1st occurence:                  :s/old/new
     # In 1 line for all occurences:                :s/old/new/g
     # Change every occurences between 2 line no.s: :#,#s/old/new/g
     # Change every occurence in whole file:        :%s/old/new/g
     # Same as above + prompt asking for each:      :%s/old/new/gc
+
+# Also use foll more frequently:
+    # "C" is equivalent of D + i
+    # "I" starts insert mode at the beginning of line.
+    # "R" is replace mode for continuous typing.
+    # "Y" copies everything from cursor till end of line.
+    # "y" works similarly like dw/cw with other moving keys like h.j.k.l.w.e..etc.
