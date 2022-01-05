@@ -36,6 +36,21 @@ keymap("n", "<A-j>", "<C-w>j", opts)
 keymap("n", "<A-k>", "<C-w>k", opts)
 keymap("n", "<A-l>", "<C-w>l", opts)
 
+-- Better Tab navigation
+keymap("n", "<leader>L", ":tabn<CR>", opts)
+keymap("n", "<leader>H", ":tabp<CR>", opts)
+keymap("n", "<leader>1", "1gt<CR>", opts)
+keymap("n", "<leader>2", "2gt<CR>", opts)
+keymap("n", "<leader>3", "3gt<CR>", opts)
+keymap("n", "<leader>4", "4gt<CR>", opts)
+keymap("n", "<leader>5", "5gt<CR>", opts)
+keymap("n", "<leader>6", "6gt<CR>", opts)
+keymap("n", "<leader>7", "7gt<CR>", opts)
+keymap("n", "<leader>8", "8gt<CR>", opts)
+keymap("n", "<leader>9", "9gt<CR>", opts)
+keymap("n", "<leader><Tab>", "g<tab><CR>", opts)
+keymap("n", "<M-Tab>", "gt<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)

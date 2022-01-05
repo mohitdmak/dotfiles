@@ -91,6 +91,7 @@ nvim_tree.setup {
         { key = "h", cb = tree_cb "close_node" },
         { key = "i", cb = tree_cb "vsplit" },
         { key = "s", cb = tree_cb "split" },
+        { key = "t", cb = tree_cb "tabnew" },
       },
     },
     number = false,
