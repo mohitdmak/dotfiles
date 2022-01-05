@@ -29,8 +29,8 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Differentiating between cut and delete?
 
 -- Better window navigation
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>q", "<cmd>q!<CR>", opts)
+keymap("n", "<A-e>", "<cmd>NvimTreeToggle<cr>", opts)
+keymap("n", "<A-q>", "<cmd>q!<CR>", opts)
 keymap("n", "<A-h>", "<C-w>h", opts)
 keymap("n", "<A-j>", "<C-w>j", opts)
 keymap("n", "<A-k>", "<C-w>k", opts)
@@ -43,13 +43,13 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
-keymap("n", "<leader>t", "<ESC><CMD>ToggleTerm size=14 direction=horizontal<CR>", opts)
-keymap("n", "<leader>w", "<cmd>w!<CR>", opts)
+keymap("n", "<A-b>", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
+keymap("n", "<A-t>", "<ESC><CMD>ToggleTerm size=14 direction=horizontal<CR>", opts)
+keymap("n", "<A-w>", "<cmd>w!<CR>", opts)
 keymap("n", "<A-S-l>", ":bnext<CR>", opts)
 keymap("n", "<A-S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-S-j>", ":b#<CR>", opts)
-keymap("n", "<A-S-k>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<A-S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Move text up and down
 --keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -71,8 +71,8 @@ keymap("v", "<S-l>", "$", opts)
 keymap("v", "as", "<ESC>", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+-- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+-- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --

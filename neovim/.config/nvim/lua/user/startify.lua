@@ -7,8 +7,9 @@ vim.cmd[[
 
     let g:startify_bookmarks = [
                 \ { 'c': '~/dotfiles/neovim/.config/nvim' },
-                \ { 'z': '~/dotfiles/zsh/.zshrc' },
                 \ { 'i': '~/dotfiles/i3wm/.config/i3'},
+                \ { 'z': '~/dotfiles/zsh/.zshrc' },
+                \ { 'o': '~/dotfiles/ohmyzsh/.oh-my-zsh' },
                 \ { 'a': '~/dotfiles/alacritty/.config/alacritty'},
                 \ { 't': '~/dotfiles/tmux'},
                 \ { 'r': '~/dotfiles/rofi/.config/rofi'},

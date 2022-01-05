@@ -84,7 +84,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git-no-alias dirhistory sudo zsh-syntax-highlighting)
+plugins=(dirhistory sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # ALiases must be after sourcing !!! Else they maybe overriden by oh my zsh's default aliases
