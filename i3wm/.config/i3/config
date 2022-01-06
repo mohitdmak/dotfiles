@@ -87,7 +87,7 @@ bindsym $mod+Shift+q kill
 for_window [class="^.*"] border pixel 4
 # for_window [con_id="__focused__"] border pixel 2
 # gaps inner 20
-gaps inner 6
+gaps inner 4
 gaps outer 0
 smart_gaps on
 # new_window pixel 3
