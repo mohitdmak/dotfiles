@@ -62,14 +62,13 @@ return packer.startup(function(use)
   use "mhinz/vim-startify" -- vim startify, dashboard manager for bookmarks, settings, mru, history, etc
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim" -- helpful keybindings guider
-
-  use "godlygeek/tabular"
+  use "godlygeek/tabular" -- helpful syntactical sugar
 
   -- Colorschemes (Removed all default ones, trying out only custom gh cloned colorshemes)
   use "lunarvim/colorschemes" 
   use "lunarvim/darkplus.nvim"
   use "lunarvim/onedarker.nvim"
-  use "folke/tokyonight.nvim"
+  use "folke/tokyonight.nvim" -- main go-to theme
   use "rmehri01/onenord.nvim"
   use "EdenEast/nightfox.nvim"
   use "rose-pine/neovim"
@@ -87,6 +86,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "SirVer/ultisnips" -- custom snippet completions
+  use "quangnguyen30192/cmp-nvim-ultisnips" -- cmp integratable for utlitsnip
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp" -- lsp support 
 
