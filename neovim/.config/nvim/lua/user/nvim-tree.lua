@@ -4,12 +4,12 @@ vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",
   git = {
-    unstaged = "✚",
+    unstaged = "",
     staged = "",
-    unmerged = "",
+    unmerged = "?",
     renamed = "➜",
     deleted = "",
-    untracked = "?",
+    untracked = "✚",
     ignored = "",
   },
   folder = {
@@ -53,8 +53,8 @@ nvim_tree.setup {
   diagnostics = {
     enable = true,
     icons = {
-      hint = "",
-      info = "",
+      info = "",
+      hint = "",
       warning = "",
       error = "",
     },

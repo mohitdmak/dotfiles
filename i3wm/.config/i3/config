@@ -36,9 +36,14 @@ bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
 # powermenu shortcut
 bindsym $mod+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
 # wallpaper
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallhaven-z8odwg_1920x1080.png
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpaper.png
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallhaven-wq1wlr_1920x1080.png
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/falcon_fishing.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/fishing.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/mars.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/planet.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/milky_way.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/astrowalk.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/meteorites.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/big_bright_planet.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

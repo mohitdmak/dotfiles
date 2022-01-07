@@ -35,3 +35,5 @@ vim.cmd [[
 --   autocmd!
 --   autocmd BufWritePre * lua vim.lsp.buf.formatting()
 -- augroup end
+
+-- markdown block sets spell mode on for typos in note making md

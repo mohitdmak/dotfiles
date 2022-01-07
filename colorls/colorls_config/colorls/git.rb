@@ -38,9 +38,9 @@ module ColorLS
 
       #modes.to_a.join.uniq.delete('!').rjust(3).ljust(4)
       modes.to_a.join.uniq.rjust(1).ljust(1)
-           .sub('?', '?'.colorize(colors[:untracked]))
+           .sub('?', '✚'.colorize(colors[:untracked]))
            .sub('A', ''.colorize(colors[:addition]))
-           .sub('M', '✚'.colorize(colors[:modification]))
+           .sub('M', ''.colorize(colors[:modification]))
            .sub('D', ''.colorize(colors[:deletion]))
 	   .sub('!', ''.colorize(colors[:ignored]))
     end

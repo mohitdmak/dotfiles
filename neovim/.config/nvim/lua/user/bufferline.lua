@@ -5,7 +5,11 @@ end
 
 bufferline.setup {
   options = {
-    numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+    -- numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+    numbers = function(opts)
+        return string.format('%s', opts.ordinal)
+    end,
+    -- number_style = "",
     close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
     right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
     left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
@@ -71,7 +75,57 @@ bufferline.setup {
     --   -- add custom logic
     --   return buffer_a.modified > buffer_b.modified
     -- end
+
+    -- USEFULE EXTRA TO NOT SHOW BUFFERS WHILE SHOWING TABS : START::::::::::::::::::::::::::::
+    custom_filter = function(buf)
+      local tab_num = 0
+      for _ in pairs(vim.api.nvim_list_tabpages()) do tab_num = tab_num + 1 end
+      if tab_num > 4 then
+          return false
+      else
+          return true
+      end
+    end,
+    -- END ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    -- USEFUL EXTRA TO SHOW LSP DIAGNOSTIC ICON ON BUFFER : START::::::::::::::::::::::::::::::
+    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      local icon = level:match("error") and "" or ""
+      return "" .. icon
+    end,
+    -- END :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    -- USELESS EXTRA TO DISPLAY LSP DIAGNOSTICS ON RIGHT OF BUFFERLINE : START::::::::::::::::::
+--     custom_areas = {
+--       right = function()
+--         local result = {}
+--         local error = vim.lsp.diagnostic.get_count(0, [[Error]])
+--         local warning = vim.lsp.diagnostic.get_count(0, [[Warning]])
+--         local info = vim.lsp.diagnostic.get_count(0, [[Information]])
+--         local hint = vim.lsp.diagnostic.get_count(0, [[Hint]])
+-- 
+--         if error ~= 0 then
+--           table.insert(result, {text = " " .. error, guifg = "#EC5241"})
+--         end
+-- 
+--         if warning ~= 0 then
+--           table.insert(result, {text = " " .. warning, guifg = "#EFB839"})
+--         end
+-- 
+--         if hint ~= 0 then
+--           table.insert(result, {text = " " .. hint, guifg = "#A3BA5E"})
+--         end
+-- 
+--         if info ~= 0 then
+--           table.insert(result, {text = " " .. info, guifg = "#7EA9A7"})
+--         end
+--         return result
+--       end,
+--     }
+    -- : END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   },
+
+-- THEME SETTINGS:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   highlights = {
     fill = {
       guifg = { attribute = "fg", highlight = "#ff0000" },
@@ -165,4 +219,5 @@ bufferline.setup {
       guibg = { attribute = "bg", highlight = "Normal" },
     },
   },
+  -- THEME SETTINGS END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 }

@@ -58,7 +58,7 @@ case $chosen in
         ;;
     $lock)
 		if [[ -f /usr/bin/i3lock ]]; then
-			i3lock -i ~/dotfiles/i3wm/.config/i3/wallhaven-z8odwg_1920x1080.png -ef
+			i3lock -i ~/dotfiles/i3wm/.config/i3/wallpapers/mars.png -ef
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
 		fi
@@ -68,6 +68,7 @@ case $chosen in
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
 			mpc -q pause
 			amixer set Master mute
+			i3lock -i ~/dotfiles/i3wm/.config/i3/wallpapers/mars.png -ef
 			systemctl suspend
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
