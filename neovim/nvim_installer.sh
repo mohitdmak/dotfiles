@@ -67,13 +67,13 @@ lazydocker --version || die "Lazydocker was not installed properly."
 # NOTE: Following blocks are redundant as we have shifted to nvim_lsp  
 # # c/c++ family lsp support
 # # Get clangd support
-# echo Obtaining C/C++ LSP support . . .
-# sudo apt-get install clangd-9 || die "Could not install clangd"
-# # make clangd-9 the default clangd
-# sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100 || die "Clangd-9 could not be made the default clangd."
-# # verify installations
-# echo Confirming Clangd installation . . .
-# clangd --version || die "CLangd was not installed properly."
+echo Obtaining C/C++ LSP support . . .
+sudo apt-get install clangd-9 || die "Could not install clangd"
+# make clangd-9 the default clangd
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100 || die "Clangd-9 could not be made the default clangd."
+# verify installations
+echo Confirming Clangd installation . . .
+clangd --version || die "CLangd was not installed properly."
 
 # Install node and npm support with build-essential
 # We are using nvm as version manager for node/npm
