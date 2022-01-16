@@ -21,6 +21,16 @@ vim.g.nvim_tree_icons = {
   },
 }
 
+-- file highlights
+-- vim.g.nvim_tree_git_hl = 1
+-- vim.g.nvim_tree_highlight_opened_files = 1
+vim.g.nvim_tree_indent_markers = 1
+-- vim.g.nvim_tree_add_trailing = 1  -- adds trailing "/" after dirs
+vim.g.nvim_tree_group_empty = 1  -- groups folder into parent folder if its the only item
+-- vim.g.nvim_tree_disable_window_picker = 1
+vim.g.nvim_tree_respect_buf_cwd = 1 -- will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return

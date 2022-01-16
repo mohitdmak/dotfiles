@@ -24,7 +24,7 @@ configuration {
 window {
     transparency:                   "real";
     border-radius:                  0px;
-    location:                       southeast;
+    location:                       center;
 	width:							450px;
     x-offset:                       -15px;
     y-offset:                       -45px;

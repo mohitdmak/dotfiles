@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -188,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
     url = "https://github.com/tamago324/nlsp-settings.nvim"
+  },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
   },
   ["nord.nvim"] = {
     loaded = true,
@@ -304,10 +314,23 @@ _G.packer_plugins = {
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-hexokinase"] = {
+    commands = { "HexokinaseToggle" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/opt/vim-hexokinase",
+    url = "https://github.com/RRethy/vim-hexokinase"
+  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   },
   ["which-key.nvim"] = {
     loaded = true,
@@ -322,6 +345,12 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HexokinaseToggle lua require("packer.load")({'vim-hexokinase'}, { cmd = "HexokinaseToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 if should_profile then save_profiles() end
 
 end)

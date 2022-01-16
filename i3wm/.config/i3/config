@@ -31,12 +31,14 @@ exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = BackSpace"
 exec bash /home/mohitdmak/dotfiles/polybar-bitmap/.config/polybar/cuts/preview.sh
 # Diodon clipboard (FOR PERSONAL MACHINE ONLY)
 bindsym $mod+a exec /usr/bin/diodon
+# Display time
+bindsym $mod+t exec /home/mohitdmak/.config/rofi/bin/applet_time
 # screenshot
 bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
 # powermenu shortcut
 bindsym $mod+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
 # wallpaper
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/falcon_fishing.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/falcon_fishing.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/fishing.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/mars.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/planet.jpg
@@ -44,10 +46,14 @@ exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/astrowalk.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/meteorites.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/big_bright_planet.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/sky_under_sea.jpg
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0286.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack Nerd Font Bold 9
+# font pango:Hack Nerd Font Bold 9
+font pango:JetBrainsMono Nerd Font Bold 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -82,7 +88,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Control+q kill
 
 #WORKSPACE STARTUP
 #Gaps and Window
@@ -92,7 +98,7 @@ bindsym $mod+Shift+q kill
 for_window [class="^.*"] border pixel 4
 # for_window [con_id="__focused__"] border pixel 2
 # gaps inner 20
-gaps inner 4
+gaps inner 0
 gaps outer 0
 smart_gaps on
 # new_window pixel 3
@@ -117,7 +123,7 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.background       #F8F8F2
 
 for_window [workspace=""] floating enable
-floating_minimum_size 800 x 800
+floating_minimum_size 400 x 400
 floating_maximum_size 1500 x 1500
 
 

@@ -20,8 +20,10 @@ vim.cmd([[autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9
 -- Hotkey to toggle Git signs and highlights while using cpp files (really not needed there)
 vim.cmd([[autocmd filetype * nnoremap <silent> <leader>B :Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>]])
 -- Temporary need: translate ts to js files upon saving
-vim.cmd([[autocmd BufWritePost *.ts !tsc %]])
+-- vim.cmd([[autocmd BufWritePost *.ts !tsc %]])
 
+-- VIMWIKI CUSTOM BINDINGS
+-- TODO: Vimwiki bindings @ "./vimwiki.lua"
 
 -- UTILITY KEYMAPS ---------------------------------------------------------------
 -- Modes
@@ -49,10 +51,12 @@ keymap("n", "<A-h>", "<C-w>h", opts)
 keymap("n", "<A-j>", "<C-w>j", opts)
 keymap("n", "<A-k>", "<C-w>k", opts)
 keymap("n", "<A-l>", "<C-w>l", opts)
+-- keymap("n", "<A-S-j>", "<C-w>J", opts)
+-- keymap("n", "<A-S-k>", "<C-w>K", opts)
 
 -- Better Tab navigation
-keymap("n", "<leader>L", ":tabn<CR>", opts)
-keymap("n", "<leader>H", ":tabp<CR>", opts)
+keymap("n", "<Tab>", ":tabn<CR>", opts)
+keymap("n", "<S-Tab>", ":tabp<CR>", opts)
 keymap("n", "<leader>1", "1gt<CR>", opts)
 keymap("n", "<leader>2", "2gt<CR>", opts)
 keymap("n", "<leader>3", "3gt<CR>", opts)
@@ -63,7 +67,7 @@ keymap("n", "<leader>7", "7gt<CR>", opts)
 keymap("n", "<leader>8", "8gt<CR>", opts)
 keymap("n", "<leader>9", "9gt<CR>", opts)
 keymap("n", "<leader><Tab>", "g<tab><CR>", opts)
-keymap("n", "<M-Tab>", "gt<CR>", opts)
+-- keymap("n", "<M-Tab>", "gt<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -75,10 +79,12 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<A-b>", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 keymap("n", "<A-t>", "<ESC><CMD>ToggleTerm size=14 direction=horizontal<CR>", opts)
 keymap("n", "<A-w>", "<cmd>w! <CR> :NvimTreeRefresh<CR>", opts)
-keymap("n", "<A-S-h>", ":BufferLineCyclePrev<CR>", opts)
-keymap("n", "<A-S-l>", ":BufferLineCycleNext<CR>", opts)
-keymap("n", "<A-S-j>", ":b#<CR>", opts)
-keymap("n", "<A-S-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<A-C-h>", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<A-C-l>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<A-C-j>", ":b#<CR>", opts)
+keymap("n", "<A-C-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<A-H>", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<A-L>", ":BufferLineMoveNext<CR>", opts)
 keymap("n", "<A-1>", ":BufferLineGoToBuffer 1<CR>", opts)
 keymap("n", "<A-2>", ":BufferLineGoToBuffer 2<CR>", opts)
 keymap("n", "<A-3>", ":BufferLineGoToBuffer 3<CR>", opts)
@@ -88,8 +94,6 @@ keymap("n", "<A-6>", ":BufferLineGoToBuffer 6<CR>", opts)
 keymap("n", "<A-7>", ":BufferLineGoToBuffer 7<CR>", opts)
 keymap("n", "<A-8>", ":BufferLineGoToBuffer 8<CR>", opts)
 keymap("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", opts)
-keymap("n", "<leader>H", ":BufferLineMovePrev<CR>", opts)
-keymap("n", "<leader>L", ":BufferLineMoveNext<CR>", opts)
 
 -- Move text up and down
 --keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)

@@ -6,9 +6,11 @@ precmd () { print -Pn "\e]0;$TITLE\a" }
 title() { export TITLE="$*" }
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mohitdmak/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # adding rofi scripts to path
 export PATH=$HOME/.config/rofi/bin:$PATH
+# Add go binaries to path for some plugins dependant on it 
+export PATH=/usr/local/go/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

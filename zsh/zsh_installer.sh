@@ -28,7 +28,7 @@ else
     # NOTE: We directly "stow" custom .ohmyzsh containing all custom plugins
     # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || die "Oh  my zsh could not be installed."
     # Thus, run the ohmyzsh installer script directly
-    cd $HOME && bash ./.ohmyzsh/tools/install.sh 
+    bash $HOME/.ohmyzsh/tools/install.sh 
 fi
 
 # NOTE: Redundant, powerlevel9k git repo already supplied via custom .ohmyzsh repo

@@ -1,10 +1,3 @@
-# TODOS
-* nvim-tree doesnt copy to clipboard
-
-* LSP doesnt asynchronously check for each file in background, only the ones open.
-* sudo apt udpate && sudo apt upgrade
-* started using ultisnips, but removing luasnips causes cmp to die altogether?
-
 # Neovim from scratch
 
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).

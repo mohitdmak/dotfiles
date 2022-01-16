@@ -375,9 +375,12 @@ case $POWERLEVEL9K_MODE in
       SWAP_ICON                      $'\uF464'              # 
       RAM_ICON                       $'\uF0E4'              # 
       SERVER_ICON                    $'\uF0AE'              # 
-      VCS_UNTRACKED_ICON             $'\uF059'              # 
-      VCS_UNSTAGED_ICON              $'\uF06A'              # 
-      VCS_STAGED_ICON                $'\uF055'              # 
+      # VCS_UNTRACKED_ICON             $'\uF059'              # 
+      # VCS_UNSTAGED_ICON              $'\uF06A'              # 
+      # VCS_STAGED_ICON                $'\uF055'              # 
+      VCS_UNTRACKED_ICON             ✚             
+      VCS_UNSTAGED_ICON              
+      VCS_STAGED_ICON                
       VCS_STASH_ICON                 $'\uF01C '             # 
       VCS_INCOMING_CHANGES_ICON      $'\uF01A '             # 
       VCS_OUTGOING_CHANGES_ICON      $'\uF01B '             # 

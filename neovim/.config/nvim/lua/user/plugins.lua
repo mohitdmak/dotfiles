@@ -16,12 +16,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
+-- vim.cmd [[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim" -- helpful keybindings guider
   use "godlygeek/tabular" -- helpful syntactical sugar
+  use { "vimwiki/vimwiki", branch = "dev" }
 
   -- Colorschemes (Removed all default ones, trying out only custom gh cloned colorshemes)
   use "lunarvim/colorschemes" 
@@ -80,6 +81,8 @@ return packer.startup(function(use)
   use "rafamadriz/neon"
   use "glepnir/zephyr-nvim"
   use "fenetikm/falcon"
+  use "arcticicestudio/nord-vim"
+  use "sainnhe/gruvbox-material"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -110,6 +113,12 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring" -- helps to mark comment strings for commenting binding
+  -- use "norcalli/nvim-colorizer.lua"
+  use {
+    'RRethy/vim-hexokinase',
+    run = 'cd ~/.local/share/nvim/site/pack/packer/opt/vim-hexokinase && make hexokinase',
+    cmd = {"HexokinaseToggle"},
+  }
 
   -- Git
   use "lewis6991/gitsigns.nvim" -- git sign support near line number
