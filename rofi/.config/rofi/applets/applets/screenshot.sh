@@ -21,7 +21,7 @@ area=""
 window=""
 
 # Variable passed to rofi
-options="$screen\n$area\n$window"
+options="$window\n$screen\n$area"
 
 chosen="$(echo -e "$options" | $rofi_command -p 'scrot' -dmenu -selected-row 1)"
 case $chosen in

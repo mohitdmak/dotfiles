@@ -3,9 +3,20 @@
 	email = mdmohitrc@gmail.com
 	signingkey = 69D4C45DEF6F96C4
 
-[alias]
-  r = !GIT_NO_PAGER=1 git l -30
-  l = "!. ~/.githelpers && pretty_git_log"
+[diff]
+	tool = vimdiff
+[difftool "vimdiff"]
+	path = nvim
+	cmd = nvim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	path = nvim
+
+; [alias]
+  ; r = !GIT_NO_PAGER=1 git l -30
+  ; l = "!. ~/.githelpers && pretty_git_log"
 
 [color]
   ui = auto

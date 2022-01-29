@@ -10,10 +10,14 @@ vim.g["vimwiki_list"] = {
       path = '~/vimwiki', path_html = '~/vimwiki/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     }
   }
+
+  -- VIMWIKI SETTINGS
 vim.g["vimwiki_global_ext"] = 0
+vim.cmd([[ autocmd filetype vimwiki set nospell ]])
 
 
 -- VIMWIKI CUSTOM BINDINGS
+vim.cmd([[ let g:vimwiki_conceallevel = 2 ]])
 vim.cmd([[ autocmd filetype vimwiki nmap <C-j> <Plug>VimwikiSplitLink <ESC> ]])
 vim.cmd([[ autocmd filetype vimwiki nmap <C-k> <Plug>VimwikiVSplitLink <ESC> ]])
 vim.cmd([[ autocmd filetype vimwiki nmap <C-t> <Plug>VimwikiTabnewLink <ESC> ]])

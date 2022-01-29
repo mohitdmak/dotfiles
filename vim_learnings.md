@@ -20,6 +20,47 @@
     # "Y" copies everything from cursor till end of line.
     # "y" works similarly like dw/cw with other moving keys like h.j.k.l.w.e..etc.
 
+CTRL + U deletes all entered characters in a line.
+CTRL + W deletes the previous word.
+CTRL + H deletes the previous character, but honesty its no better than the backspace.
+CTRL + R inserts contents of register.
+CTRL + K print keybinding format of what you type.
+CTRL + E/Y copies and prints characters just below and above the cursor while in insert mode.
+CTRL + N/P Iterates through cmp suggestions to provide word completion while in insert mode.
+
+### Others ::
+* xprop WM_CLASS to click on a window and get its class
+### END ::
+
+### USEFUL GIT TIP ::
+configure: git config --global diff.tool vimdiff
+           git config --global difftool.path nvim
+           git config --global merge.tool vimdiff
+           git config --global mergetool.path nvim
+use:       git difftool branch1:path/to/file branch2:path/to/file 
+### END ::
+
+### MACROS ! ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+use 15@w to repeat the macro at 'w' 15 times (use more often!)
+use @@ to repeat the last macro
+use @: to repeat the last ex command
+### END :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Youtube :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Here in youtube I use the controls:
+F/f to full screen 
+<> to increase and decrease speed.
+M to mute. 
+
+If I want to go to full screen the best possibility is disable F.
+But if I want to mute I need to hit 'im' but in fullscreen I get stuck in insert mode with the message at bottom left.
+It would be nice a feature to exit insert mode without hitting <esc> or <C-[>. Maybe an imap.
+
+It would be also nice to have a key to use when I want to inject javascript.
+Like:
+document.getElementsByTagName("video")[0].playbackRate=3;
+To increase video speed.
+### END :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### VIMWIKI :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

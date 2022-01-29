@@ -36,6 +36,8 @@ local options = {
     guifont = "Hack Nerd Font:h17",               -- the font used in graphical neovim applications
 }
 
+-- match angle brackets too
+vim.cmd([[ set matchpairs+=<:> ]])
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
@@ -46,6 +48,7 @@ end
 vim.cmd[[
     set nocompatible
     filetype plugin on
+    set concealcursor=nc
     syntax on
 ]]
 -- END :::::::::::::::::::::::::::::::::::

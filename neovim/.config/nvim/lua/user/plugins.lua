@@ -71,6 +71,7 @@ return packer.startup(function(use)
   use "lunarvim/onedarker.nvim"
   use "folke/tokyonight.nvim" -- main go-to theme
   use "rmehri01/onenord.nvim"
+  use "mhartington/ oceanic-next"
   use "EdenEast/nightfox.nvim"
   use "rose-pine/neovim"
   use "sainnhe/everforest"

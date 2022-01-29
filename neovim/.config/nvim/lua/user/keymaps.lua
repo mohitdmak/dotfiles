@@ -15,7 +15,7 @@ vim.g.maplocalleader = " "
 -- FILE SPECIFIC KEYMAPS ---------------------------------------------------------
 -- Working with cpp files and dsa setup
 -- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
-vim.cmd([[autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % 2>cpp/log.txt -o %:r && timeout -k9 -v 1 ./%:r < cpp/ainput.txt > cpp/aoutput.txt 2>cpp/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
+vim.cmd([[autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % -fsanitize=address 2>cpp/log.txt -o %:r && timeout -k9 -v 1 ./%:r < cpp/ainput.txt > cpp/aoutput.txt 2>cpp/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
 ]])
 -- Hotkey to toggle Git signs and highlights while using cpp files (really not needed there)
 vim.cmd([[autocmd filetype * nnoremap <silent> <leader>B :Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>]])

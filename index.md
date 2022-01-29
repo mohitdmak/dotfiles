@@ -9,8 +9,17 @@
 * [ ] Remind nvm bt solved by writing export 3lines tozshrc orbashrc
 * [ ] Remind stow ignore list
 * [ ] Ryanoasis nerdfonts repo
+* [ ] Keybindings for insert mode?
 
 ## Todo
+* [X] Try out later: https://www.reddit.com/r/vim/comments/s1f14h/the_vimium_extension_for_chrome_is_amazing/
+* [ ] Try out later: https://vim.fandom.com/wiki/Browsing_programs_with_tags
+* [ ] Fix vim conceal for colorized tags in vimwiki
+* [ ] Fix: visual and normal mode to switch bw '', "", (), {}, [], <>
+* [ ] Nvim tree current dir doesnt set, causing further problems in telescope file and text search
+* [ ] Remove line numberings in situations where its not needed
+* [ ] Battery low indicator (more verbal)
+* [ ] `set lazydraw` for improved macro performance?
 * [ ] n & N mappings for VWS interfere with that of normal search
 * [ ] Default app for pdf/png alacritty
 * [ ] Installer scripts
