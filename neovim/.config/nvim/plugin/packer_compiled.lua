@@ -294,6 +294,11 @@ _G.packer_plugins = {
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/tabular",
     url = "https://github.com/godlygeek/tabular"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/telescope.nvim",

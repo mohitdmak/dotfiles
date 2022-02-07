@@ -111,6 +111,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim" -- heavily used finder menu
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Treesitter
   use {
