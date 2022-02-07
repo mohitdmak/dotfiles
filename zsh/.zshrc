@@ -22,7 +22,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 # Configuring airline for terminal
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir docker_machine dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda virtualenv vcs)
+CONDA_AUTO_ACTIVATE_BASE=false
 
 
 # Set list of themes to pick from when loading at random
@@ -142,9 +143,9 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/a
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Always execute tmux upon starting
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux -u
-# fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux -u
+fi
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

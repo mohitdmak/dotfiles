@@ -10,13 +10,13 @@
 
 -- 1) TOKYONIGHT SCHEME (MAINSTAY) ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 -- MY STANDARD THEME
-vim.g.tokyonight_style               = "night"
-vim.g.tokyonight_transform_colors = true
+-- vim.g.tokyonight_style               = "storm"
+vim.g.tokyonight_transform_colors = false
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_italic_comments     = true
 vim.g.italic_keywords                = true
 vim.g.tokyonight_italic_variables    = false
-vim.g.tokyonight_transparent         = true
+vim.g.tokyonight_transparent         = false
 vim.g.tokyonight_dark_float          = true
 vim.g.tokyonight_dark_sidebar        = true
 vim.g.hide_inactive_statusline       = true

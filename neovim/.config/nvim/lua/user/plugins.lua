@@ -63,7 +63,8 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim" -- helpful keybindings guider
   use "godlygeek/tabular" -- helpful syntactical sugar
-  use { "vimwiki/vimwiki", branch = "dev" }
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- helps to mark comment strings for commenting binding
+  use "tpope/vim-surround" -- 
 
   -- Colorschemes (Removed all default ones, trying out only custom gh cloned colorshemes)
   use "lunarvim/colorschemes" 
@@ -99,6 +100,9 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
+  --vimwiki
+  use { "vimwiki/vimwiki", branch = "dev" }
+
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
@@ -113,7 +117,6 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter", -- syntax highlighting support
     run = ":TSUpdate",
   }
-  use "JoosepAlviste/nvim-ts-context-commentstring" -- helps to mark comment strings for commenting binding
   -- use "norcalli/nvim-colorizer.lua"
   use {
     'RRethy/vim-hexokinase',

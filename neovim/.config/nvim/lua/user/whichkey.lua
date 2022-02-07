@@ -105,7 +105,7 @@ local mappings = {
   ["J"] = { "<cmd>lua require 'gitsigns'.stage_hunk()<CR> :sleep 1<CR> :NvimTreeRefresh<CR>", "Stage Hunk" },
   ["U"] = { "<cmd>lua require 'gitsigns'.reset_hunk()<CR> :sleep 1<CR> :NvimTreeRefresh<CR>", "Reset Hunk" },
   ["u"] = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<CR> :sleep 1<CR> :NvimTreeRefresh<CR>", "Undo Stage Hunk" },
-  ["z"] = { "<cmd>:HexokinaseToggle<CR>", "Toggle CSS"},
+  -- ["z"] = { "<cmd>:HexokinaseToggle<CR>", "Toggle CSS"},
 
   --["t"] = { "<ESC><CMD>ToggleTerm size=14 direction=horizontal<CR>", "Terminal" },
     --name = "Terminal",

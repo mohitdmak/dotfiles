@@ -15,8 +15,13 @@ vim.g.maplocalleader = " "
 -- FILE SPECIFIC KEYMAPS ---------------------------------------------------------
 -- Working with cpp files and dsa setup
 -- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
-vim.cmd([[autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % -fsanitize=address 2>cpp/log.txt -o %:r && timeout -k9 -v 1 ./%:r < cpp/ainput.txt > cpp/aoutput.txt 2>cpp/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
+vim.cmd([[
+autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % -fsanitize=address 2>cpp/log.txt -o %:r && timeout -k9 -v 1 ./%:r < cpp/ainput.txt > cpp/aoutput.txt 2>cpp/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
 ]])
+-- -- same function as above, but for c files
+-- vim.cmd([[
+-- autocmd filetype c nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 gcc % 2>c/log.txt -o %:r && timeout -k9 -v 1 ./%:r < c/ainput.txt > c/aoutput.txt 2>c/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
+-- ]])
 -- Hotkey to toggle Git signs and highlights while using cpp files (really not needed there)
 vim.cmd([[autocmd filetype * nnoremap <silent> <leader>B :Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>]])
 -- Temporary need: translate ts to js files upon saving
@@ -33,6 +38,9 @@ vim.cmd([[autocmd filetype * nnoremap <silent> <leader>B :Gitsigns toggle_numhl<
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+
+-- Lite ZENMODE --
+keymap("n", "<leader>z", ":set noruler<CR> :set laststatus=0<CR> :set noshowmode<CR> :set noshowcmd<CR>", opts)
 
 -- Normal --
 -- Better Line navigation
@@ -113,6 +121,11 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<S-h>", "^", opts)
 keymap("v", "<S-l>", "$", opts)
 keymap("v", "as", "<ESC>", opts)
+-- Tabular commands
+keymap("v", "T:", ":Tab /:<CR>", opts)
+keymap("v", "T::", ":Tab /::<CR>", opts)
+keymap("v", "T=", ":Tab /=<CR>", opts)
+keymap("v", "T,", ":Tab /,<CR>", opts)
 
 -- Move text up and down
 -- keymap("v", "<A-j>", ":m .+1<CR>==", opts)

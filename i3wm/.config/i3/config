@@ -38,16 +38,16 @@ bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
 # powermenu shortcut
 bindsym $mod+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
 # wallpaper
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/falcon_fishing.png
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/fishing.png
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/mars.png
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/planet.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/milky_way.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/astrowalk.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/meteorites.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/big_bright_planet.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/sky_under_sea.jpg
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/falcon_fishing.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/fishing.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/mars.png
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/planet.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/milky_way.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/astrowalk.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/meteorites.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/big_bright_planet.jpg
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/sky_under_sea.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/forest-road.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font

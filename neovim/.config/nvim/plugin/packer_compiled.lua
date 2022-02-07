@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  [" oceanic-next"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/ oceanic-next",
+    url = "https://github.com/mhartington/ oceanic-next"
+  },
   ["FixCursorHold.nvim"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
@@ -254,11 +259,6 @@ _G.packer_plugins = {
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["oceanic-next"] = {
-    loaded = true,
-    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/oceanic-next",
-    url = "https://github.com/mhartington/oceanic-next"
-  },
   ["onedarker.nvim"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/onedarker.nvim",
@@ -331,6 +331,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   vimwiki = {
     loaded = true,
