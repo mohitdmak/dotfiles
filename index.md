@@ -14,6 +14,8 @@
 ## Todo
 * [X] Try out later: https://www.reddit.com/r/vim/comments/s1f14h/the_vimium_extension_for_chrome_is_amazing/
 * [ ] Try out later: https://vim.fandom.com/wiki/Browsing_programs_with_tags
+* [ ] <leader>z reversal
+* [ ] indent lines plus reversal
 * [ ] Fix vim conceal for colorized tags in vimwiki
 * [ ] Fix: visual and normal mode to switch bw '', "", (), {}, [], <>
 * [ ] Nvim tree current dir doesnt set, causing further problems in telescope file and text search

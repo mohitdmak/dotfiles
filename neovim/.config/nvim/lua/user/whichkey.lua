@@ -127,6 +127,14 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
+  z = {
+    name = "Screen Cleaner",
+    g = { ":Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>", "Git signs and highlight" },
+    s = { ":set noruler<CR> :set laststatus=0<CR>", "Status line and ruler" },
+    S = { ":set laststatus=2<CR>", "Reverses 's'" },
+    i = { ":IndentBlanklineToggle<CR>", "Indent line" },
+  },
+
   g = {
     name = "Git",
     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },

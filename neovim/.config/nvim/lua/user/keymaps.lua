@@ -18,12 +18,15 @@ vim.g.maplocalleader = " "
 vim.cmd([[
 autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % -fsanitize=address 2>cpp/log.txt -o %:r && timeout -k9 -v 1 ./%:r < cpp/ainput.txt > cpp/aoutput.txt 2>cpp/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
 ]])
+vim.cmd([[
+autocmd filetype python nnoremap <silent> <leader>b :w<CR> :!timeout -k9 -v 1 python3 % < py/input.txt > py/output.txt 2>py/log.txt<CR><CR>
+]])
 -- -- same function as above, but for c files
 -- vim.cmd([[
 -- autocmd filetype c nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 gcc % 2>c/log.txt -o %:r && timeout -k9 -v 1 ./%:r < c/ainput.txt > c/aoutput.txt 2>c/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
 -- ]])
 -- Hotkey to toggle Git signs and highlights while using cpp files (really not needed there)
-vim.cmd([[autocmd filetype * nnoremap <silent> <leader>B :Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>]])
+-- vim.cmd([[autocmd filetype * nnoremap <silent> <leader>B :Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>]])
 -- Temporary need: translate ts to js files upon saving
 -- vim.cmd([[autocmd BufWritePost *.ts !tsc %]])
 
@@ -40,7 +43,7 @@ vim.cmd([[autocmd filetype * nnoremap <silent> <leader>B :Gitsigns toggle_numhl<
 --   command_mode = "c",
 
 -- Lite ZENMODE --
-keymap("n", "<leader>z", ":set noruler<CR> :set laststatus=0<CR> :set noshowmode<CR> :set noshowcmd<CR>", opts)
+-- keymap("n", "<leader>z", ":set noruler<CR> :set laststatus=0<CR>", opts)
 
 -- Normal --
 -- Better Line navigation
