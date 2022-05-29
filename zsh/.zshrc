@@ -87,8 +87,10 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(dirhistory sudo zsh-syntax-highlighting)
+plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search)
 source $ZSH/oh-my-zsh.sh
+bindkey "^[[Z" history-beginning-search-forward
+bindkey "^I" history-beginning-search-backward
 
 # ALiases must be after sourcing !!! Else they maybe overriden by oh my zsh's default aliases
 # USEFUL ALIASES FOR COLORLS:::::::::

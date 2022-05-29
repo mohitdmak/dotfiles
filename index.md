@@ -14,12 +14,12 @@
 ## Todo
 * [X] Try out later: https://www.reddit.com/r/vim/comments/s1f14h/the_vimium_extension_for_chrome_is_amazing/
 * [ ] Try out later: https://vim.fandom.com/wiki/Browsing_programs_with_tags
-* [ ] <leader>z reversal
-* [ ] indent lines plus reversal
+* [X] <leader>z reversal
+* [X] indent lines plus reversal
 * [ ] Fix vim conceal for colorized tags in vimwiki
 * [ ] Fix: visual and normal mode to switch bw '', "", (), {}, [], <>
 * [ ] Nvim tree current dir doesnt set, causing further problems in telescope file and text search
-* [ ] Remove line numberings in situations where its not needed
+* [X] Remove line numberings in situations where its not needed
 * [ ] Battery low indicator (more verbal)
 * [ ] `set lazydraw` for improved macro performance?
 * [ ] n & N mappings for VWS interfere with that of normal search
@@ -31,8 +31,8 @@
     - [ ] I3
     - [ ] etc
 * [ ] Nvim-tree doesnt copy to clipboard
-* [ ] Vim wiki setup
-    - [ ] Table bindings?
+* [o] Vim wiki setup
+    - [X] Table bindings?
     - [ ] etc
 * [ ] LSP doesnt asynchronously check for each file in background, only the ones open.
 * [ ] Spell as nvim-cmp source for lsp

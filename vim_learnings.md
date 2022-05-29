@@ -1,3 +1,4 @@
+### Random :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # When in visual mode, "O" and "o" both switch between the starting and ending of the code selected.
 
 # When inside a closed block of text (i.e, content between "" or '' or () or {} or [] or <>, etc); 
@@ -6,6 +7,9 @@
     # EG: 2vi" or va" in the same above case elects: "mohit makwana"
     # EG: 2va" in the same above case selects: ""mohit makwana""
 
+# Change filelocal in buffer (use case: use vimwiki in any md file):
+    :bufdo setlocal filetype=vimwiki
+    
 # Also use substitution more frequently:
     # In 1 line in 1st occurence:                  :s/old/new
     # In 1 line for all occurences:                :s/old/new/g
@@ -19,7 +23,9 @@
     # "R" is replace mode for continuous typing.
     # "Y" copies everything from cursor till end of line.
     # "y" works similarly like dw/cw with other moving keys like h.j.k.l.w.e..etc.
+### END :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Insert mode bindings ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 CTRL + U deletes all entered characters in a line.
 CTRL + W deletes the previous word.
 CTRL + H deletes the previous character, but honesty its no better than the backspace.
@@ -27,18 +33,19 @@ CTRL + R inserts contents of register.
 CTRL + K print keybinding format of what you type.
 CTRL + E/Y copies and prints characters just below and above the cursor while in insert mode.
 CTRL + N/P Iterates through cmp suggestions to provide word completion while in insert mode.
+### END :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Others ::
 * xprop WM_CLASS to click on a window and get its class
-### END ::
+### END :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### USEFUL GIT TIP ::
+### USEFUL GIT TIP ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 configure: git config --global diff.tool vimdiff
            git config --global difftool.path nvim
            git config --global merge.tool vimdiff
            git config --global mergetool.path nvim
 use:       git difftool branch1:path/to/file branch2:path/to/file 
-### END ::
+### END :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### MACROS ! ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 use 15@w to repeat the macro at 'w' 15 times (use more often!)

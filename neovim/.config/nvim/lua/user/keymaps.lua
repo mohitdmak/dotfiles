@@ -150,3 +150,5 @@ keymap("t", "jk", "<ESC>", term_opts);
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+--vim.cmd([[unmap i Tab]])
+keymap("i", "asd", ":UltiSnips#ExpandSnippet()", opts)
