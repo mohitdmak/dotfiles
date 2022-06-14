@@ -12,6 +12,10 @@
 * [ ] Keybindings for insert mode?
 
 ## Todo
+* [ ] Battery low warning more verbal
+* [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)
+* [ ] systemd service to keep gh repos for dotfiles/local settings updated periodically
+* [ ] obstidian hack for above
 * [X] Try out later: https://www.reddit.com/r/vim/comments/s1f14h/the_vimium_extension_for_chrome_is_amazing/
 * [ ] Try out later: https://vim.fandom.com/wiki/Browsing_programs_with_tags
 * [X] <leader>z reversal
@@ -36,7 +40,7 @@
     - [ ] etc
 * [ ] LSP doesnt asynchronously check for each file in background, only the ones open.
 * [ ] Spell as nvim-cmp source for lsp
-* [ ] sudo apt udpate && sudo apt upgrade
+* [X] sudo apt udpate && sudo apt upgrade
 * [ ] Map <leader>H/L, unused, window move left/right, switch bw horizontal and vertical layout.
 * [ ] Started using ultisnips, but removing luasnips causes cmp to die altogether?
 * [ ] Lookup /usr/share/doc/ranger

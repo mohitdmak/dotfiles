@@ -44,10 +44,10 @@ bindsym $mod+Shift+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/mars.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/planet.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/milky_way.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/astrowalk.jpg
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/astrowalk.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/meteorites.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/big_bright_planet.jpg
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/sky_under_sea.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/sky_under_sea.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/seaview.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0062.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
