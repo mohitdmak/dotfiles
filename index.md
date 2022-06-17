@@ -12,7 +12,7 @@
 * [ ] Keybindings for insert mode?
 
 ## Todo
-* [ ] Battery low warning more verbal
+* [X] Battery low warning more verbal
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)
 * [ ] systemd service to keep gh repos for dotfiles/local settings updated periodically
 * [ ] obstidian hack for above
@@ -24,7 +24,7 @@
 * [ ] Fix: visual and normal mode to switch bw '', "", (), {}, [], <>
 * [ ] Nvim tree current dir doesnt set, causing further problems in telescope file and text search
 * [X] Remove line numberings in situations where its not needed
-* [ ] Battery low indicator (more verbal)
+* [X] Battery low indicator (more verbal)
 * [ ] `set lazydraw` for improved macro performance?
 * [ ] n & N mappings for VWS interfere with that of normal search
 * [ ] Default app for pdf/png alacritty

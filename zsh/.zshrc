@@ -9,6 +9,8 @@ title() { export TITLE="$*" }
 export ZSH="$HOME/.oh-my-zsh"
 # adding rofi scripts to path
 export PATH=$HOME/.config/rofi/bin:$PATH
+# add battery popup script to path
+export PATH=$HOME/dotfiles/i3-battery-popup/:$PATH
 # Add go binaries to path for some plugins dependant on it 
 export PATH=/usr/local/go/bin:$PATH
 

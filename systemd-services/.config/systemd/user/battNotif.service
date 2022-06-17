@@ -1,0 +1,8 @@
+[Unit]
+Description="Run custom script to trigger notifications on low battery power."
+
+[Service]
+ExecStart=/home/mohitdmak/.config/batteryPopup/activate_battery_notifier.sh
+
+[Install]
+WantedBy=multi-user.target

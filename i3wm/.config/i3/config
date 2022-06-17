@@ -27,8 +27,12 @@ exec --no-startup-id xset r rate 200 35
 # Switch caps to backspace
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = BackSpace" 
+# TODO: DOESNT WORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# low battery indicator script launch
+# exec_always --no-startup-id i3-battery-popup -n -s /home/mohitdmak/dotfiles/i3-battery-popup/battery-popup.wav -L 20
+# exec_always --no-startup-id bash /home/mohitdmak/dotfiles/i3-battery-popup/activate_battery_notifier.sh
 # Polybar status bar launcher
-exec bash /home/mohitdmak/dotfiles/polybar-bitmap/.config/polybar/cuts/preview.sh
+exec_always bash /home/mohitdmak/dotfiles/polybar-bitmap/.config/polybar/cuts/preview.sh
 # Diodon clipboard (FOR PERSONAL MACHINE ONLY)
 bindsym $mod+a exec /usr/bin/diodon
 # Display time

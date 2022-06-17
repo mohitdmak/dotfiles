@@ -12,3 +12,5 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar -q top -c "$DIR"/preview.ini &
 polybar -q mid -c "$DIR"/preview.ini &
 polybar -q bottom -c "$DIR"/preview.ini &
+# sleep 5
+# i3-battery-popup -n -s /home/mohitdmak/dotfiles/i3-battery-popup/battery-popup.wav -L 20

@@ -4,7 +4,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "# Insert your preferred key mappings here.\nunmap u\nmap s scrollPageUp\nmap a visitPreviousTab\nmap u duplicateTab\nunmap yy\nmap cc copyCurrentUrl\nunmap yf\nmap cf LinkHints.activateModeToCopyLinkUrl\nmap R reload hard\n#map jk exitMode\nmap gh firstTab\nmap gl lastTab",
+  "keyMappings": "# Insert your preferred key mappings here.\nunmap u\nmap s scrollPageUp\nmap a visitPreviousTab\nmap u duplicateTab\nunmap yy\nmap cc copyCurrentUrl\nunmap yf\nmap cf LinkHints.activateModeToCopyLinkUrl\nmap R reload hard\n#map jk exitMode\nmap gh firstTab\nmap gl lastTab\n# change go to mark\nunmap `\nmap ' Marks.activateGotoMode",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
