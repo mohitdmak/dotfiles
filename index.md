@@ -10,9 +10,12 @@
 * [ ] Remind stow ignore list
 * [ ] Ryanoasis nerdfonts repo
 * [ ] Keybindings for insert mode?
+* [ ] tokyonight package modifications?
 
 ## Todo
 * [X] Battery low warning more verbal
+* [ ] keychron k2 extend sleep timeout
+* [ ] Stream mobile notififications on linux
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)
 * [ ] systemd service to keep gh repos for dotfiles/local settings updated periodically
 * [ ] obstidian hack for above
@@ -34,10 +37,10 @@
     - [ ] Misc
     - [ ] I3
     - [ ] etc
-* [ ] Nvim-tree doesnt copy to clipboard
-* [o] Vim wiki setup
+* [X] Nvim-tree doesnt copy to clipboard
+* [X] Vim wiki setup
     - [X] Table bindings?
-    - [ ] etc
+    - [X] etc
 * [ ] LSP doesnt asynchronously check for each file in background, only the ones open.
 * [ ] Spell as nvim-cmp source for lsp
 * [X] sudo apt udpate && sudo apt upgrade

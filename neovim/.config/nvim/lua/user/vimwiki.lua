@@ -7,6 +7,9 @@ vim.g["vimwiki_list"] = {
       path = '~/vault/semester::3:1', path_html = '~/vault/Semester::3:1/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
+      path = '~/gsoc', path_html = '~/gsoc/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+    },
+    {
       path = '~/dotfiles', path_html = '~/dotfiles/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {

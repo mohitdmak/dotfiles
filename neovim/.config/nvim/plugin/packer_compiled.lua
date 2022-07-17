@@ -69,11 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  [" oceanic-next"] = {
-    loaded = true,
-    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/ oceanic-next",
-    url = "https://github.com/mhartington/ oceanic-next"
-  },
   ["FixCursorHold.nvim"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
@@ -168,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["kat.nvim"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/kat.nvim",
+    url = "https://github.com/katawful/kat.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -376,5 +376,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

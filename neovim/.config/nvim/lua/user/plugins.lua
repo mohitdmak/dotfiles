@@ -47,7 +47,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
   -- Utility Plugins
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "windwp/nvim-autopairs" --Autopairs, integrates with both cmp and treesitter
   --use "numToStr/Comment.nvim" -- Easily comment stuff
   use "terrortylor/nvim-comment" -- easy commenting
   use "kyazdani42/nvim-web-devicons" -- devicon icons for nvim-tree
@@ -73,7 +73,6 @@ return packer.startup(function(use)
   use "lunarvim/onedarker.nvim"
   use "folke/tokyonight.nvim" -- main go-to theme
   use "rmehri01/onenord.nvim"
-  use "mhartington/ oceanic-next"
   use "EdenEast/nightfox.nvim"
   use "rose-pine/neovim"
   use "sainnhe/everforest"

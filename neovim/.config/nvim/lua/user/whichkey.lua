@@ -132,6 +132,8 @@ local mappings = {
     g = { ":Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>", "Git signs and highlight" },
     s = { ":set noruler<CR> :set laststatus=0<CR>", "Status line and ruler" },
     S = { ":set laststatus=2<CR>", "Reverses 's'" },
+    l = { ":lua vim.diagnostic.disable()<CR>", "Disable all LSP diagnostics" },
+    L = { ":lua vim.diagnostic.enable()<CR>", "Enable all LSP diagnostics" },
     i = { ":IndentBlanklineToggle<CR>", "Indent line" },
   },
 

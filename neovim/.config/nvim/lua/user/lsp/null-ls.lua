@@ -10,10 +10,11 @@ local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	debug = false,
+    autostart = true,
 	sources = {
         formatting.uncrustify.with({ filetypes = {"c", "cpp"}, command = "uncrustify" }),
 		formatting.prettier.with({ extra_args = {   "--jsx-single-quote", "--tab-width 4", "--no-semi"  }}),
-		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.black.with({extra_args = {"--line-length", "90"}}),
 		formatting.stylua,
     -- diagnostics.flake8
 	},
