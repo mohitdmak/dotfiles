@@ -11,6 +11,7 @@ echo "Entering Home @ mohitdmak > > >"
 cd && pwd
 
 # add personal gitlab ssh key
+eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_personal_gitlab_ed25519 | die "ERROR: Could not add personal gitlab ssh key for regular backup."
 
 # dotfiles
