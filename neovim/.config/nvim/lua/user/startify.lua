@@ -12,6 +12,8 @@ vim.cmd[[
                 \ { 'o': '~/dotfiles/ohmyzsh/.oh-my-zsh' },
                 \ { 'a': '~/dotfiles/alacritty/.config/alacritty'},
                 \ { 't': '~/dotfiles/tmux'},
+                \ { 's': '~/dotfiles/systemd-services'},
+                \ { 'l': '~/dotfiles/batteryPopup'},
                 \ { 'T': '~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim'},
                 \ { 'r': '~/dotfiles/rofi/.config/rofi'},
                 \ { 'C': '~/dotfiles/colorls'},

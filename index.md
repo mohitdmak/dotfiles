@@ -16,7 +16,7 @@
 ## Todo
 * [X] Battery low warning more verbal
 * [X] keychron k2 extend sleep timeout
-* [ ] nvim startify add systemd config page and batterypopup
+* [X] nvim startify add systemd config page and batterypopup
 * [ ] lookup tmux/zsh vim keybindings 
 * [ ] Stream mobile notififications on linux
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)

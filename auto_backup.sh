@@ -77,7 +77,12 @@ SEM31="$HOME/vault/semester::3:1"
 SEM22="$HOME/vault/sem-2-2"
 
 # Start backing up . . .
+# Send system wide warning
 notify-send -u critical "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Auto Backing up System Critical GIT Locations; Avoid ShutDown."
-# auto_backup ${DOTFILES}
+# Notification with pulse
+SOUND_TO_PLAY="$HOME/dotfiles/batteryPopup/.config/batteryPopup/battery-popup.wav"
+SOUND_VOLUME=65536
+paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
+auto_backup ${DOTFILES}
 auto_backup ${SEM31}
 auto_backup ${SEM22}
