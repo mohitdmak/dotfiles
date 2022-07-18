@@ -185,7 +185,7 @@ main (){
     UPPER_LIMIT="${UPPER_LIMIT:-10}"
     UPPER_HALF=$(( UPPER_LIMIT / 2 ))
     LOWER_LIMIT=${LOWER_LIMIT:-$UPPER_HALF}
-    MESSAGE="${MESSAGE:-Warning: @mohitdmak: LOW POWER! Time to shutdown ~ 15 min@20%, 10 min@10%}"
+    MESSAGE="${MESSAGE:-[SYSTEMD POWER WARNING]: @mohitdmak: LOW POWER! Time to shutdown ~ 15 min@20%, 10 min@10%}"
     SLEEP_TIME="${SLEEP_TIME:-5m}"
     # Note: BATTERIES is an array
     BATTERIES=( /sys/class/power_supply/BAT*/uevent )
