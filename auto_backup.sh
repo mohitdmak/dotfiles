@@ -17,10 +17,10 @@ cd && pwd
 # add personal gitlab ssh key
 PERSONAL_GITLAB_SSH_KEY_LOCATION="$HOME/.ssh/id_personal_gitlab_ed25519"
 echo -e "${CYAN} [SETUP] Starting SSH-AGENT and adding Personal GitLab SSH Key > > >"
-# eval "$(ssh-agent -s)"
-# ssh-add ${PERSONAL_GITLAB_SSH_KEY_LOCATION} | 
-#     die "[ERROR SETUP]:Could not add personal gitlab ssh key for regular backup."
-# echo -e "${CYAN} [SETUP] SSH-AGENT and GitLab SSH Keys setup < < <"
+eval "$(ssh-agent -s)"
+ssh-add ${PERSONAL_GITLAB_SSH_KEY_LOCATION} | 
+    die "[ERROR SETUP]:Could not add personal gitlab ssh key for regular backup."
+echo -e "${CYAN} [SETUP] SSH-AGENT and GitLab SSH Keys setup < < <"
 
 # function to enter repository provided by 1st arg, and send updates to upsream if any
 auto_backup () {
