@@ -10,6 +10,9 @@ die(){
 echo "Entering Home @ mohitdmak > > >"
 cd && pwd
 
+# add personal gitlab ssh key
+ssh-add ~/.ssh/id_personal_gitlab_ed25519
+
 # dotfiles
 echo "Moving to Dotfiles @ ~/dotfiles > > >"
 cd ~/dotfiles && pwd
@@ -21,9 +24,6 @@ git add .
 git commit -m "add: regular backup"
 echo "Pushing Update : "
 git push | die "ERROR: Unable to Push git diffs in ~/vault/semester::2:2; most probably an ssh-id agent inactive issue! < < <"
-
-# add personal gitlab ssh key
-ssh-add ~/.ssh/id_personal_gitlab_ed25519
 
 # vault - semester 3-1
 echo "Moving to Vault Semester::3:1 @ ~/vault/semester::3:1 > > >"
