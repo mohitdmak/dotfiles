@@ -48,12 +48,15 @@ bindsym $mod+Shift+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/mars.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/planet.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/milky_way.jpg
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/astrowalk.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/astrowalk.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/meteorites.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/big_bright_planet.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/sky_under_sea.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/seaview.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0062.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0002.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0003.jpg
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0012.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/forest-road.jpg
 
@@ -141,7 +144,7 @@ bindsym $mod+d exec /home/mohitdmak/.config/rofi/bin/applet_apps
 # bindsym $mod+d exec bash ~/.config/rofi/launchers/misc/launcher.sh 
 # Start compton
 # exec_always --no-startup-id compton --backend glx --vsync opengl --config ~/.config/compton.conf
-exec_always --no-startup-id picom
+exec_always --no-startup-id picom --experimental-backends
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
@@ -258,7 +261,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# NOTE: Changing below to safer binding (formerly $mod+shift+e)
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

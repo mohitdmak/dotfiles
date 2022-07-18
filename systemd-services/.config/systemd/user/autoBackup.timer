@@ -1,0 +1,15 @@
+# This timer unit is for testing
+# By David Both
+# Licensed under GPL V2
+#
+
+[Unit]
+Description=Timer to manage periodic backup of system critical git repos.
+Requires=autoBackup.service
+
+[Timer]
+Unit=autoBackup.service
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=timers.target

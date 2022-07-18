@@ -10,11 +10,14 @@
 * [ ] Remind stow ignore list
 * [ ] Ryanoasis nerdfonts repo
 * [ ] Keybindings for insert mode?
-* [ ] tokyonight package modifications?
+* [ ] specific version of picom fork required, see its stow folder
+* [ ] tokyonight package modifications? - placed the whole site package in dotfiles, directly use it in ~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/
 
 ## Todo
 * [X] Battery low warning more verbal
-* [ ] keychron k2 extend sleep timeout
+* [X] keychron k2 extend sleep timeout
+* [ ] nvim startify add systemd config page
+* [ ] lookup tmux/zsh vim keybindings 
 * [ ] Stream mobile notififications on linux
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)
 * [ ] systemd service to keep gh repos for dotfiles/local settings updated periodically
@@ -30,7 +33,7 @@
 * [X] Battery low indicator (more verbal)
 * [ ] `set lazydraw` for improved macro performance?
 * [ ] n & N mappings for VWS interfere with that of normal search
-* [ ] Default app for pdf/png alacritty
+* [X] Default app for pdf/png alacritty - feh
 * [ ] Installer scripts
     - [ ] Nvim
     - [ ] Zsh
@@ -43,8 +46,8 @@
     - [X] etc
 * [ ] LSP doesnt asynchronously check for each file in background, only the ones open.
 * [ ] Spell as nvim-cmp source for lsp
-* [X] sudo apt udpate && sudo apt upgrade
-* [ ] Map <leader>H/L, unused, window move left/right, switch bw horizontal and vertical layout.
+* [ ] Map <leader>H/L, unused
+* [X] Map <leader>H/L, unused, window move left/right, switch bw horizontal and vertical layout. - not really neeeded
 * [ ] Started using ultisnips, but removing luasnips causes cmp to die altogether?
 * [ ] Lookup /usr/share/doc/ranger
 

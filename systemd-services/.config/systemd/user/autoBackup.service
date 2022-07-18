@@ -1,0 +1,9 @@
+[Unit]
+Description="Run automatic backups of system critical Git repos (dotfiles/vaults/other-configs) periodically."
+Wants=autoBackup.timer
+
+[Service]
+ExecStart=/home/mohitdmak/dotfiles/auto_backup.sh
+
+[Install]
+WantedBy=multi-user.target
