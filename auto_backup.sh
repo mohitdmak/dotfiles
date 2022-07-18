@@ -48,3 +48,15 @@ git add .
 git commit -m "add: regular backup"
 echo "Pushing Update : "
 git push | die "ERROR: Unable to Push git diffs in ~/vault/semester::2:2; most probably an ssh-id agent inactive issue! < < <"
+
+# vault - semesters 2-2
+echo "Moving to Vault Semester::2:2 @ ~/vault/sem-2-2 > > >"
+cd ~/vault/sem-2-2 && pwd
+echo "Vault Git Status : "
+git fetch origin
+git status
+echo "Adding Hunks : "
+git add .
+git commit -m "add: regular backup"
+echo "Pushing Update : "
+git push | die "ERROR: Unable to Push git diffs in ~/vault/semester::2:2; most probably an ssh-id agent inactive issue! < < <"
