@@ -16,7 +16,6 @@ ssh-add ~/.ssh/id_personal_gitlab_ed25519 | die "ERROR: Could not add personal g
 # dotfiles
 echo "Moving to Dotfiles @ ~/dotfiles > > >"
 cd ~/dotfiles && pwd
-echo "Dotfiles Git Status : "
 git fetch origin
 git status
 echo "Adding Hunks : "
@@ -28,7 +27,6 @@ git push | die "ERROR: Unable to Push git diffs in ~/vault/semester::2:2; most p
 # vault - semester 3-1
 echo "Moving to Vault Semester::3:1 @ ~/vault/semester::3:1 > > >"
 cd ~/vault/semester::3:1 && pwd
-echo "Vault Git Status : "
 git fetch origin
 git status
 echo "Adding Hunks : "
@@ -40,7 +38,6 @@ git push | die "ERROR: Unable to Push git diffs in ~/vault/semester::2:2; most p
 # vault - semesters 2-2
 echo "Moving to Vault Semester::2:2 @ ~/vault/semester::2:2 > > >"
 cd ~/vault/Semester::2:2 && pwd
-echo "Vault Git Status : "
 git fetch origin
 git status
 echo "Adding Hunks : "
@@ -52,7 +49,6 @@ git push | die "ERROR: Unable to Push git diffs in ~/vault/semester::2:2; most p
 # vault - semesters 2-2
 echo "Moving to Vault Semester::2:2 @ ~/vault/sem-2-2 > > >"
 cd ~/vault/sem-2-2 && pwd
-echo "Vault Git Status : "
 git fetch origin
 git status
 echo "Adding Hunks : "
