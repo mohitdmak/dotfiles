@@ -3,7 +3,7 @@ Description="Run automatic backups of system critical Git repos (dotfiles/vaults
 Wants=autoBackup.timer
 
 [Service]
-ExecStart=/home/mohitdmak/dotfiles/auto_backup.sh
+ExecStart=/home/mohitdmak/dotfiles/scripts/auto_backup.sh
 
 [Install]
 WantedBy=multi-user.target
