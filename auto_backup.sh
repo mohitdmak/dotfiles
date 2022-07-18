@@ -27,15 +27,34 @@ auto_backup () {
     echo -e "${CYAN} [ENTER] SYSTEM CRITICAL GIT REPO @ ${1} > > >"
     cd "$1" && pwd
     echo -e "${CYAN} [FETCH] Fetching from upstream : "
-    git fetch origin | die "[ERROR FETCH]:Could not fetch upstream @ ${1} !"
+    if git fetch origin 
+    then
+        continue
+    else
+        die "[ERROR FETCH]:Could not fetch upstream @ ${1} !"
+    fi
     git status
     if [[ `git status --porcelain` ]]; then
         echo -e "${CYAN} [ADD] Adding Hunks : "
-        git add . | die "[ERROR ADD]:Could not add git diff @ ${1} !"
+        if git add . 
+        then 
+            continue
+        else 
+            die "[ERROR ADD]:Could not add git diff @ ${1} !"
+        fi
         echo -e "${CYAN} [COMMIT] Committing Diffs : "
-        git commit -m "add: regular backup" | die "[ERROR COMMIT]: Could not commit @ ${1} !"
+        if git commit -m "add: regular backup" 
+        then 
+            continue
+        else 
+            die "[ERROR COMMIT]: Could not commit @ ${1} !"
+        fi
         echo -e "${CYAN} [PUSH] Pushing Update : "
-        git push | die "[ERROR PUSH]: Unable to Push @ ${1}; most probably an ssh-id agent inactive issue ! < < <"
+        if git push 
+        then 
+            continue
+        else die "[ERROR PUSH]: Unable to Push @ ${1}; most probably an ssh-id agent inactive issue ! < < <"
+        fi
     else
         echo -e "${CYAN} [STATUS] No updates in ${1}"
     fi
