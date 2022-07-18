@@ -38,7 +38,6 @@ auto_backup () {
     echo -e "${CYAN}[ENTER] SYSTEM CRITICAL GIT REPO @ ${1} > > >"
     cd "$1" && pwd
     echo -e "${CYAN}[FETCH] Fetching from upstream : "
-    die "[ERROR ADD]:Could not add git diff @ ${1} !"
     if git fetch origin 
     then
         :
@@ -79,6 +78,6 @@ SEM22="$HOME/vault/sem-2-2"
 
 # Start backing up . . .
 notify-send -u critical "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Auto Backing up System Critical GIT Locations; Avoid ShutDown."
-auto_backup ${DOTFILES}
+# auto_backup ${DOTFILES}
 auto_backup ${SEM31}
 auto_backup ${SEM22}
