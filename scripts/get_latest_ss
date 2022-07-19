@@ -8,4 +8,4 @@ LATEST_PICTURE=$(ls ${PICTURES} -tr | tail -1)
 LATEST_PICTURE=${PICTURES}${LATEST_PICTURE}
 
 # copy to curr location
-cp ${LATEST_PICTURE} $PWD
+cp ${LATEST_PICTURE} $PWD/$1
