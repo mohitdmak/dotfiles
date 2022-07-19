@@ -65,14 +65,14 @@ auto_backup () {
     echo -e "${CYAN}[CHECK] Checking for pending commits @ ${BRANCH} @ origin : > > >"
     PENDING_COMMITS=$(git log origin/${BRANCH}..${BRANCH} | cat)
     if [[ ${PENDING_COMMITS} == "" ]]; then
+        echo -e "${CYAN}[CHECK] No pending commits < < <"
+    else
         echo -e "${CYAN}[PUSH] Found pending commits; pushing updates : "
         if git push 
         then 
             :
         else die "[ERROR PUSH]: Unable to Push @ ${1}; most probably an ssh-id agent inactive issue ! < < <"
         fi
-    else
-        echo -e "${CYAN}[CHECK] No pending commits < < <"
     fi
     else
         echo -e "${CYAN}[STATUS] No updates in ${1} < < <"
