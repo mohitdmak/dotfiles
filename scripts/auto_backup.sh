@@ -60,14 +60,22 @@ auto_backup () {
         else 
             die "[ERROR COMMIT]: Could not commit @ ${1} !"
         fi
-        echo -e "${CYAN}[PUSH] Pushing Update : "
+    # obtain branch and check for pending commits (due to ssh/network issues)
+    BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+    echo -e "${CYAN}[CHECK] Checking for pending commits @ ${BRANCH} @ origin : > > >"
+    PENDING_COMMITS=$(git log origin/${BRANCH}..${BRANCH} | cat)
+    if [[ ${PENDING_COMMITS} == "" ]]; then
+        echo -e "${CYAN}[PUSH] Found pending commits; pushing updates : "
         if git push 
         then 
             :
         else die "[ERROR PUSH]: Unable to Push @ ${1}; most probably an ssh-id agent inactive issue ! < < <"
         fi
     else
-        echo -e "${CYAN}[STATUS] No updates in ${1}"
+        echo -e "${CYAN}[CHECK] No pending commits < < <"
+    fi
+    else
+        echo -e "${CYAN}[STATUS] No updates in ${1} < < <"
     fi
 }
 
