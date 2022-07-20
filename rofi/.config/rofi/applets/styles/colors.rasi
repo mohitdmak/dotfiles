@@ -19,4 +19,9 @@
  *
  */
 
-@import "dark.rasi"
+/* @import "adapta-nokto.rasi" */
+/* @import "arc-dark.rasi" */
+/* @import "adwaita.rasi" */
+@import "gruvbox.rasi"
+/* @import "inside.rasi" */
+/* @import "sirin.rasi" */
