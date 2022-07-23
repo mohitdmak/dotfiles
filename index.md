@@ -18,6 +18,7 @@
 * [X] keychron k2 extend sleep timeout
 * [X] nvim startify add systemd config page and batterypopup
 * [ ] lookup tmux/zsh vim keybindings 
+* [ ] script run from i3.config to start all custom --user services on startup
 * [ ] rofi bluetooth and network
 * [ ] Stream mobile notififications on linux
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)

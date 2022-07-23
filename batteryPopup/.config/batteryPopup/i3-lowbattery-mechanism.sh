@@ -11,7 +11,7 @@ notify-user() {
     #Detect the user using such display
     local user=$(whoami)
 
-    notify-send -u critical -t 4000 "battery warning" "\n$user, your battery is low"
+    notify-send -u critical "[SYSTEMD POWER WARNING]: @mohitdmak VERY LOW POWER! (~5%); Suspending system to preserve state."
 }
 
 main(){
@@ -20,6 +20,7 @@ main(){
 
         if [ "$status" = Discharging ]; then
             if [ "$capacity" -lt 5 ]; then
+                notify-user
                 lock
             fi
         fi
@@ -28,5 +29,5 @@ main(){
 
 while true; do
     main
-    sleep 180
+    sleep 120
 done
