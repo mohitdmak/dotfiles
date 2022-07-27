@@ -12,6 +12,7 @@
 * [ ] Keybindings for insert mode?
 * [ ] specific version of picom fork required, see its stow folder
 * [ ] tokyonight package modifications? - placed the whole site package in dotfiles, directly use it in ~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/
+* [ ] super neovim/vim collection for reference - https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#ceef
 
 ## Todo
 * [X] Battery low warning more verbal
