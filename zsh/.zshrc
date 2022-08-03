@@ -169,3 +169,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Pro keychron k2v2 keyboard setup
+# make caps lock another backspace key
+# exec xmodmap -e "clear lock"
+# exec xmodmap -e "keysym Caps_Lock = BackSpace" 
+# # increase keystroke input speed and reduce delay/repeat times
+# exec xset r rate 200 35

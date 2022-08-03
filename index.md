@@ -13,6 +13,11 @@
 * [ ] specific version of picom fork required, see its stow folder
 * [ ] tokyonight package modifications? - placed the whole site package in dotfiles, directly use it in ~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/
 * [ ] super neovim/vim collection for reference - https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#ceef
+* [ ] Works for Keychron K3. I presume K2 has the same hotkeys.
+disable auto sleep: fn+s+l+o
+Auto sleep in 10mins: Press fn+s+l+r for four seconds
+Auto sleep in 20mins: Press fn+s+l+t for four seconds
+Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
 ## Todo
 * [X] Battery low warning more verbal
