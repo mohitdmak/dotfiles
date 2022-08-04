@@ -24,6 +24,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [X] keychron k2 extend sleep timeout
 * [X] nvim startify add systemd config page and batterypopup
 * [ ] lookup tmux/zsh vim keybindings 
+* [ ] tokyonight border on float term
 * [ ] script run from i3.config to start all custom --user services on startup
 * [ ] rofi bluetooth and network
 * [ ] Stream mobile notififications on linux
