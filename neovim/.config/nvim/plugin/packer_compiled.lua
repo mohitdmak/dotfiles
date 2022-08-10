@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["colorbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    url = "https://github.com/tjdevries/colorbuddy.nvim"
+  },
   colorschemes = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/colorschemes",
@@ -164,11 +169,6 @@ _G.packer_plugins = {
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["kat.nvim"] = {
-    loaded = true,
-    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/kat.nvim",
-    url = "https://github.com/katawful/kat.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -188,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/neon",
     url = "https://github.com/rafamadriz/neon"
+  },
+  ["neosolarized.nvim"] = {
+    loaded = true,
+    path = "/home/mohitdmak/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
+    url = "https://github.com/svrana/neosolarized.nvim"
   },
   neovim = {
     loaded = true,

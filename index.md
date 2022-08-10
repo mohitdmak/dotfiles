@@ -23,6 +23,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [X] Battery low warning more verbal
 * [X] keychron k2 extend sleep timeout
 * [X] nvim startify add systemd config page and batterypopup
+* [ ] maybe replace current to use mason.nvim later
 * [ ] lookup tmux/zsh vim keybindings 
 * [ ] tokyonight border on float term
 * [ ] script run from i3.config to start all custom --user services on startup

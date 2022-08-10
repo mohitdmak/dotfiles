@@ -68,7 +68,9 @@ return packer.startup(function(use)
   use "tpope/vim-surround" -- 
 
   -- Colorschemes (Removed all default ones, trying out only custom gh cloned colorshemes)
-  use "lunarvim/colorschemes" 
+  use "lunarvim/colorschemes"
+  use "tjdevries/colorbuddy.nvim"
+  use "svrana/neosolarized.nvim"
   use "lunarvim/darkplus.nvim"
   use "lunarvim/onedarker.nvim"
   use "folke/tokyonight.nvim" -- main go-to theme
