@@ -30,15 +30,7 @@ vim.g.tokyonight_cterm_colors        = false
 vim.g.tokyonight_colors = { error = "#ff0000", border = "purple" }
 
 -- Load the colorscheme
--- vim.cmd[[colorscheme tokyonight]]
-vim.cmd[[ 
-lua << EOF
-  n = require('neosolarized').setup({
-    comment_italics = true,
-  })
-  n.Group.new('TODO', n.colors.blue)
-EOF
-]]
+vim.cmd[[colorscheme tokyonight]]
 
 -- 1) ENDS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

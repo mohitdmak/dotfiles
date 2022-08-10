@@ -148,7 +148,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
       },
       filesystem_watchers = {
         enable = false,
-        interval = 100,
+        -- interval = 100,
         debounce_delay = 50,
       },
       git = {
