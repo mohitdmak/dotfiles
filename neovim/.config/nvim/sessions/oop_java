@@ -3,19 +3,27 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/Semester::2:1/ZNotes/OOPS/javaEnv/cases
+cd ~/vault/2:1::Semester/ZNotes
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
-set shortmess=aoO
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +1 OOPS/javaEnv/cases/t0.java
+badd +1 ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/log.txt
+badd +1 ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/t1.java
+badd +1 ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/t2.java
+badd +1 ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/t3.java
+badd +0 ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/ainput.txt
+badd +0 ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/aoutput.txt
 argglobal
 %argdel
-$argadd ~/Semester::2:1/ZNotes/OOPS/javaEnv/cases
-tabnew
-tabnew
-tabnew
-tabrewind
-edit t0.java
+$argadd .
+edit OOPS/javaEnv/cases/t0.java
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -36,20 +44,20 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
+exe 'vert 1resize ' . ((&columns * 129 + 96) / 192)
 exe '2resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
+exe 'vert 2resize ' . ((&columns * 62 + 96) / 192)
 exe '3resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 86 + 86) / 173)
+exe 'vert 3resize ' . ((&columns * 62 + 96) / 192)
 argglobal
-balt ainput.txt
+balt ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/log.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=5
+setlocal fdl=0
 setlocal fml=1
-setlocal fdn=3
+setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
@@ -61,18 +69,18 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists("ainput.txt") | buffer ainput.txt | else | edit ainput.txt | endif
+if bufexists(fnamemodify("~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/ainput.txt", ":p")) | buffer ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/ainput.txt | else | edit ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/ainput.txt | endif
 if &buftype ==# 'terminal'
-  silent file ainput.txt
+  silent file ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/ainput.txt
 endif
-balt t0.java
+balt ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/aoutput.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=5
+setlocal fdl=0
 setlocal fml=1
-setlocal fdn=3
+setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
@@ -84,261 +92,40 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists("aoutput.txt") | buffer aoutput.txt | else | edit aoutput.txt | endif
+if bufexists(fnamemodify("~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/aoutput.txt", ":p")) | buffer ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/aoutput.txt | else | edit ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/aoutput.txt | endif
 if &buftype ==# 'terminal'
-  silent file aoutput.txt
+  silent file ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/aoutput.txt
 endif
-balt ainput.txt
+balt ~/vault/2:1::Semester/ZNotes/OOPS/javaEnv/cases/ainput.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=5
+setlocal fdl=0
 setlocal fml=1
-setlocal fdn=3
+setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 9) / 19)
+let s:l = 3 - ((2 * winheight(0) + 9) / 19)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
+keepjumps 3
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
+exe 'vert 1resize ' . ((&columns * 129 + 96) / 192)
 exe '2resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
+exe 'vert 2resize ' . ((&columns * 62 + 96) / 192)
 exe '3resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 86 + 86) / 173)
-tabnext
-edit log.txt
-argglobal
-balt log.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=5
-setlocal fml=1
-setlocal fdn=3
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 2
-normal! 013|
-tabnext
-edit t2.java
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
-exe '2resize ' . ((&lines * 20 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
-exe '3resize ' . ((&lines * 18 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 86 + 86) / 173)
-argglobal
-balt t2.java
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=5
-setlocal fml=1
-setlocal fdn=3
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 34 - ((33 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 34
-normal! 037|
-wincmd w
-argglobal
-if bufexists("ainput.txt") | buffer ainput.txt | else | edit ainput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ainput.txt
-endif
-balt t2.java
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=5
-setlocal fml=1
-setlocal fdn=3
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 10) / 20)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 024|
-wincmd w
-argglobal
-if bufexists("aoutput.txt") | buffer aoutput.txt | else | edit aoutput.txt | endif
-if &buftype ==# 'terminal'
-  silent file aoutput.txt
-endif
-balt ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=5
-setlocal fml=1
-setlocal fdn=3
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 9) / 18)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
-exe '2resize ' . ((&lines * 20 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
-exe '3resize ' . ((&lines * 18 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 86 + 86) / 173)
-tabnext
-edit t3.java
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
-exe '2resize ' . ((&lines * 20 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
-exe '3resize ' . ((&lines * 18 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 86 + 86) / 173)
-argglobal
-balt t3.java
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=5
-setlocal fml=1
-setlocal fdn=3
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 15 - ((14 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 15
-normal! 05|
-wincmd w
-argglobal
-if bufexists("ainput.txt") | buffer ainput.txt | else | edit ainput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ainput.txt
-endif
-balt t3.java
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=5
-setlocal fml=1
-setlocal fdn=3
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 10) / 20)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-wincmd w
-argglobal
-if bufexists("aoutput.txt") | buffer aoutput.txt | else | edit aoutput.txt | endif
-if &buftype ==# 'terminal'
-  silent file aoutput.txt
-endif
-balt ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=5
-setlocal fml=1
-setlocal fdn=3
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 9) / 18)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 2
-normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
-exe '2resize ' . ((&lines * 20 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
-exe '3resize ' . ((&lines * 18 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 86 + 86) / 173)
-tabnext 3
-badd +1 ainput.txt
-badd +1 ~/Semester::2:1/ZNotes/OOPS/javaEnv/cases
-badd +1 log.txt
-badd +35 t2.java
-badd +1 t3.java
-badd +9 t1.java
-badd +2 aoutput.txt
-badd +1 t0.java
+exe 'vert 3resize ' . ((&columns * 62 + 96) / 192)
+tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 shortmess=filnxtToOFAI
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
 let &winminheight = s:save_winminheight
 let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
