@@ -18,8 +18,13 @@ vim.g.maplocalleader = " "
 vim.cmd([[
 autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % -fsanitize=address 2>cpp/log.txt -o %:r && timeout -k9 -v 1 ./%:r < cpp/ainput.txt > cpp/aoutput.txt 2>cpp/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
 ]])
+-- FOR LEETCODING (PYTHON3)
+-- vim.cmd([[
+-- autocmd filetype python nnoremap <silent> <leader>b :w<CR> :!timeout -k9 -v 1 python3 % < my/py/input.txt > my/py/output.txt 2>my/py/log.txt<CR><CR>
+-- ]])
+-- FOR CODEFORCES (PYPY2)
 vim.cmd([[
-autocmd filetype python nnoremap <silent> <leader>b :w<CR> :!timeout -k9 -v 1 python3 % < my/py/input.txt > my/py/output.txt 2>my/py/log.txt<CR><CR>
+autocmd filetype python nnoremap <silent> <leader>b :w<CR> :!timeout -k9 -v 1 pypy % < my/py/input.txt > my/py/output.txt 2>my/py/log.txt<CR><CR>
 ]])
 vim.cmd([[
 autocmd filetype java nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 javac % 2>OOPS/javaEnv/cases/log.txt && cd OOPS/javaEnv/cases && timeout -k9 -v 1 java %:t:r < ainput.txt > aoutput.txt 2>log.txt && timeout -k9 -v 1 rm *.class<CR><CR>

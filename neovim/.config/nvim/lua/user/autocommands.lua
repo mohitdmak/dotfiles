@@ -7,6 +7,18 @@ vim.cmd [[
     autocmd FileType qf set nobuflisted
   augroup end
 
+  augroup remember_folds
+    autocmd!
+    au BufWinLeave p1.py mkview 1
+    au BufWinEnter p1.py silent! loadview 1
+    au BufWinLeave p2.py mkview 1
+    au BufWinEnter p2.py silent! loadview 1
+    au BufWinLeave p3.py mkview 1
+    au BufWinEnter p3.py silent! loadview 1
+    au BufWinLeave p4.py mkview 1
+    au BufWinEnter p4.py silent! loadview 1
+  augroup END
+
   augroup _git
     autocmd!
     autocmd FileType gitcommit setlocal wrap
