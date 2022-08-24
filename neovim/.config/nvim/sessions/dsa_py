@@ -13,10 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 my/py/p1.py
+badd +16 my/py/p1.py
 badd +1 ~/Algos/my/py/log.txt
-badd +1 ~/Algos/my/py/p2.py
-badd +1 ~/Algos/my/py/p3.py
+badd +37 ~/Algos/my/py/p2.py
+badd +21 ~/Algos/my/py/p3.py
+badd +30 ~/Algos/my/py/p4.py
 badd +0 ~/Algos/my/py/input.txt
 badd +0 ~/Algos/my/py/output.txt
 argglobal
@@ -43,13 +44,13 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 137 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 131 + 96) / 192)
 exe '2resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 54 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 60 + 96) / 192)
 exe '3resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 54 + 96) / 192)
+exe 'vert 3resize ' . ((&columns * 60 + 96) / 192)
 argglobal
-balt ~/Algos/my/py/input.txt
+balt ~/Algos/my/py/log.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -60,12 +61,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 19) / 39)
+let s:l = 13 - ((12 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 01|
+keepjumps 13
+normal! 0
 wincmd w
 argglobal
 if bufexists(fnamemodify("~/Algos/my/py/input.txt", ":p")) | buffer ~/Algos/my/py/input.txt | else | edit ~/Algos/my/py/input.txt | endif
@@ -113,11 +114,11 @@ normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 137 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 131 + 96) / 192)
 exe '2resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 2resize ' . ((&columns * 54 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 60 + 96) / 192)
 exe '3resize ' . ((&lines * 19 + 21) / 42)
-exe 'vert 3resize ' . ((&columns * 54 + 96) / 192)
+exe 'vert 3resize ' . ((&columns * 60 + 96) / 192)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
