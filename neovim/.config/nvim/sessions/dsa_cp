@@ -7,16 +7,23 @@ cd ~/Algos
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
-set shortmess=aoO
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +31 my/cpp/a1.cpp
+badd +1 ~/Algos/my/cpp/log.txt
+badd +1 ~/Algos/my/cpp/a2.cpp
+badd +1 ~/Algos/my/cpp/a3.cpp
+badd +1 ~/Algos/my/cpp/a4.cpp
+badd +0 ~/Algos/my/cpp/input.txt
+badd +0 ~/Algos/my/cpp/output.txt
 argglobal
 %argdel
 $argadd .
-tabnew
-tabnew
-tabnew
-tabnew
-tabrewind
-edit cpp/a1.cpp
+edit my/cpp/a1.cpp
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -37,13 +44,13 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
+exe 'vert 1resize ' . ((&columns * 144 + 96) / 192)
+exe '2resize ' . ((&lines * 19 + 21) / 42)
+exe 'vert 2resize ' . ((&columns * 47 + 96) / 192)
+exe '3resize ' . ((&lines * 19 + 21) / 42)
+exe 'vert 3resize ' . ((&columns * 47 + 96) / 192)
 argglobal
-balt cpp/ainput.txt
+balt ~/Algos/my/cpp/log.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -54,241 +61,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+let s:l = 31 - ((24 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-argglobal
-if bufexists("~/Algos/cpp/ainput.txt") | buffer ~/Algos/cpp/ainput.txt | else | edit ~/Algos/cpp/ainput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/ainput.txt
-endif
-balt ~/Algos/cpp/aoutput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-argglobal
-if bufexists("~/Algos/cpp/aoutput.txt") | buffer ~/Algos/cpp/aoutput.txt | else | edit ~/Algos/cpp/aoutput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/aoutput.txt
-endif
-balt ~/Algos/cpp/ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
-tabnext
-edit ~/Algos/cpp/a2.cpp
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
-argglobal
-balt ~/Algos/cpp/ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 15 - ((14 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 15
-normal! 05|
-lcd ~/Algos
-wincmd w
-argglobal
-if bufexists("~/Algos/cpp/ainput.txt") | buffer ~/Algos/cpp/ainput.txt | else | edit ~/Algos/cpp/ainput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/ainput.txt
-endif
-balt ~/Algos/cpp/aoutput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-argglobal
-if bufexists("~/Algos/cpp/aoutput.txt") | buffer ~/Algos/cpp/aoutput.txt | else | edit ~/Algos/cpp/aoutput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/aoutput.txt
-endif
-balt ~/Algos/cpp/ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
-tabnext
-edit ~/Algos/cpp/log.txt
-argglobal
-balt ~/Algos/cpp/a3.cpp
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-tabnext
-edit ~/Algos/cpp/a3.cpp
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
-argglobal
-balt ~/Algos/cpp/ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 15 - ((14 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 15
+keepjumps 31
 normal! 09|
-lcd ~/Algos
 wincmd w
 argglobal
-if bufexists("~/Algos/cpp/ainput.txt") | buffer ~/Algos/cpp/ainput.txt | else | edit ~/Algos/cpp/ainput.txt | endif
+if bufexists(fnamemodify("~/Algos/my/cpp/input.txt", ":p")) | buffer ~/Algos/my/cpp/input.txt | else | edit ~/Algos/my/cpp/input.txt | endif
 if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/ainput.txt
+  silent file ~/Algos/my/cpp/input.txt
 endif
-balt ~/Algos/cpp/aoutput.txt
+balt ~/Algos/my/cpp/output.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -299,156 +84,48 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
+let s:l = 27 - ((17 * winheight(0) + 9) / 19)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 27
+normal! 02|
+wincmd w
+argglobal
+if bufexists(fnamemodify("~/Algos/my/cpp/output.txt", ":p")) | buffer ~/Algos/my/cpp/output.txt | else | edit ~/Algos/my/cpp/output.txt | endif
+if &buftype ==# 'terminal'
+  silent file ~/Algos/my/cpp/output.txt
+endif
+balt ~/Algos/my/cpp/input.txt
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 9) / 19)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
-lcd ~/Algos
 wincmd w
-argglobal
-if bufexists("~/Algos/cpp/aoutput.txt") | buffer ~/Algos/cpp/aoutput.txt | else | edit ~/Algos/cpp/aoutput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/aoutput.txt
-endif
-balt ~/Algos/cpp/ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
-tabnext
-edit ~/Algos/cpp/a4.cpp
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
-argglobal
-balt ~/Algos/cpp/ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 9 - ((8 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 9
-normal! 05|
-lcd ~/Algos
-wincmd w
-argglobal
-if bufexists("~/Algos/cpp/ainput.txt") | buffer ~/Algos/cpp/ainput.txt | else | edit ~/Algos/cpp/ainput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/ainput.txt
-endif
-balt ~/Algos/cpp/aoutput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-argglobal
-if bufexists("~/Algos/cpp/aoutput.txt") | buffer ~/Algos/cpp/aoutput.txt | else | edit ~/Algos/cpp/aoutput.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/Algos/cpp/aoutput.txt
-endif
-balt ~/Algos/cpp/ainput.txt
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-lcd ~/Algos
-wincmd w
-exe 'vert 1resize ' . ((&columns * 153 + 95) / 191)
-exe '2resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 37 + 95) / 191)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 37 + 95) / 191)
+exe 'vert 1resize ' . ((&columns * 144 + 96) / 192)
+exe '2resize ' . ((&lines * 19 + 21) / 42)
+exe 'vert 2resize ' . ((&columns * 47 + 96) / 192)
+exe '3resize ' . ((&lines * 19 + 21) / 42)
+exe 'vert 3resize ' . ((&columns * 47 + 96) / 192)
 tabnext 1
-badd +15 ~/Algos/cpp/a1.cpp
-badd +1 ~/Algos/cpp/a2.cpp
-badd +1 ~/Algos/cpp/log.txt
-badd +1 ~/Algos/cpp/a3.cpp
-badd +4 ~/Algos/cpp/a4.cpp
-badd +0 ~/Algos/cpp/ainput.txt
-badd +0 ~/Algos/cpp/aoutput.txt
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 shortmess=ilxTtofcnOFI
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
 let &winminheight = s:save_winminheight
 let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"

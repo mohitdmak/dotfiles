@@ -16,7 +16,7 @@ vim.g.maplocalleader = " "
 -- Working with cpp files and dsa setup
 -- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
 vim.cmd([[
-autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % -fsanitize=address 2>cpp/log.txt -o %:r && timeout -k9 -v 1 ./%:r < cpp/ainput.txt > cpp/aoutput.txt 2>cpp/log.txt && timeout -k9 -v 1 rm %:r<CR><CR>
+autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !timeout -k9 -v 1 g++ % -fsanitize=address 2>my/cpp/log.txt -o %:r && timeout -k9 -v 1 %:r < my/cpp/input.txt > my/cpp/output.txt 2>my/cpp/log.txt && timeout -k9 -v 1 rm ./my/cpp/%:r<CR><CR>
 ]])
 -- FOR LEETCODING (PYTHON3)
 -- vim.cmd([[
