@@ -5,16 +5,18 @@
 * [New bindings](vim_learnings)
 
 ## Reminders for new machines
-* [ ] Remember to set "filter_ignored" property of function M.setup(opts) in ~/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/lua/nvim-tree/populate.lua to false
+* [X] Remember to set "filter_ignored" property of function M.setup(opts) in ~/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/lua/nvim-tree/populate.lua to false
 * [ ] Remind nvm bt solved by writing export 3lines tozshrc orbashrc
-* [ ] Remind stow ignore list
-* [ ] Ryanoasis nerdfonts repo
+* [X] Remind stow ignore list
+* [X] Ryanoasis nerdfonts repo
 * [ ] Keybindings for insert mode?
-* [ ] specific version of picom fork required, see its stow folder
-* [ ] tokyonight package modifications? - placed the whole site package in dotfiles, directly use it in ~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/
-* [ ] super neovim/vim collection for reference - https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#ceef
-* [ ] Works for Keychron K3. I presume K2 has the same hotkeys.
-* [ ] NOTEEE: ":e" reloads buffer, used to syntax highlight fenced code by language in vimwiki
+* [ ] setup obsidian sync between linux and android - https://werzum.github.io/tech/2022/02/13/Obsidian-Mobile-Sync.html (termux and termux widget usage)
+* [ ] NOTE: For obsidian/other desktop apps integration with rofi see answer by *"notachraf"* here - https://unix.stackexchange.com/questions/364773/how-to-get-installed-application-to-be-detected-by-rofi
+* [X] specific version of picom fork required, see its stow folder
+* [X] tokyonight package modifications? - placed the whole site package in dotfiles, directly use it in ~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/
+* [X] super neovim/vim collection for reference - https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#ceef
+* [X] NOTEEE: ":e" reloads buffer, used to syntax highlight fenced code by language in vimwiki
+* [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 disable auto sleep: fn+s+l+o
 Auto sleep in 10mins: Press fn+s+l+r for four seconds
 Auto sleep in 20mins: Press fn+s+l+t for four seconds
