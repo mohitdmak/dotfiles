@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/Algos
+cd ~/algos
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -14,12 +14,12 @@ else
   set shortmess=aoO
 endif
 badd +31 my/cpp/a1.cpp
-badd +1 ~/Algos/my/cpp/log.txt
-badd +1 ~/Algos/my/cpp/a2.cpp
-badd +1 ~/Algos/my/cpp/a3.cpp
-badd +1 ~/Algos/my/cpp/a4.cpp
-badd +0 ~/Algos/my/cpp/input.txt
-badd +0 ~/Algos/my/cpp/output.txt
+badd +1 ~/algos/my/cpp/log.txt
+badd +1 ~/algos/my/cpp/a2.cpp
+badd +1 ~/algos/my/cpp/a3.cpp
+badd +1 ~/algos/my/cpp/a4.cpp
+badd +0 ~/algos/my/cpp/input.txt
+badd +0 ~/algos/my/cpp/output.txt
 argglobal
 %argdel
 $argadd .
@@ -50,7 +50,7 @@ exe 'vert 2resize ' . ((&columns * 47 + 96) / 192)
 exe '3resize ' . ((&lines * 19 + 21) / 42)
 exe 'vert 3resize ' . ((&columns * 47 + 96) / 192)
 argglobal
-balt ~/Algos/my/cpp/log.txt
+balt ~/algos/my/cpp/log.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -69,11 +69,11 @@ keepjumps 31
 normal! 09|
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/Algos/my/cpp/input.txt", ":p")) | buffer ~/Algos/my/cpp/input.txt | else | edit ~/Algos/my/cpp/input.txt | endif
+if bufexists(fnamemodify("~/algos/my/cpp/input.txt", ":p")) | buffer ~/algos/my/cpp/input.txt | else | edit ~/algos/my/cpp/input.txt | endif
 if &buftype ==# 'terminal'
-  silent file ~/Algos/my/cpp/input.txt
+  silent file ~/algos/my/cpp/input.txt
 endif
-balt ~/Algos/my/cpp/output.txt
+balt ~/algos/my/cpp/output.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -92,11 +92,11 @@ keepjumps 27
 normal! 02|
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/Algos/my/cpp/output.txt", ":p")) | buffer ~/Algos/my/cpp/output.txt | else | edit ~/Algos/my/cpp/output.txt | endif
+if bufexists(fnamemodify("~/algos/my/cpp/output.txt", ":p")) | buffer ~/algos/my/cpp/output.txt | else | edit ~/algos/my/cpp/output.txt | endif
 if &buftype ==# 'terminal'
-  silent file ~/Algos/my/cpp/output.txt
+  silent file ~/algos/my/cpp/output.txt
 endif
-balt ~/Algos/my/cpp/input.txt
+balt ~/algos/my/cpp/input.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
