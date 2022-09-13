@@ -18,6 +18,8 @@ vim.cmd [[
     au BufWinEnter p3.py silent! loadview 1
     au BufWinLeave p4.py mkview 1
     au BufWinEnter p4.py silent! loadview 1
+    au BufWinLeave a1.cpp mkview 1
+    au BufWinEnter a1.cpp silent! loadview 1
   augroup END
 
   augroup _git
