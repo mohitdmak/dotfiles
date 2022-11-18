@@ -56,7 +56,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye" -- proper buffer closing without messing up current window
   use "nvim-lualine/lualine.nvim" -- quick status line in lua
   use "akinsho/toggleterm.nvim" -- floating terminal manager
-  use "ahmedkhalf/project.nvim" -- project finder (based on .git dirs probably)
+  -- use "ahmedkhalf/project.nvim" -- project finder (based on .git dirs probably)  # UPDATE: Don't think this is needed any longer
   use "lewis6991/impatient.nvim" -- speeds up neovim loading by using an efficient execution of "require" in lua
   -- use "goolord/alpha-nvim" -- startup dashboard (currently use startify instead)
   use "mhinz/vim-startify" -- vim startify, dashboard manager for bookmarks, settings, mru, history, etc
@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use "godlygeek/tabular" -- helpful syntactical sugar
   use "lukas-reineke/indent-blankline.nvim" -- indentline
   use "JoosepAlviste/nvim-ts-context-commentstring" -- helps to mark comment strings for commenting binding
-  use "tpope/vim-surround" -- 
+  use "tpope/vim-surround" -- #TODO: Bindings for this
 
   -- Colorschemes (Removed all default ones, trying out only custom gh cloned colorshemes)
   use "lunarvim/colorschemes"
@@ -120,12 +120,12 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter", -- syntax highlighting support
     run = ":TSUpdate",
   }
-  -- use "norcalli/nvim-colorizer.lua"
-  use {
-    'RRethy/vim-hexokinase',
-    run = 'cd ~/.local/share/nvim/site/pack/packer/opt/vim-hexokinase && make hexokinase',
-    cmd = {"HexokinaseToggle"},
-  }
+  -- use "norcalli/nvim-colorizer.lua" # UPDATE: Probably not needed now
+  -- use {
+  --   'RRethy/vim-hexokinase',
+  --   run = 'cd ~/.local/share/nvim/site/pack/packer/opt/vim-hexokinase && make hexokinase',
+  --   cmd = {"HexokinaseToggle"},
+  -- }
 
   -- Git
   use "lewis6991/gitsigns.nvim" -- git sign support near line number

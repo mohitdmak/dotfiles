@@ -94,7 +94,7 @@ local mappings = {
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-  ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
+  -- ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
   ["y"] = { "<cmd>Telescope resume<cr>", "Resume Telescope"},
   ["d"] = { "<cmd>lua _LAZYDOCKER_TOGGLE()<CR>", "Lazydocker"},
   ["r"] = { "<cmd>lua _RANGER_TOGGLE()<CR>", "Ranger"},

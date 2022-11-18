@@ -69,6 +69,7 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Better window navigation
 keymap("n", "<A-e>", "<cmd>NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>q", "<cmd>q!<CR>", opts)
+keymap("n", "<leader>Q", "<cmd>qa!<CR>", opts)
 keymap("n", "<A-h>", "<C-w>h", opts)
 keymap("n", "<A-j>", "<C-w>j", opts)
 keymap("n", "<A-k>", "<C-w>k", opts)
