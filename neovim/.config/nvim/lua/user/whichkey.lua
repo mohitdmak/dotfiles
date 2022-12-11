@@ -95,7 +95,7 @@ local mappings = {
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   -- ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
-  ["y"] = { "<cmd>Telescope resume<cr>", "Resume Telescope"},
+  -- ["y"] = { "<cmd>Telescope resume<cr>", "Resume Telescope"},
   ["d"] = { "<cmd>lua _LAZYDOCKER_TOGGLE()<CR>", "Lazydocker"},
   ["r"] = { "<cmd>lua _RANGER_TOGGLE()<CR>", "Ranger"},
   ["G"] = { "<cmd>lua _LAZYGIT_TOGGLE()<CR> :NvimTreeRefresh<CR>", "Lazygit" },
@@ -125,6 +125,15 @@ local mappings = {
     s = { "<cmd>PackerSync<cr>", "Sync" },
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
+  },
+
+  y = {
+    name = "WikiLogs",
+    n = { ":VimwikiMakeDiaryNote<cr>", "Log today" },
+    y = { ":VimwikiMakeYesterdayDiaryNote<cr>", "Log yesterday" },
+    t = { ":VimwikiMakeTomorrowDiaryNote<cr>", "Log tomorrow" },
+    i = { ":VimwikiDiaryIndex<cr>", "Log Index" },
+    g = { ":VimwikiDiaryGenerateLinks<cr>", "Generate Links" },
   },
 
   z = {

@@ -4,6 +4,10 @@ vim.g["vimwiki_list"] = {
       path = '~/vault/semester::3:1', path_html = '~/vault/Semester::3:1/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
+      -- path = '~/vault/logs', path_html = '~/vault/logs/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+      path = '/var/log/logs', path_html = '/var/log/logs', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+    },
+    {
       path = '~/gsoc', path_html = '~/gsoc/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
