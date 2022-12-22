@@ -23,6 +23,7 @@ Auto sleep in 20mins: Press fn+s+l+t for four seconds
 Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
 ## Todo
+* [ ] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [X] Battery low warning more verbal
 * [X] keychron k2 extend sleep timeout
 * [X] nvim startify add systemd config page and batterypopup

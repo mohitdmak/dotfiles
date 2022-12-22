@@ -17,8 +17,8 @@ toggleterm.setup({
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {
-		border = "double",
-        width = 3,
+		-- border = "double",
+        width = 150,
 		winblend = 1,
 		highlights = {
 			border = "Normal",
