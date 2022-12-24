@@ -142,7 +142,7 @@ bufferline.setup {
       fg = {attribute='fg',highlight='#ff0000'},
       bg = {attribute='bg',highlight='#0000ff'},
       -- gui = 'none'
-      underline = true, undercurl = false, italic = false
+      underline = false, undercurl = false, italic = false
       },
     buffer_visible = {
       fg = { attribute = "fg", highlight = "TabLine" },
