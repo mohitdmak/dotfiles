@@ -18,7 +18,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
       sort_by = "name",
       root_dirs = {},
       prefer_startup_root = false,
-      sync_root_with_cwd = false,
+      sync_root_with_cwd = true,
       reload_on_bufenter = true,
       respect_buf_cwd = false,
       view = {
@@ -122,8 +122,8 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
         auto_open = true,
       },
       update_focused_file = {
-        enable = false,
-        update_root = false,
+        enable = true,
+        update_root = true,
         ignore_list = {},
       },
       ignore_ft_on_setup = {},

@@ -68,6 +68,7 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<A-e>", "<cmd>NvimTreeToggle<cr>", opts)
+keymap("n", "<A-r>", ":cd %:p:h<cr>:pwd<cr>", opts) -- reset nvim-tree root
 keymap("n", "<leader>q", "<cmd>q!<CR>", opts)
 keymap("n", "<leader>Q", "<cmd>qa!<CR>", opts)
 keymap("n", "<A-h>", "<C-w>h", opts)
