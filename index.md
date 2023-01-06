@@ -40,7 +40,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)
 * [ ] browser open ranger for file upload download
 * [X] systemd service to keep gh repos for dotfiles/local settings updated periodically
-* [ ] obstidian hack for above
+* [X] obstidian hack for above
 * [X] Try out later: https://www.reddit.com/r/vim/comments/s1f14h/the_vimium_extension_for_chrome_is_amazing/
 * [ ] Try out later: https://vim.fandom.com/wiki/Browsing_programs_with_tags
 * [X] <leader>z reversal
