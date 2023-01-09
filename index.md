@@ -31,6 +31,9 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [X] nvim startify add systemd config page and batterypopup
 * [ ] maybe replace current to use mason.nvim later
 * [ ] lazy.nvim?
+* [ ] wine configs - picom, fonts, etc
+* [X] fingerprint reader for sudo/etc?
+    * [ ] TOO risky, for corruption due to 2 drivers from windows/linux
 * [ ] screen blackout / saver timeout configurable?
 * [ ] lookup tmux/zsh vim keybindings 
 * [ ] tokyonight border on float term
