@@ -66,6 +66,9 @@ case $chosen in
     $suspend)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
+            # enabling keyboard if disabled due to external connection
+            xinput enable 13
+            notify-send "[[ Re-Enabling system default keyboard before suspension ]]"
 			mpc -q pause
 			amixer set Master mute
 			i3lock -i ~/dotfiles/i3wm/.config/i3/starred_wallpapers/mars.png -ef
