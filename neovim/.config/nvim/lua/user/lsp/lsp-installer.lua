@@ -16,6 +16,11 @@ lsp_installer.on_server_ready(function(server)
        opts = vim.tbl_deep_extend("force", jdtls_opts, opts)
     end
 
+    if server.name == "pylsp" then
+       local pylsp_opts = require("user.lsp.settings.pylsp")
+       opts = vim.tbl_deep_extend("force", pylsp_opts, opts)
+    end
+
 	 if server.name == "jsonls" then
 	 	local jsonls_opts = require("user.lsp.settings.jsonls")
 	 	opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
