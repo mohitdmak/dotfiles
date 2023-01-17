@@ -8,7 +8,7 @@ return {
           -- enabled = false -- default true
         },
         pylint = {
-          -- enabled = true, -- default false
+          enabled = true, -- default false
         }
       },
       configurationSources = {

@@ -25,6 +25,8 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 ## Todo
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [ ] bell in alacritty
+* [ ] Customize recently added Grammarly LSP
+* [ ] https://github.com/folke/todo-comments.nvim
 * [ ] tmux/alacritty vim nav
 * [X] Battery low warning more verbal
 * [X] keychron k2 extend sleep timeout
