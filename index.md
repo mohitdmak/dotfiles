@@ -24,10 +24,13 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
 ## Todo
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
-* [ ] bell in alacritty
+* [ ] browser open ranger for file upload download
+* [ ] allow mouse inputs - toggling sys keyboard / system shut/sleep / power / brightness/volume/bt etc
+* [ ] ask for save location scrot screenshot
 * [ ] Customize recently added Grammarly LSP
-* [ ] https://github.com/folke/todo-comments.nvim
 * [ ] tmux/alacritty vim nav
+* [ ] bell in alacritty
+* [X] https://github.com/folke/todo-comments.nvim
 * [X] Battery low warning more verbal
 * [X] keychron k2 extend sleep timeout
 * [X] nvim startify add systemd config page and batterypopup
@@ -43,7 +46,6 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [ ] rofi bluetooth and network
 * [ ] Stream mobile notififications on linux
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)
-* [ ] browser open ranger for file upload download
 * [X] systemd service to keep gh repos for dotfiles/local settings updated periodically
 * [X] obstidian hack for above
 * [X] Try out later: https://www.reddit.com/r/vim/comments/s1f14h/the_vimium_extension_for_chrome_is_amazing/
@@ -73,5 +75,5 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [ ] Map <leader>H/L, unused
 * [X] Map <leader>H/L, unused, window move left/right, switch bw horizontal and vertical layout. - not really neeeded
 * [ ] Started using ultisnips, but removing luasnips causes cmp to die altogether?
-* [ ] Lookup /usr/share/doc/ranger
+* [X] Lookup /usr/share/doc/ranger
 
