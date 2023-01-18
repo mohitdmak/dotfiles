@@ -160,6 +160,15 @@ local mappings = {
     },
   },
 
+  t = {
+    name = "Dev Hunks",
+    a = { ":TodoTelescope<CR>", "All Hunks" },
+    n = { ":TodoTelescope keywords=NOTE<CR>", "NOTEs" },
+    t = { ":TodoTelescope keywords=TODO<CR>", "TODOs" },
+    f = { ":TodoTelescope keywords=FIXME<CR>", "FIXMEs" },
+    m = { ":TodoTelescope keywords=MOHITDMAK<CR>", "IAMs" },
+  },
+
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },

@@ -67,7 +67,17 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim" -- indentline
   use "JoosepAlviste/nvim-ts-context-commentstring" -- helps to mark comment strings for commenting binding
   use "tpope/vim-surround" -- #TODO: Bindings for this
-
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    -- config = function()
+    --   require("todo-comments").setup {
+    --     -- your configuration comes here
+    --     -- or leave it empty to use the default settings
+    --     -- refer to the configuration section below
+    --   }
+    -- end
+  }
   -- Colorschemes (Removed all default ones, trying out only custom gh cloned colorshemes)
   use "lunarvim/colorschemes"
   use "tjdevries/colorbuddy.nvim"
