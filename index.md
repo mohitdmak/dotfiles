@@ -10,7 +10,7 @@
 * [X] Remind stow ignore list
 * [X] Ryanoasis nerdfonts repo
 * [ ] Keybindings for insert mode?
-* [ ] setup obsidian sync between linux and android - https://werzum.github.io/tech/2022/02/13/Obsidian-Mobile-Sync.html (termux and termux widget usage)
+%% * [ ] @MOHITDMAK: Turned Hardware acc usage off in brave (1.46.xxx) else caused blank rendering on overflow/github/few sites
 * [ ] NOTE: For obsidian/other desktop apps integration with rofi see answer by *"notachraf"* here - https://unix.stackexchange.com/questions/364773/how-to-get-installed-application-to-be-detected-by-rofi
 * [X] specific version of picom fork required, see its stow folder
 * [X] tokyonight package modifications? - placed the whole site package in dotfiles, directly use it in ~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/
@@ -26,12 +26,14 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [X] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script
-* [ ] allow mouse inputs - toggling sys keyboard / system shut/sleep / power / brightness/volume/bt etc
-* [ ] ask for save location scrot screenshot
+* [ ] allow mouse inputs - toggling sys keyboard / system shut/sleep / power / brightness/volume/bt fullscreen etc
+* [X] ask for save location scrot screenshot
+    * [X] maybe ranger enugh?
 * [ ] rofi bluetooth and network
 * [ ] tmux/alacritty vim nav
 * [ ] bell in alacritty
 * [ ] Customize recently added Grammarly LSP
+* [ ] op status bar but too bad, only for macos - https://github.com/FelixKratz/SketchyBar
 * [X] https://github.com/folke/todo-comments.nvim
 * [X] Battery low warning more verbal
 * [X] keychron k2 extend sleep timeout
@@ -53,6 +55,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [ ] Try out later: https://vim.fandom.com/wiki/Browsing_programs_with_tags
 * [X] <leader>z reversal
 * [X] indent lines plus reversal
+* [ ] just another mac font, try later - https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized
 * [ ] Fix vim conceal for colorized tags in vimwiki
 * [ ] Fix: visual and normal mode to switch bw '', "", (), {}, [], <>
 * [ ] Nvim tree current dir doesnt set, causing further problems in telescope file and text search

@@ -25,12 +25,15 @@ msg() {
 # @MOHITDMAK: THIS FILE SERVES AS MENU
 
 # Variable passed to rofi
-options="$windows\n$browser\n$files\n$settings"
+options="$windows\n$browser\n$files\n$terminal\n$settings"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Most Used" -dmenu -selected-row 0)"
 case $chosen in
     $terminal)
-		if [[ -f /usr/bin/alacritty ]]; then
+        if [[ -f /usr/bin/alacritty ]]; then
+            selected=$(ls ~/dotfiles/scripts/|rofi -dmenu -p "Run: ")&&bash ~/dotfiles/scripts/$selected
+            # notify-send 'heck'
+		elif [[ -f /usr/bin/alacritty ]]; then
 			alacritty &
 		# elif [[ -f /usr/bin/urxvt ]]; then
 		# 	urxvt &

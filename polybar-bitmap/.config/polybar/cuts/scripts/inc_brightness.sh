@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec sudo brightnessctl set +10%
+exec brightnessctl set +10%

@@ -7,11 +7,14 @@
  *
  */
 
+/* @MOHITDMAK: THIS FILE SERVES AS MENU CONFIG */
 configuration {
     show-icons:                     false;
 	font:                      		"Comfortaa 12";
     disable-history:                false;
 	sidebar-mode: 					false;
+    me-select-entry:                "";
+    me-accept-entry:                "MousePrimary";
 }
 
 @import "../../../styles/colors.rasi"
