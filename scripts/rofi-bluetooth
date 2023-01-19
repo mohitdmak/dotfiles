@@ -124,11 +124,31 @@ device_connected() {
 
 # Toggles device connection
 toggle_connection() {
+    # notify-send "$1"
+    # notify-send "$device"
     if device_connected "$1"; then
         bluetoothctl disconnect "$1"
+        if device_connected "$1"; then
+            notify-send -u critical "[BCTL NOTIF]: @mohtidmak: Device -
+    $device 
+    disconn failed."
+        else
+            notify-send "[BCTL NOTIF]: @mohtidmak: Device - 
+    $device 
+    Disconnected."
+        fi
         device_menu "$device"
     else
         bluetoothctl connect "$1"
+        if device_connected "$1"; then
+            notify-send "[BCTL NOTIF]: @mohtidmak: Device -
+    $device 
+    Connected."
+        else
+            notify-send -u critical "[BCTL NOTIF]: @mohtidmak: Device -
+    $device
+    conn failed."
+        fi
         device_menu "$device"
     fi
 }
@@ -260,9 +280,16 @@ show_menu() {
     if power_on; then
         power="Power: on"
 
+        # mapfile -t paired_devices < <(bluetoothctl "$paired_devices_cmd" | grep Device | cut -d ' ' -f 2)
+        # echo "$paired_devices"
+        VAR=$(print_status)
+        VAR="${VAR///}"
+        # VAR=$(echo "$VAR" | tr   '')
+        VAR=$(echo "$VAR" | tr , '\n')
         # Human-readable names of devices, one per line
         # If scan is off, will only list paired devices
-        devices=$(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)
+        devices=$(bluetoothctl devices | grep Device | cut -d ' ' -f 3- | sort)
+        # notify-send "$devices"
 
         # Get controller flags
         scan=$(scan_on)
@@ -270,7 +297,7 @@ show_menu() {
         discoverable=$(discoverable_on)
 
         # Options passed to rofi
-        options="$devices\n$divider\n$power\n$scan\n$pairable\n$discoverable\nExit"
+        options="$VAR\n$devices\n$divider\n$power\n$scan\n$pairable\n$discoverable\nExit"
     else
         power="Power: off"
         options="$power\nExit"
