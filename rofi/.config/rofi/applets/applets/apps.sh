@@ -22,6 +22,7 @@ settings=""
 msg() {
 	rofi -theme "$HOME/.config/rofi/applets/styles/message.rasi" -e "$1"
 }
+# @MOHITDMAK: THIS FILE SERVES AS MENU
 
 # Variable passed to rofi
 options="$windows\n$browser\n$files\n$settings"
@@ -68,12 +69,15 @@ case $chosen in
 		fi
         ;;
     $browser)
-		if [[ -f /snap/bin/brave ]]; then
-			brave &
+		if [[ -f /usr/bin/brave-browser ]]; then
+			# notify-send "XDG_CURRENT_DESKTOP="KDE" brave-browser &"
+			XDG_CURRENT_DESKTOP="KDE" brave-browser &
+		elif [[ -f /snap/bin/brave ]]; then
+			XDG_CURRENT_DESKTOP="KDE" brave &
 		elif [[ -f /usr/bin/microsoft-edge ]]; then
-			microsoft-edge &
+			XDG_CURRENT_DESKTOP="KDE" microsoft-edge &
 		elif [[ -f /usr/bin/google-chrome ]]; then
-			google-chrome &
+			XDG_CURRENT_DESKTOP="KDE" google-chrome &
 		else
 			msg "No suitable web browser found!"
 		fi

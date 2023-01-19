@@ -14,11 +14,12 @@ vim.cmd[[
                 \ { 'l': '~/dotfiles/batteryPopup'},
                 \ { 'o': '~/dotfiles/ohmyzsh/.oh-my-zsh' },
                 \ { 'a': '~/dotfiles/alacritty/.config/alacritty'},
+                \ { 'r': '~/dotfiles/ranger/.config/ranger/rc.conf'},
                 \ { 't': '~/dotfiles/tmux'},
                 \ { 'b': '~/dotfiles/bash'},
                 \ { 'P': '~/dotfiles/picom/.config/picom'},
                 \ { 'T': '~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim'},
-                \ { 'r': '~/dotfiles/rofi/.config/rofi'},
+                \ { 'R': '~/dotfiles/rofi/.config/rofi'},
                 \ { 'C': '~/dotfiles/colorls'},
                 \ { 'p': '~/dotfiles/polybar-bitmap/.config/polybar/cuts'},
                 \ { 'w': '~/Semester::2:1/ZNotes'}]

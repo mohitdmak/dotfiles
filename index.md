@@ -24,12 +24,14 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
 ## Todo
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
-* [ ] browser open ranger for file upload download
+* [X] browser open ranger for file upload download
+    * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script
 * [ ] allow mouse inputs - toggling sys keyboard / system shut/sleep / power / brightness/volume/bt etc
 * [ ] ask for save location scrot screenshot
-* [ ] Customize recently added Grammarly LSP
+* [ ] rofi bluetooth and network
 * [ ] tmux/alacritty vim nav
 * [ ] bell in alacritty
+* [ ] Customize recently added Grammarly LSP
 * [X] https://github.com/folke/todo-comments.nvim
 * [X] Battery low warning more verbal
 * [X] keychron k2 extend sleep timeout
@@ -43,7 +45,6 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [ ] lookup tmux/zsh vim keybindings 
 * [ ] tokyonight border on float term
 * [ ] script run from i3.config to start all custom --user services on startup
-* [ ] rofi bluetooth and network
 * [ ] Stream mobile notififications on linux
 * [ ] Way to save tmux sessions locally periodically  (maybe even on cloud)
 * [X] systemd service to keep gh repos for dotfiles/local settings updated periodically

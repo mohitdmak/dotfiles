@@ -111,6 +111,7 @@ for_window [class="^.*"] border pixel 4
 gaps inner 0
 gaps outer 0
 smart_gaps on
+smart_borders on
 # new_window pixel 3
 # new_float pixel 3
 # hide_edge_borders vertical
