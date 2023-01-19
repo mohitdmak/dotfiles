@@ -37,24 +37,24 @@ options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
-		ans=$(confirm_exit &)
-		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			systemctl poweroff
-		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-			exit 0
-        else
-			msg
-        fi
+        systemctl poweroff
+		# ans=$(confirm_exit &)
+		# if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
+		# elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
+		# 	exit 0
+		#         else
+		# 	msg
+		#         fi
         ;;
     $reboot)
-		ans=$(confirm_exit &)
-		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			systemctl reboot
-		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-			exit 0
-        else
-			msg
-        fi
+        systemctl reboot
+		# ans=$(confirm_exit &)
+		# if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
+		# elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
+		# 	exit 0
+		#         else
+		# 	msg
+		#         fi
         ;;
     $lock)
 		if [[ -f /usr/bin/i3lock ]]; then
@@ -64,20 +64,20 @@ case $chosen in
 		fi
         ;;
     $suspend)
-		ans=$(confirm_exit &)
-		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-            # enabling keyboard if disabled due to external connection
-            xinput enable 13
-            notify-send "[[ Re-Enabling system default keyboard before suspension ]]"
-			mpc -q pause
-			amixer set Master mute
-			i3lock -i ~/dotfiles/i3wm/.config/i3/starred_wallpapers/mars.png -ef
-			systemctl suspend
-		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-			exit 0
-        else
-			msg
-        fi
+        # enabling keyboard if disabled due to external connection
+        xinput enable "AT Translated Set 2 keyboard" 
+        notify-send "[[ Re-Enabling system default keyboard before suspension ]]"
+        mpc -q pause
+        amixer set Master mute
+        i3lock -i ~/dotfiles/i3wm/.config/i3/starred_wallpapers/mars.png -ef
+        systemctl suspend
+		# ans=$(confirm_exit &)
+		# if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
+		# elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
+		# 	exit 0
+		#         else
+		# 	msg
+		#         fi
         ;;
     $logout)
 		ans=$(confirm_exit &)

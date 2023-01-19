@@ -26,10 +26,16 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [X] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script
-* [ ] allow mouse inputs - toggling sys keyboard / system shut/sleep / power / brightness/volume/bt fullscreen etc
+* [O] allow mouse inputs - 
+    * [X] >>toggling sys keyboard / 
+    * [X] system shut/sleep / power / 
+    * [X] brightness/volume/bt fullscreen etc
+    * [ ] allow above/some of above from sleep locked screen?
 * [X] ask for save location scrot screenshot
     * [X] maybe ranger enugh?
-* [ ] rofi bluetooth and network
+* [o] rofi bluetooth and network
+    * [X] bluetooth
+    * [ ] network
 * [ ] tmux/alacritty vim nav
 * [ ] bell in alacritty
 * [ ] Customize recently added Grammarly LSP

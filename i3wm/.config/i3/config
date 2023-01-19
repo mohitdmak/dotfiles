@@ -37,11 +37,13 @@ exec_always bash /home/mohitdmak/dotfiles/polybar-bitmap/.config/polybar/cuts/pr
 bindsym $mod+a exec /usr/bin/diodon
 # Display time
 bindsym $mod+t exec /home/mohitdmak/.config/rofi/bin/applet_time
+# bluetooth manager
+bindsym $mod+b exec /home/mohitdmak/dotfiles/scripts/rofi-bluetooth
 # screenshot
 bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
 # powermenu shortcut
 bindsym $mod+s exec /home/mohitdmak/.config/polybar/cuts/scripts/sleep.sh
-bindsym $mod+Shift+s exec /home/mohitdmak/.config/rofi/applets/applets/powermenu.sh
+bindsym $mod+Shift+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
 # wallpaper
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/falcon_fishing.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/fishing.png
