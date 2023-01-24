@@ -127,6 +127,7 @@ auto_backup_restore () {
 
 # system critical locations
 DOTFILES="$HOME/dotfiles"
+SEM32="$HOME/vault/sem_3_2"
 SEM31="$HOME/vault/semester::3:1"
 SEM22="$HOME/vault/sem-2-2"
 ALGOS="$HOME/algos"
@@ -140,6 +141,7 @@ paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
 
 # Start backing up . . .
 auto_backup ${DOTFILES}
+auto_backup ${SEM32}
 auto_backup ${SEM31}
 auto_backup ${SEM22}
 auto_backup_restore ${ALGOS}

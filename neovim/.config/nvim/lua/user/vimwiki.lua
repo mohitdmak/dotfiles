@@ -1,6 +1,9 @@
  -- Here we set list of our vim wiki dirs/dbs
 vim.g["vimwiki_list"] = {
     {
+      path = '~/vault/sem_3_2', path_html = '~/vault/sem_3_2/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+    },
+    {
       path = '~/vault/semester::3:1', path_html = '~/vault/Semester::3:1/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
