@@ -13,6 +13,8 @@
 %% * [ ] @MOHITDMAK: Turned Hardware acc usage off in brave (1.46.xxx) else caused blank rendering on overflow/github/few sites
 * [ ] NOTE: For obsidian/other desktop apps integration with rofi see answer by *"notachraf"* here - https://unix.stackexchange.com/questions/364773/how-to-get-installed-application-to-be-detected-by-rofi
 * [X] specific version of picom fork required, see its stow folder
+* [ ] Lookup 'locate' command - useful
+* [ ] $mod+shift+space toggles float/non-float
 * [X] tokyonight package modifications? - placed the whole site package in dotfiles, directly use it in ~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/
 * [X] super neovim/vim collection for reference - https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#ceef
 * [X] NOTEEE: ":e" reloads buffer, used to syntax highlight fenced code by language in vimwiki

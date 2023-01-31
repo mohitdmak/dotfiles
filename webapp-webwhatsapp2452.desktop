@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=web_whatsapp
+Comment=Web App
+Exec=env XDG_CURRENT_DESKTOP="KDE" google-chrome --app=https://web.whatsapp.com/ --class=WebApp-webwhatsapp2452
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=webapp-manager
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-webwhatsapp2452
+StartupNotify=true
+X-WebApp-URL=https://web.whatsapp.com/
+X-WebApp-Isolated=false
