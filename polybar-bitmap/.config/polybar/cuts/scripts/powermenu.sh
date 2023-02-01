@@ -69,7 +69,8 @@ case $chosen in
         notify-send "[[ Re-Enabling system default keyboard before suspension ]]"
         mpc -q pause
         amixer set Master mute
-        i3lock -i ~/dotfiles/i3wm/.config/i3/starred_wallpapers/mars.png -ef
+        # i3lock -i ~/dotfiles/i3wm/.config/i3/starred_wallpapers/mars.png -ef
+        i3lock -i /home/mohitdmak/.config/i3/wallpapers/0062.jpg -ef
         systemctl suspend
 		# ans=$(confirm_exit &)
 		# if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
