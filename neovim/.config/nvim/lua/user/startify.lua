@@ -22,7 +22,7 @@ vim.cmd[[
                 \ { 'R': '~/dotfiles/rofi/.config/rofi'},
                 \ { 'C': '~/dotfiles/colorls'},
                 \ { 'p': '~/dotfiles/polybar-bitmap/.config/polybar/cuts'},
-                \ { 'w': '~/Semester::2:1/ZNotes'}]
+                \ { 'w': '~/vault/iam/bio/'}]
 
     let g:startify_lists = [
               \ { 'type': 'sessions',  'header': ['   Sessions']                     },

@@ -144,6 +144,9 @@ toggle_connection() {
             notify-send "[BCTL NOTIF]: @mohtidmak: Device -
     $device 
     Connected."
+            # i3-msg restart
+            sleep 2
+            bash /home/mohitdmak/dotfiles/scripts/refresh_poly_status.sh
         else
             notify-send -u critical "[BCTL NOTIF]: @mohtidmak: Device -
     $device

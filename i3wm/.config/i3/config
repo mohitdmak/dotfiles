@@ -83,10 +83,21 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
+################### WARNING: Don't fuckin use pactl - no max vol lets it fly to >600%, accidentally blowed my drums away on headphones
+
+# set $refresh_i3status killall -SIGUSR1 i3status
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+################### NOTE: Following up on above warning, preferrably uncomment below 2 'shift' commands in order to get limitless vol changes
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 --max-volume 100 #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 --max-volume 100 #decrease sound volume
+# bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 #increase sound volume (No limit)
+# bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 #decrease sound volume (No limit)
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Brightness controls
@@ -219,6 +230,9 @@ set $ws10 "10"
 
 # floating dialog boxes
 for_window [window_role="pop-up"] floating enable
+for_window [title="PulseMixer"] floating enable resize set 800 800
+for_window [title="Ranger"] floating enable resize set 1200 800
+for_window [title="ConfigSettings"] floating enable resize set 1200 800
 for_window [window_role="task_dialog"] floating enable
 #assign apps to workspaces	
 assign [class = "urxvt"] 

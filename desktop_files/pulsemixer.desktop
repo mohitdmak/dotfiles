@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=PulseMixer
+Comment=Launches pulsemixer control settings
+Icon=utilities-terminal
+Terminal=false
+Exec=env EDITOR="nvim" alacritty --title="PulseMixer" -e pulsemixer
+# Categories=ConsoleOnly;System;FileTools;FileManager
+# MimeType=inode/directory;
+# Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python

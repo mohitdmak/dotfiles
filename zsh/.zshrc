@@ -13,6 +13,8 @@ export PATH=$HOME/.config/rofi/bin:$PATH
 export PATH=$HOME/dotfiles/scripts:$PATH
 # Add go binaries to path for some plugins dependant on it 
 export PATH=/usr/local/go/bin:$PATH
+# theme for bat
+export BAT_THEME=ansi-dark
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

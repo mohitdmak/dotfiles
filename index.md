@@ -40,6 +40,9 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
     * [ ] network
 * [ ] tmux/alacritty vim nav
 * [ ] bell in alacritty
+* [ ] fzf_lua telescope search
+* [ ] htop config, launch as .desktop with i3 for_window settings like pulsemixer's
+* [ ] <leader>F search text - toggling between allowing search on hidden/gitignored files or not
 * [ ] Customize recently added Grammarly LSP
 * [ ] op status bar but too bad, only for macos - https://github.com/FelixKratz/SketchyBar
 * [X] https://github.com/folke/todo-comments.nvim

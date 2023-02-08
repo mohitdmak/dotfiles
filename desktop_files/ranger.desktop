@@ -8,3 +8,4 @@ Exec=env BAT_THEME="ansi-dark" EDITOR="nvim" alacritty --title="Ranger" -e range
 Categories=ConsoleOnly;System;FileTools;FileManager
 MimeType=inode/directory;
 Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python
+

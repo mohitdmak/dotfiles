@@ -96,7 +96,7 @@ case $chosen in
 		if [[ -f /usr/bin/xfce4-settings-manager ]]; then
 			xfce4-settings-manager &
         elif [[ -f /usr/bin/nvim ]]; then
-            alacritty -e nvim &
+            alacritty --title="ConfigSettings" -e nvim &
 		else
 			msg "No suitable settings manager found!"
 		fi
