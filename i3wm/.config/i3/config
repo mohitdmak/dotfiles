@@ -103,6 +103,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10% 
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%- 
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id picom-trans -c +10
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id picom-trans -c -10 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
