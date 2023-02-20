@@ -95,8 +95,8 @@ exec --no-startup-id nm-applet
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 --max-volume 100 #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 --max-volume 100 #decrease sound volume
-# bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 #increase sound volume (No limit)
-# bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 #decrease sound volume (No limit)
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 #increase sound volume (No limit)
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 #decrease sound volume (No limit)
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
