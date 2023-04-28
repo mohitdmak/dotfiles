@@ -31,7 +31,7 @@ chosen="$(echo -e "$options" | $rofi_command -p "Most Used" -dmenu -selected-row
 case $chosen in
     $terminal)
         if [[ -f /usr/bin/alacritty ]]; then
-            selected=$(ls ~/dotfiles/scripts/|rofi -dmenu -p "Run: ")&&bash ~/dotfiles/scripts/$selected
+            selected=$(ls ~/legacy_dotfiles/scripts/|rofi -dmenu -p "Run: ")&&bash ~/legacy_dotfiles/scripts/$selected
             # notify-send 'heck'
 		elif [[ -f /usr/bin/alacritty ]]; then
 			alacritty &

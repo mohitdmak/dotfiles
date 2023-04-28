@@ -46,22 +46,22 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 500
+    width = 300
 
     # The maximum height of a single notification, excluding the frame.
-    height = 1300
+    height = 300
 
     # Position the notification in the top right corner
     origin = top-right
 
     # Offset from the origin
-    offset = 10x4
+    offset = 10x50
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 120
+    notification_limit = 20
 
     ### Progress bar ###
 
@@ -86,7 +86,7 @@
     progress_bar_corner_radius = 0
 
     # Corner radius for the icon image.
-    icon_corner_radius = 5
+    icon_corner_radius = 0
 
     # Show how many messages are currently hidden (because of
     # notification_limit).
@@ -101,7 +101,7 @@
     # notifications.
     # Set to 0 to disable.
     # If gap_size is greater than 0, this setting will be ignored.
-    separator_height = 0
+    separator_height = 2
 
     # Padding between text and separator.
     padding = 8
@@ -123,7 +123,7 @@
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
     # Click events on gaps do not currently propagate to applications below.
-    gap_size = 7
+    gap_size = 0
 
     # Define a color for the separator.
     # possible values are:
@@ -131,7 +131,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = foreground
+    separator_color = frame
 
     # Sort messages by urgency.
     sort = yes
@@ -145,7 +145,7 @@
 
     ### Text ###
 
-    font = Hack Nerd Font Bold 11
+    font = Monospace 8
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -185,7 +185,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "(%p) <i>%a</i>:- <b>%s</b>\n%b"
+    format = "<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -248,7 +248,7 @@
     sticky_history = yes
 
     # Maximum amount of notifications kept in history
-    history_length = 120
+    history_length = 20
 
     ### Misc/Advanced ###
 

@@ -38,4 +38,4 @@
   untracked = magenta
 
 [commit]
-	gpgsign = true
+	; gpgsign = true

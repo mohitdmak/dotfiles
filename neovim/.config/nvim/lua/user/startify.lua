@@ -1,28 +1,28 @@
 vim.cmd[[
-    let g:startify_session_dir = '~/dotfiles/neovim/.config/nvim/sessions'
+    let g:startify_session_dir = '~/.config/nvim/sessions'
     let g:startify_session_delete_buffers = 1
     let g:startify_change_to_vcs_root = 1
     let g:startify_fortune_use_unicode = 1
     let g:startify_session_persistence = 0
 
     let g:startify_bookmarks = [
-                \ { 'c': '~/dotfiles/neovim/.config/nvim' },
-                \ { 'i': '~/dotfiles/i3wm/.config/i3'},
-                \ { 'z': '~/dotfiles/zsh/.zshrc' },
-                \ { 's': '~/dotfiles/systemd-services'},
-                \ { 'S': '~/dotfiles/scripts'},
-                \ { 'l': '~/dotfiles/batteryPopup'},
-                \ { 'o': '~/dotfiles/ohmyzsh/.oh-my-zsh' },
-                \ { 'a': '~/dotfiles/alacritty/.config/alacritty'},
-                \ { 'r': '~/dotfiles/ranger/.config/ranger/rc.conf'},
-                \ { 't': '~/dotfiles/tmux'},
-                \ { 'b': '~/dotfiles/bash'},
-                \ { 'P': '~/dotfiles/picom/.config/picom'},
+                \ { 'c': '~/.config/nvim' },
+                \ { 'i': '~/.config/i3'},
+                \ { 'z': '~/.zshrc' },
+                \ { 's': '~/legacy_dotfiles/systemd-services'},
+                \ { 'S': '~/legacy_dotfiles/scripts'},
+                \ { 'l': '~/legacy_dotfiles/batteryPopup'},
+                \ { 'o': '~/.oh-my-zsh' },
+                \ { 'a': '~/.config/alacritty'},
+                \ { 'r': '~/.config/ranger/rc.conf'},
+                \ { 't': '~/legacy_dotfiles/tmux'},
+                \ { 'b': '~/legacy_dotfiles/bash'},
+                \ { 'P': '~/.config/picom'},
                 \ { 'T': '~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim'},
-                \ { 'R': '~/dotfiles/rofi/.config/rofi'},
-                \ { 'C': '~/dotfiles/colorls'},
-                \ { 'p': '~/dotfiles/polybar-bitmap/.config/polybar/cuts'},
-                \ { 'w': '~/vault/iam/bio/'}]
+                \ { 'R': '~/.config/rofi'},
+                \ { 'C': '~/legacy_dotfiles/colorls'},
+                \ { 'p': '~/.config/polybar/cuts'},
+                \ { 'w': '/home/mohitdmak/vault/iam/bio/'}]
 
     let g:startify_lists = [
               \ { 'type': 'sessions',  'header': ['   Sessions']                     },

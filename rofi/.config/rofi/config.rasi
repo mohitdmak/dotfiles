@@ -1,3 +1,5 @@
-configuration {
-	theme: "/usr/share/rofi/themes/DarkBlue.rasi";
-}
+/* configuration { */
+/* 	theme: "/usr/share/rofi/themes/DarkBlue.rasi"; */
+/* } */
+
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"

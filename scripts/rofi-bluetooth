@@ -115,7 +115,9 @@ toggle_discoverable() {
 # Checks if a device is connected
 device_connected() {
     device_info=$(bluetoothctl info "$1")
-    if echo "$device_info" | grep -q "Connected: yes"; then
+    status=$(echo "$device_info" | grep -q "Connected: yes")
+    status=$?
+    if [ $status -eq 0 ]; then
         return 0
     else
         return 1
@@ -146,7 +148,8 @@ toggle_connection() {
     Connected."
             # i3-msg restart
             sleep 2
-            bash /home/mohitdmak/dotfiles/scripts/refresh_poly_status.sh
+            # bash /home/mohitdmak/dotfiles/scripts/refresh_poly_status.sh
+            bash /home/arch/legacy_dotfiles/scripts/refresh_poly_status.sh
         else
             notify-send -u critical "[BCTL NOTIF]: @mohtidmak: Device -
     $device
@@ -214,7 +217,7 @@ print_status() {
             paired_devices_cmd="paired-devices"
         fi
 
-        mapfile -t paired_devices < <(bluetoothctl "$paired_devices_cmd" | grep Device | cut -d ' ' -f 2)
+        mapfile -t paired_devices < <(bluetoothctl $paired_devices_cmd | grep Device | cut -d ' ' -f 2)
         counter=0
 
         for device in "${paired_devices[@]}"; do
@@ -232,7 +235,7 @@ print_status() {
         done
         printf "\n"
     else
-        echo ""
+        echo " Down"
     fi
 }
 
@@ -340,6 +343,16 @@ rofi_command="rofi -dmenu $* -p"
 case "$1" in
     --status)
         print_status
+        # device="B8:98:AD:32:A8:82"
+        # device="DC:2C:26:33:7B:DA"
+        # device="FE:5D:F8:B2:C9:EB"
+        # device_connected "$device"
+        # if [ $? -eq 1 ]; then
+        # if device_connected $device; then
+        #     echo "HOLAAAAAAAAAA"
+        # else
+        #     echo bye
+        # fi
         ;;
     *)
         show_menu

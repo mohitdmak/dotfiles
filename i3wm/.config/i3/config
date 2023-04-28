@@ -11,10 +11,6 @@
 
 set $mod Mod4
 
-# Set gaps settings
-# gaps outer 2
-# gaps inner 10
-
 # touchpad click and scroll settings (NOTE : PROBABLY VALID FOR PERSONAL MACHINE ONLY)
 # FOR OTHERS, FOLLOW GUIDE:
 # 1) xinput list : lists available input devices, get id of required device (touchpad)
@@ -32,18 +28,26 @@ exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = BackSpace"
 # exec_always --no-startup-id i3-battery-popup -n -s /home/mohitdmak/dotfiles/i3-battery-popup/battery-popup.wav -L 20
 # exec_always --no-startup-id bash /home/mohitdmak/dotfiles/i3-battery-popup/activate_battery_notifier.sh
 # Polybar status bar launcher
-exec_always bash /home/mohitdmak/dotfiles/polybar-bitmap/.config/polybar/cuts/preview.sh
+# exec_always bash /home/mohitdmak/dotfiles/polybar-bitmap/.config/polybar/cuts/preview.sh
+# exec_always bash /home/arch/legacy_dotfiles/polybar-bitmap/.config/polybar/cuts/preview.sh
+exec_always --no-startup-id killall -q polybar && while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done && polybar
+exec_always --no-startup-id killall -q dunst && while pgrep -u $UID -x dunst >/dev/null; do sleep 1; done && dunst
 # Diodon clipboard (FOR PERSONAL MACHINE ONLY)
 bindsym $mod+a exec /usr/bin/diodon
 # Display time
-bindsym $mod+t exec /home/mohitdmak/.config/rofi/bin/applet_time
+# bindsym $mod+t exec /home/mohitdmak/.config/rofi/bin/applet_time
+bindsym $mod+t exec /home/arch/.config/rofi/bin/applet_time
 # bluetooth manager
-bindsym $mod+b exec /home/mohitdmak/dotfiles/scripts/rofi-bluetooth
+# bindsym $mod+b exec /home/mohitdmak/dotfiles/scripts/rofi-bluetooth
+bindsym $mod+b exec /home/arch/legacy_dotfiles/scripts/rofi-bluetooth
 # screenshot
-bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
+# bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
+bindsym Print exec /home/arch/.config/rofi/bin/applet_screenshot
 # powermenu shortcut
-bindsym $mod+s exec /home/mohitdmak/.config/polybar/cuts/scripts/sleep.sh
-bindsym $mod+Shift+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
+# bindsym $mod+s exec /home/mohitdmak/.config/polybar/cuts/scripts/sleep.sh
+bindsym $mod+s exec /home/arch/.config/polybar/cuts/scripts/sleep.sh
+# bindsym $mod+Shift+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
+bindsym $mod+Shift+s exec /home/arch/.config/polybar/cuts/scripts/powermenu.sh
 # wallpaper
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/falcon_fishing.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/fishing.png
@@ -55,10 +59,10 @@ bindsym $mod+Shift+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/big_bright_planet.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/sky_under_sea.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/seaview.jpg
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0062.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0062.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0002.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0003.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0012.jpg
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0012.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/forest-road.jpg
 
@@ -103,8 +107,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10% 
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%- 
-bindsym Shift+XF86MonBrightnessUp exec --no-startup-id picom-trans -c +10
-bindsym Shift+XF86MonBrightnessDown exec --no-startup-id picom-trans -c -10 
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id picom-trans -c +5
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id picom-trans -c -5 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -123,9 +127,9 @@ bindsym $mod+Control+q kill
 for_window [class="^.*"] border pixel 4
 # for_window [con_id="__focused__"] border pixel 2
 # gaps inner 20
-gaps inner 0
-gaps outer 0
-smart_gaps on
+gaps inner 5
+gaps outer 3
+smart_gaps off
 smart_borders on
 # new_window pixel 3
 # new_float pixel 3
@@ -156,7 +160,8 @@ floating_maximum_size 1500 x 1500
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec /home/mohitdmak/.config/rofi/bin/applet_apps
+# bindsym $mod+d exec /home/mohitdmak/.config/rofi/bin/applet_apps
+bindsym $mod+d exec /home/arch/.config/rofi/bin/applet_apps
 # bindsym $mod+d exec bash ~/.config/rofi/launchers/misc/launcher.sh 
 # Start compton
 # exec_always --no-startup-id compton --backend glx --vsync opengl --config ~/.config/compton.conf

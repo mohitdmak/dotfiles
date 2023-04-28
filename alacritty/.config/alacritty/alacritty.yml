@@ -31,6 +31,7 @@ window:
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
+  opacity: 1.0
   dimensions:
     columns: 200
     lines: 50
@@ -114,7 +115,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: Hack Nerd Font -- COMPLETELY AVAILABLE -- MAJOR FONT
+    # family: Hack Nerd Font # -- COMPLETELY AVAILABLE -- MAJOR FONT
     family: JetBrainsMono Nerd Font  # -- COMPLETELY AVAILABLE -- MAJOR FONT -- https://github.com/ryanoasis/nerd-fonts
     # STYLES AVAILABLE FOR JETBRAINSMONO NERD FONT : Regular/Bold/Bold Italic/Italic/SemiBold/SemiBold Italic/Medium/Medium Italic
 
@@ -660,7 +661,7 @@ bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.88
+# background_opacity: 0.88 ### DEPRECIATED (SEE window.opacity)
 
 #selection:
   # This string contains all characters that are used as separators for

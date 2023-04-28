@@ -1,7 +1,7 @@
  -- Here we set list of our vim wiki dirs/dbs
 vim.g["vimwiki_list"] = {
     {
-      path = '~/vault/sem_3_2', path_html = '~/vault/sem_3_2/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+      path = '~/../mohitdmak/vault/sem_3_2', path_html = '~/vault/sem_3_2/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
       path = '~/vault/semester::3:1', path_html = '~/vault/Semester::3:1/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
@@ -11,7 +11,7 @@ vim.g["vimwiki_list"] = {
       path = '/var/log/logs', path_html = '/var/log/logs', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
-      path = '~/algos/my/docs', path_html = '~/algos/my/docs/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+      path = '~/../mohitdmak/algos/my/docs', path_html = '~/../mohitdmak/algos/my/docs/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
       path = '~/dotfiles', path_html = '~/dotfiles/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"

@@ -13,8 +13,14 @@ export PATH=$HOME/.config/rofi/bin:$PATH
 export PATH=$HOME/dotfiles/scripts:$PATH
 # Add go binaries to path for some plugins dependant on it 
 export PATH=/usr/local/go/bin:$PATH
+# Add ruby gems to path
+export PATH=/home/arch/.local/share/gem/ruby/3.0.0/bin:$PATH
+# Add miniconda to path
+export PATH=/home/arch/tools/miniconda3/bin:$PATH
 # theme for bat
 export BAT_THEME=ansi-dark
+# wayland for firefox
+export MOZ_ENABLE_WAYLAND=1
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -156,20 +162,6 @@ fi
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mohitdmak/tools/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mohitdmak/tools/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mohitdmak/tools/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mohitdmak/tools/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # Pro keychron k2v2 keyboard setup
 # make caps lock another backspace key
@@ -177,3 +169,19 @@ unset __conda_setup
 # exec xmodmap -e "keysym Caps_Lock = BackSpace" 
 # # increase keystroke input speed and reduce delay/repeat times
 # exec xset r rate 200 35
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/arch/tools/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/arch/tools/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/arch/tools/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/arch/tools/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

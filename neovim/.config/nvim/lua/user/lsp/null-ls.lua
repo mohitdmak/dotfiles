@@ -13,7 +13,8 @@ null_ls.setup({
     autostart = true,
 	sources = {
         -- formatting.uncrustify.with({ filetypes = {"c", "cpp"}, command = "uncrustify" }),
-        formatting.clang_format.with({ filetypes = {"c", "cpp"}, command = "clang-format" }),
+        -- formatting.clang_format.with({ filetypes = {"c", "cpp"}, command = "clang-format", extra_args = {"-style=file:/home/arch/.config/nvim/lua/user/lsp/null_ls_clang_spec.clang-format"} }),
+        formatting.clang_format.with({ filetypes = {"c", "cpp"}, command = "clang-format -style=file:/home/arch/.config/nvim/lua/user/lsp/null_ls_clang_spec.clang-format" }),
 		formatting.prettier.with({ extra_args = {   "--jsx-single-quote", "--tab-width 4", "--no-semi"  }}),
 		formatting.black.with({extra_args = {"--line-length", "90"}}),
 		formatting.stylua,

@@ -2,7 +2,8 @@
 Description="Run custom script to trigger suspend mechanisms on low battery power."
 
 [Service]
-ExecStart=/home/mohitdmak/.config/batteryPopup/activate_battery_mechanisms.sh
+; ExecStart=/home/mohitdmak/.config/batteryPopup/activate_battery_mechanisms.sh
+ExecStart=/home/arch/.config/batteryPopup/activate_battery_mechanisms.sh
 
 [Install]
 WantedBy=multi-user.target

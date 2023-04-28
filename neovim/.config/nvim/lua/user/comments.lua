@@ -10,5 +10,10 @@ require('nvim_comment').setup({
   -- Visual/Operator mapping left hand side
   operator_mapping = "?",
   -- Hook function to call before commenting takes place
-  hook = nil,
+  -- hook = nil,
+  hook = function()
+    if vim.api.nvim_buf_get_option(0, "filetype") == "c" then
+      vim.api.nvim_buf_set_option(0, "commentstring", "// %s")
+    end
+  end
 })
