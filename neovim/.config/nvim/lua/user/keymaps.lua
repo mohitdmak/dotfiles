@@ -67,16 +67,16 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Differentiating between cut and delete?
 
 -- Better window navigation
-keymap("n", "<A-e>", "<cmd>NvimTreeToggle<cr>", opts)
-keymap("n", "<A-r>", ":cd %:p:h<cr>:pwd<cr>", opts) -- reset nvim-tree root
+keymap("n", "<C-_>", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<C-X>", ":cd %:p:h<cr>:pwd<cr>", opts) -- reset nvim-tree root
 keymap("n", "<leader>q", "<cmd>q!<CR>", opts)
 keymap("n", "<leader>Q", "<cmd>qa!<CR>", opts)
-keymap("n", "<A-h>", "<C-w>h", opts)
-keymap("n", "<A-j>", "<C-w>j", opts)
-keymap("n", "<A-k>", "<C-w>k", opts)
-keymap("n", "<A-l>", "<C-w>l", opts)
--- keymap("n", "<A-S-j>", "<C-w>J", opts)
--- keymap("n", "<A-S-k>", "<C-w>K", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+-- keymap("n", "<M-S-j>", "<C-w>J", opts)
+-- keymap("n", "<M-S-k>", "<C-w>K", opts)
 
 -- Better Tab navigation
 keymap("n", "<Tab>", ":tabn<CR>", opts)
@@ -100,24 +100,27 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<A-b>", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
-keymap("n", "<A-t>", "<ESC><CMD>ToggleTerm size=14 direction=horizontal<CR>", opts)
-keymap("n", "<A-w>", "<cmd>w! <CR> :NvimTreeRefresh<CR>", opts)
-keymap("n", "<A-C-h>", ":BufferLineCyclePrev<CR>", opts)
-keymap("n", "<A-C-l>", ":BufferLineCycleNext<CR>", opts)
-keymap("n", "<A-C-j>", ":b#<CR>", opts)
-keymap("n", "<A-C-q>", "<cmd>Bdelete!<CR>", opts)
-keymap("n", "<A-H>", ":BufferLineMovePrev<CR>", opts)
-keymap("n", "<A-L>", ":BufferLineMoveNext<CR>", opts)
-keymap("n", "<A-1>", ":BufferLineGoToBuffer 1<CR>", opts)
-keymap("n", "<A-2>", ":BufferLineGoToBuffer 2<CR>", opts)
-keymap("n", "<A-3>", ":BufferLineGoToBuffer 3<CR>", opts)
-keymap("n", "<A-4>", ":BufferLineGoToBuffer 4<CR>", opts)
-keymap("n", "<A-5>", ":BufferLineGoToBuffer 5<CR>", opts)
-keymap("n", "<A-6>", ":BufferLineGoToBuffer 6<CR>", opts)
-keymap("n", "<A-7>", ":BufferLineGoToBuffer 7<CR>", opts)
-keymap("n", "<A-8>", ":BufferLineGoToBuffer 8<CR>", opts)
-keymap("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", opts)
+-- keymap("n", "<M-b>", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
+keymap("n", "<C-t>", "<ESC><CMD>ToggleTerm size=14 direction=horizontal<CR>", opts)
+keymap("n", "<C-y>", "<cmd>w! <CR> :NvimTreeRefresh<CR>", opts)
+keymap("n", "<C-d>", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<C-b>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<C-c>", ":b#<CR>", opts)
+-- keymap("n", "<M-C-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<C-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<C-e>", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<C-f>", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<C-g>", ":BufferLineGoToBuffer 1<CR>", opts)
+keymap("n", "<C-m>", ":BufferLineGoToBuffer 2<CR>", opts)
+keymap("n", "<C-n>", ":BufferLineGoToBuffer 3<CR>", opts)
+keymap("n", "<C-o>", ":BufferLineGoToBuffer 4<CR>", opts)
+keymap("n", "<C-p>", ":BufferLineGoToBuffer 5<CR>", opts)
+keymap("n", "<C-s>", ":BufferLineGoToBuffer 6<CR>", opts)
+keymap("n", "<C-t>", ":BufferLineGoToBuffer 7<CR>", opts)
+keymap("n", "<C-u>", ":BufferLineGoToBuffer 8<CR>", opts)
+-- keymap("n", "<C-y>", ":BufferLineGoToBuffer 9<CR>", opts) -- C-y used in cmd-w saving ball
+-- NOTE: ctrl + i is mostly free
+-- g m n o p s t u y
 
 -- Move text up and down
 --keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -128,6 +131,12 @@ keymap("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 -- to move cursor ahead of brackets and quotes
 keymap("i", "kj", "<right>", opts)
+-- map <M-v> "+p<CR>
+-- keymap("i", "<M-v>", '"+p<CR>', opts)
+
+-- toggle fullscreen
+keymap("n", "<M-f>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", opts)
+-- vim.api.nvim_set_keymap('n', '<M-f>', ':let g:neovide_fullscreen = !g:neovide_fullscreen<CR>')
 
 -- Visual --
 -- Stay in indent mode

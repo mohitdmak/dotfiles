@@ -131,7 +131,7 @@ export NVM_DIR="$HOME/.nvm"
 # Setting preffered editors for remote and remote sessions
 #Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
+  export EDITOR='vim'
 else
   export EDITOR='nvim'
 fi

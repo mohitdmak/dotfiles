@@ -130,7 +130,7 @@ bufferline.setup {
 -- THEME SETTINGS:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   highlights = {
     fill = {
-      fg = { attribute = "fg", highlight = "#ff0000" },
+      -- fg = { attribute = "fg", highlight = "#ff0000" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
     background = {
@@ -139,8 +139,8 @@ bufferline.setup {
     },
 
     buffer_selected = {
-      fg = {attribute='fg',highlight='#ff0000'},
-      bg = {attribute='bg',highlight='#0000ff'},
+      -- fg = {attribute='fg',highlight='#ff0000'},
+      -- bg = {attribute='bg',highlight='#0000ff'},
       -- gui = 'none'
       underline = false, undercurl = false, italic = false
       },
