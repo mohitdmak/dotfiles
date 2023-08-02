@@ -35,6 +35,7 @@
     * [X] >>toggling sys keyboard / 
     * [X] system shut/sleep / power / 
     * [X] brightness/volume/bt fullscreen etc
+    * [X] gestures DONE!
     * [ ] allow above/some of above from sleep locked screen?
 * [X] ask for save location scrot screenshot
     * [X] maybe ranger enugh?
@@ -54,6 +55,7 @@
 * [X] nvim startify add systemd config page and batterypopup
 * [ ] maybe replace current to use mason.nvim later
 * [ ] lazy.nvim?
+* [ ] conky widgets?
 * [ ] wine configs - picom, fonts, etc
 * [X] fingerprint reader for sudo/etc?
     * [ ] TOO risky, for corruption due to 2 drivers from windows/linux
