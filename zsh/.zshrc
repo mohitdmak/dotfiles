@@ -27,6 +27,10 @@ export MOZ_ENABLE_WAYLAND=1
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
+# NEW driver (from mac m2)
+# NOTE: To remove conda env prefix to fix breaking zsh themes, run foll:
+# conda config --set env_prompt ""
+# conda config --set changeps1 false
 ZSH_THEME="jonathan"
 # Using POWERLINE FONT (my longstanding driver)
 # ZSH_THEME="powerlevel9k/powerlevel9k"
