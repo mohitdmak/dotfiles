@@ -118,7 +118,7 @@ local mappings = {
     --v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   --},
 
-  p = {
+  P = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
     i = { "<cmd>PackerInstall<cr>", "Install" },
@@ -127,7 +127,7 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
-  y = {
+  Y = {
     name = "WikiLogs",
     n = { ":VimwikiMakeDiaryNote<cr>", "Log today" },
     y = { ":VimwikiMakeYesterdayDiaryNote<cr>", "Log yesterday" },
@@ -138,8 +138,9 @@ local mappings = {
 
   z = {
     name = "Screen Cleaner",
-    g = { ':Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR> :set signcolumn=no<CR>', "Git signs and highlight" },
-    G = { ':Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR> :set signcolumn=yes<CR>', "Reverses 'g'" },
+    g = { ':Gitsigns toggle_numhl<CR> :Gitsigns toggle_signs<CR>', "Toggle Git signs and highlight" },
+    c = { ':set signcolumn=no<CR>', "Remove sign column" },
+    C = { ':set signcolumn=yes<CR>', "Add sign column" },
     s = { ":set noruler<CR> :set laststatus=0 :set cmdheight=0<CR>", "Status line and ruler" },
     S = { ":set laststatus=2<CR>", "Reverses 's'" },
     l = { ":lua vim.diagnostic.disable()<CR>", "Disable all LSP diagnostics" },

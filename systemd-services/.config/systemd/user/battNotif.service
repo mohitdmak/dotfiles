@@ -6,4 +6,5 @@ Description="Run custom script to trigger notifications on low battery power."
 ExecStart=/home/arch/.config/batteryPopup/activate_battery_notifier.sh
 
 [Install]
-WantedBy=multi-user.target
+; WantedBy=multi-user.target
+WantedBy=default.target

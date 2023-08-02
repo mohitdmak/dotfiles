@@ -15,5 +15,8 @@ require('nvim_comment').setup({
     if vim.api.nvim_buf_get_option(0, "filetype") == "c" then
       vim.api.nvim_buf_set_option(0, "commentstring", "// %s")
     end
+    if vim.api.nvim_buf_get_option(0, "filetype") == "cpp" then
+      vim.api.nvim_buf_set_option(0, "commentstring", "// %s")
+    end
   end
 })

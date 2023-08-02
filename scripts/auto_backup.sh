@@ -126,11 +126,12 @@ auto_backup_restore () {
 }
 
 # system critical locations
-DOTFILES="$HOME/dotfiles"
-SEM32="$HOME/vault/sem_3_2"
-SEM31="$HOME/vault/semester::3:1"
-SEM22="$HOME/vault/sem-2-2"
-ALGOS="$HOME/algos"
+# DOTFILES="$HOME/dotfiles"
+DOTFILES="$HOME/legacy_dotfiles"
+SEM32="/home/mohitdmak/vault/sem_3_2"
+SEM31="/home/mohitdmak/vault/semester::3:1"
+SEM22="/home/mohitdmak/vault/sem-2-2"
+ALGOS="/home/mohitdmak/algos"
 
 # Send system wide warning
 notify-send -u critical "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Auto Backing up System Critical GIT Locations; Avoid ShutDown."
@@ -141,7 +142,7 @@ paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
 
 # Start backing up . . .
 auto_backup ${DOTFILES}
-auto_backup ${SEM32}
-auto_backup ${SEM31}
-auto_backup ${SEM22}
+# auto_backup ${SEM32}
+# auto_backup ${SEM31}
+# auto_backup ${SEM22}
 auto_backup_restore ${ALGOS}

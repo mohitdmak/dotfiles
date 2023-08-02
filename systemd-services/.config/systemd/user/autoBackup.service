@@ -7,4 +7,5 @@ Wants=autoBackup.timer
 ExecStart=/home/arch/legacy_dotfiles/scripts/auto_backup.sh
 
 [Install]
-WantedBy=multi-user.target
+; WantedBy=multi-user.target
+WantedBy=default.target

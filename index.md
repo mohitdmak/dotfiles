@@ -1,5 +1,12 @@
 # Dotfiles
 
+## Note:
+* X11 configs tutorial - https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
+* Keychron shortcuts:
+    disable auto sleep: fn+s+l+o
+    Auto sleep in 10mins: Press fn+s+l+r for four seconds
+    Auto sleep in 20mins: Press fn+s+l+t for four seconds
+    Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
 ## Vim 
 * [New bindings](vim_learnings)
@@ -19,10 +26,6 @@
 * [X] super neovim/vim collection for reference - https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#ceef
 * [X] NOTEEE: ":e" reloads buffer, used to syntax highlight fenced code by language in vimwiki
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
-disable auto sleep: fn+s+l+o
-Auto sleep in 10mins: Press fn+s+l+r for four seconds
-Auto sleep in 20mins: Press fn+s+l+t for four seconds
-Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
 ## Todo
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT

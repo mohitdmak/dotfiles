@@ -20,6 +20,10 @@ exec xinput set-prop 11 320 1
 exec xinput set-prop 11 304 1
 # Keyboard input speed Set initial delay 300ms, repeat 35ms
 exec --no-startup-id xset r rate 200 35 
+# enable write perms on brightness special file for polybar scrolling controls TODO: sudo usage ?
+# exec --no-startup-id sudo chmod o+rw /sys/class/backlight/intel_backlight/brightness
+# enable touchpad custom gestures
+exec --no-startup-id /usr/bin/touchegg
 # Switch caps to backspace
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = BackSpace" 
@@ -33,7 +37,10 @@ exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = BackSpace"
 exec_always --no-startup-id killall -q polybar && while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done && polybar
 exec_always --no-startup-id killall -q dunst && while pgrep -u $UID -x dunst >/dev/null; do sleep 1; done && dunst
 # Diodon clipboard (FOR PERSONAL MACHINE ONLY)
-bindsym $mod+a exec /usr/bin/diodon
+# Copyq clipboard (ARCH)
+# bindsym $mod+a exec /usr/bin/diodon
+exec_always --no-startup-id copyq
+bindsym $mod+a exec copyq menu
 # Display time
 # bindsym $mod+t exec /home/mohitdmak/.config/rofi/bin/applet_time
 bindsym $mod+t exec /home/arch/.config/rofi/bin/applet_time
@@ -57,12 +64,13 @@ bindsym $mod+Shift+s exec /home/arch/.config/polybar/cuts/scripts/powermenu.sh
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/astrowalk.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/meteorites.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/big_bright_planet.jpg
-# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/sky_under_sea.jpg
+exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/sky_under_sea.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/seaview.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0062.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0002.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0003.jpg
-exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0012.jpg
+# exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0012.jpg
+# exec_always --no-startup-id feh --bg-scale /home/arch/.config/i3/starred_wallpapers/sebastian-boring-Y1N6Gl7K5CQ-unsplash.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/forest-road.jpg
 
@@ -128,7 +136,7 @@ for_window [class="^.*"] border pixel 4
 # for_window [con_id="__focused__"] border pixel 2
 # gaps inner 20
 gaps inner 5
-gaps outer 3
+gaps outer 2
 smart_gaps off
 smart_borders on
 # new_window pixel 3

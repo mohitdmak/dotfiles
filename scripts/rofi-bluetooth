@@ -147,9 +147,9 @@ toggle_connection() {
     $device 
     Connected."
             # i3-msg restart
-            sleep 2
+            # sleep 2
             # bash /home/mohitdmak/dotfiles/scripts/refresh_poly_status.sh
-            bash /home/arch/legacy_dotfiles/scripts/refresh_poly_status.sh
+            # bash /home/arch/legacy_dotfiles/scripts/refresh_poly_status.sh
         else
             notify-send -u critical "[BCTL NOTIF]: @mohtidmak: Device -
     $device

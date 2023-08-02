@@ -146,6 +146,11 @@ keymap("v", "T,", ":Tab /,<CR>", opts)
 -- Move text up and down
 -- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 -- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+
+-- System/buffer clipboards
+keymap("v", "<leader>y", '"+y', opts)
+keymap("v", "<leader>p", '"+p', opts)
+keymap("n", "<leader>p", '"+p', opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
