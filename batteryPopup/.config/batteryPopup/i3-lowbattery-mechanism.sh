@@ -1,11 +1,12 @@
 #!/bin/bash
 
 lock() {
-    mpc -q pause
-    amixer set Master mute
-    # i3lock -i ~/dotfiles/i3wm/.config/i3/starred_wallpapers/mars.png -ef
-    i3lock -i /home/arch/.config/i3/starred_wallpapers/mars.png -ef
-    systemctl suspend
+    # /home/arch/.config/polybar/cuts/scripts/sleep.sh
+    # mpc -q pause
+    # amixer set Master mute
+    # # i3lock -i ~/dotfiles/i3wm/.config/i3/starred_wallpapers/mars.png -ef
+    # i3lock -i /home/arch/.config/i3/starred_wallpapers/mars.png -ef
+    # systemctl suspend
 }
 
 notify-user() {
@@ -20,9 +21,10 @@ main(){
         read -r status capacity
 
         if [ "$status" = Discharging ]; then
-            if [ "$capacity" -lt 5 ]; then
+            if [ "$capacity" -lt 50 ]; then
                 notify-user
-                lock
+                # lock
+                exec /home/arch/.config/polybar/cuts/scripts/sleep.sh
             fi
         fi
     }
@@ -30,5 +32,5 @@ main(){
 
 while true; do
     main
-    sleep 120
+    sleep 20
 done

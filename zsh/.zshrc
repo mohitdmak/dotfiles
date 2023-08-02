@@ -27,8 +27,9 @@ export MOZ_ENABLE_WAYLAND=1
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-# Using POWERLINE FONT
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="jonathan"
+# Using POWERLINE FONT (my longstanding driver)
+# ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 # Configuring airline for terminal
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir docker_machine dir_writable)

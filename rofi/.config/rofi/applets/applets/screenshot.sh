@@ -27,21 +27,21 @@ chosen="$(echo -e "$options" | $rofi_command -p 'scrot' -dmenu -selected-row 1)"
 case $chosen in
     $screen)
 		if [[ -f /usr/bin/scrot ]]; then
-			sleep 1; scrot 'ss-full_%H-%M-%S_%d-%m-%Y.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+			sleep 1; scrot 'ss-full_%H-%M-%S_%d-%m-%Y.png' -e 'mv $f /home/arch/ss/ ; feh /home/arch/ss/$f'
 		else
 			msg
 		fi
         ;;
     $area)
 		if [[ -f /usr/bin/scrot ]]; then
-			scrot -s 'ss-part_%H-%M-%S_%d-%m-%Y.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+			scrot -s 'ss-part_%H-%M-%S_%d-%m-%Y.png' -e 'mv $f /home/arch/ss/ ; feh /home/arch/ss/$f'
 		else
 			msg
 		fi
         ;;
     $window)
 		if [[ -f /usr/bin/scrot ]]; then
-			sleep 1; scrot -u 'ss-wind_%H-%M-%S_%d-%m-%Y.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+			sleep 1; scrot -s 'ss-wind_%H-%M-%S_%d-%m-%Y.png' -e 'mv $f /home/arch/ss/ ; feh /home/arch/ss/$f'
 		else
 			msg
 		fi
