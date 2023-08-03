@@ -46,7 +46,7 @@ bindsym $mod+a exec copyq menu
 bindsym $mod+t exec /home/arch/.config/rofi/bin/applet_time
 # bluetooth manager
 # bindsym $mod+b exec /home/mohitdmak/dotfiles/scripts/rofi-bluetooth
-bindsym $mod+b exec /home/arch/legacy_dotfiles/scripts/rofi-bluetooth
+bindsym $mod+b exec /home/arch/legacy_dotfiles/scripts/misc/rofi-bluetooth
 # screenshot
 # bindsym Print exec /home/mohitdmak/.config/rofi/bin/applet_screenshot
 bindsym Print exec /home/arch/.config/rofi/bin/applet_screenshot
