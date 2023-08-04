@@ -21,7 +21,7 @@ exec xinput set-prop 11 304 1
 # Keyboard input speed Set initial delay 300ms, repeat 35ms
 exec --no-startup-id xset r rate 200 35 
 # enable write perms on brightness special file for polybar scrolling controls TODO: sudo usage ?
-# exec --no-startup-id sudo chmod o+rw /sys/class/backlight/intel_backlight/brightness
+    # DONE! -> ADDED A udev rule, see udev-rules dir in dots
 # enable touchpad custom gestures
 exec --no-startup-id /usr/bin/touchegg
 # Switch caps to backspace
