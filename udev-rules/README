@@ -1,0 +1,2 @@
+Place these rules in - /etc/udev/rules.d/
+NOTTE: For backlight rule, make sure your user is also added to the 'video' group
