@@ -18,14 +18,19 @@ vim.cmd [[
     au BufWinEnter p3.py silent! loadview 1
     au BufWinLeave p4.py mkview 1
     au BufWinEnter p4.py silent! loadview 1
-    au BufWinLeave a1.cpp mkview 1
-    au BufWinEnter a1.cpp silent! loadview 1
+    au BufWinLeave *.cpp mkview 1
+    au BufWinEnter *.cpp silent! loadview 1
   augroup END
 
   augroup _git
     autocmd!
     autocmd FileType gitcommit setlocal wrap
     autocmd FileType gitcommit setlocal spell
+  augroup end
+
+  augroup _vimwiki
+    autocmd!
+    autocmd FileType vimwiki setlocal nowrap
   augroup end
 
   augroup _markdown
