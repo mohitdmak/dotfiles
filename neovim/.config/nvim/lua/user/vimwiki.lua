@@ -1,10 +1,10 @@
  -- Here we set list of our vim wiki dirs/dbs
 vim.g["vimwiki_list"] = {
     {
-      path = '~/../mohitdmak/vault/sem_3_2', path_html = '~/vault/sem_3_2/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+      path = '~/../mohitdmak/vault/sem_4_1', path_html = '~/vault/sem_4_1/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
-      path = '~/vault/semester::3:1', path_html = '~/vault/Semester::3:1/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+      path = '~/../mohitdmak/vault/sem_3_2', path_html = '~/vault/sem_3_2/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
       -- path = '~/vault/logs', path_html = '~/vault/logs/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
@@ -18,9 +18,6 @@ vim.g["vimwiki_list"] = {
     },
     {
       path = '~/gsoc', path_html = '~/gsoc/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
-    },
-    {
-      path = '~/vault/sem-2-2', path_html = '~/vault/sem-2-2/html', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
   }
 

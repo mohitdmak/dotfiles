@@ -128,6 +128,7 @@ auto_backup_restore () {
 # system critical locations
 # DOTFILES="$HOME/dotfiles"
 DOTFILES="$HOME/legacy_dotfiles"
+SEM41="/home/mohitdmak/vault/sem_4_1"
 SEM32="/home/mohitdmak/vault/sem_3_2"
 SEM31="/home/mohitdmak/vault/semester::3:1"
 SEM22="/home/mohitdmak/vault/sem-2-2"
@@ -142,6 +143,7 @@ paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
 
 # Start backing up . . .
 auto_backup ${DOTFILES}
+auto_backup ${SEM41}
 # auto_backup ${SEM32}
 # auto_backup ${SEM31}
 # auto_backup ${SEM22}
