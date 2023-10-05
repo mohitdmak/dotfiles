@@ -30,8 +30,19 @@
 ## Todo
 * [ ] checkout - https://wiki.archlinux.org/title/list_of_applications
     * [ ] download manager
-    * [ ] video player
+    * [ ] utilities for system/process monitoring (tui/gui/htop)
+    * [ ] calculator (Sci)
+    * [ ] power monitoring
+    * [ ] package (pacman) monitoring
+    * [ ] notification server
+    * [ ] https://github.com/majido/clipper - shared clipboard android & arch
+    * [ ] video player?
+    * [ ] webcam?
+    * [ ] android notifs on pc? 
+    * [ ] https://github.com/jersou/mouse-actions later?
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
+* [ ] what to do of stacer (installed, should uninstall?)
+* [ ] clipboard history size + fuzzy search fix
 * [X] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script
 * [O] allow mouse inputs - 
