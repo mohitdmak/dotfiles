@@ -28,6 +28,9 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
+* [ ] checkout - https://wiki.archlinux.org/title/list_of_applications
+    * [ ] download manager
+    * [ ] video player
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [X] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script

@@ -18,6 +18,8 @@ set $mod Mod4
 # 3) xinput set-prop <device_id> <prop_id> 1 : sets the property value to 1 
 exec xinput set-prop 11 320 1
 exec xinput set-prop 11 304 1
+# set screen timeout after 15 min (default = 600 = 10 min)
+exec xset s 900
 # Keyboard input speed Set initial delay 300ms, repeat 35ms
 exec --no-startup-id xset r rate 200 35 
 # enable write perms on brightness special file for polybar scrolling controls TODO: sudo usage ?
