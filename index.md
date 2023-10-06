@@ -40,7 +40,13 @@
     * [ ] webcam?
     * [ ] android notifs on pc? 
     * [ ] https://github.com/jersou/mouse-actions later?
-* [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
+* [O] Wlan0 issue debugging:
+    * [X] disabled and stopped iwd (conflicting service with Nm and wpa_supplicant)
+    * [X] iw dev wlan0 set power_save off (tried for fix on wifi, lets see)
+    * [X] created /etc/NetworkManager/conf.d/wifi_rand_mac.conf to disable randomization of MAC address sent to wifi routers (privacy, but unstable nw) (see https://wiki.archlinux.org/title/NetworkManager#Configuring_MAC_address_randomization)
+    * [X] [todo] got to know I should disable dhcpd.service too (Nm has it's own dhcp manager)
+    * [X] is this needed - https://wiki.archlinux.org/title/IPv6#Disable_IPv6 ? since dhcpd only attempts IPv6 solicitation in logs? - NOOO
+    * [ ] should also disable ntpd.service?? - NOOO
 * [ ] what to do of stacer (installed, should uninstall?)
 * [ ] clipboard history size + fuzzy search fix
 * [X] browser open ranger for file upload download
@@ -56,6 +62,7 @@
 * [o] rofi bluetooth and network
     * [X] bluetooth
     * [ ] network
+* [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [ ] tmux/alacritty vim nav
 * [ ] bell in alacritty
 * [ ] fzf_lua telescope search
