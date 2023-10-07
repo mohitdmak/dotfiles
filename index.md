@@ -28,11 +28,11 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
-* [ ] checkout - https://wiki.archlinux.org/title/list_of_applications
-    * [ ] download manager
-    * [ ] utilities for system/process monitoring (tui/gui/htop)
+* [.] checkout - https://wiki.archlinux.org/title/list_of_applications
+    * [X] download manager - nothing useful here
+    * [X] power monitoring
+    * [X] utilities for system/process monitoring (tui/gui/htop) - went with 'bottom'
     * [ ] calculator (Sci)
-    * [ ] power monitoring
     * [ ] package (pacman) monitoring
     * [ ] notification server
     * [ ] https://github.com/majido/clipper - shared clipboard android & arch
@@ -42,11 +42,12 @@
     * [ ] https://github.com/jersou/mouse-actions later?
 * [O] Wlan0 issue debugging:
     * [X] disabled and stopped iwd (conflicting service with Nm and wpa_supplicant)
-    * [X] iw dev wlan0 set power_save off (tried for fix on wifi, lets see)
+    * [X] iw dev wlan0 set power_save off (tried for fix on wifi, lets see) (also created /etc/NetworkManager/conf.d/wifi-powersave-off.conf)
     * [X] created /etc/NetworkManager/conf.d/wifi_rand_mac.conf to disable randomization of MAC address sent to wifi routers (privacy, but unstable nw) (see https://wiki.archlinux.org/title/NetworkManager#Configuring_MAC_address_randomization)
     * [X] [todo] got to know I should disable dhcpd.service too (Nm has it's own dhcp manager)
     * [X] is this needed - https://wiki.archlinux.org/title/IPv6#Disable_IPv6 ? since dhcpd only attempts IPv6 solicitation in logs? - NOOO
-    * [ ] should also disable ntpd.service?? - NOOO
+    * [ ] after above, it got better, but only remaining BT - kernel would limit TX power, causing switches in AP connections, resulting in somewhat fluctuating wifi sometimes
+    * [ ] created /etc/modprobe.d/iwlwifi.conf (options iwlwifi power_save=0) to remove powersaving for intel wireless cards
 * [ ] what to do of stacer (installed, should uninstall?)
 * [ ] clipboard history size + fuzzy search fix
 * [X] browser open ranger for file upload download
