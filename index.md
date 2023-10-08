@@ -31,7 +31,7 @@
 * [.] checkout - https://wiki.archlinux.org/title/list_of_applications
     * [X] download manager - nothing useful here
     * [X] power monitoring
-    * [X] utilities for system/process monitoring (tui/gui/htop) - went with 'bottom'
+    * [X] utilities for system/process monitoring (tui/gui/htop) - went with 'bottom' : docs - https://clementtsang.github.io/bottom/0.9.6/
     * [ ] calculator (Sci)
     * [ ] package (pacman) monitoring
     * [ ] notification server
