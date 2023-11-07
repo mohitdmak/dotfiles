@@ -17,6 +17,8 @@ export PATH=/usr/local/go/bin:$PATH
 export PATH=/home/arch/.local/share/gem/ruby/3.0.0/bin:$PATH
 # Add miniconda to path
 export PATH=/home/arch/tools/miniconda3/bin:$PATH
+# add snap apps (spotify) to path
+export PATH=/snap/bin:$PATH
 # theme for bat
 export BAT_THEME=ansi-dark
 # wayland for firefox
