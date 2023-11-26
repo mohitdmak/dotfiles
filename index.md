@@ -49,6 +49,7 @@
     * [ ] after above, it got better, but only remaining BT - kernel would limit TX power, causing switches in AP connections, resulting in somewhat fluctuating wifi sometimes
     * [ ] created /etc/modprobe.d/iwlwifi.conf (options iwlwifi power_save=0) to remove powersaving for intel wireless cards
 * [ ] what to do of stacer (installed, should uninstall?)
+* [X] mpris controller (playerctl installed and bindings created)
 * [ ] clipboard history size + fuzzy search fix
 * [X] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script
