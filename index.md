@@ -51,7 +51,7 @@
 * [ ] what to do of stacer (installed, should uninstall?)
 * [X] mpris controller (playerctl installed and bindings created)
 * [ ] clipboard history size + fuzzy search fix
-* [X] browser open ranger for file upload download
+* [ ] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script
 * [O] allow mouse inputs - 
     * [X] >>toggling sys keyboard / 
