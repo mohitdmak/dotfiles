@@ -28,6 +28,11 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
+* [ ] Useful tracking embedding todo later:
+    * [ ] They're Tracking You! Companies secretly know when you open emails.
+            Many emails have a tracking pixel at the end of the email content. It is a lightweight transparent 1x1 pixel image with a unique link. When you open the email, your email client has to make a HTTP call to that URL to fetch that image. Since the image URL is unique the image server can associate the http call with an email open event.
+            Companies use this feature to track emails they send to their customers. This can help them determine what kind of emails their customers are interacting with.
+            You can check it out yourself. Simply click on “Show Original” in Gmail to view the HTTP code of an email. If you spot an img tag at the very end but no actual image in your email, then you've just found the tracking pixel!
 * [.] checkout - https://wiki.archlinux.org/title/list_of_applications
     * [X] download manager - nothing useful here
     * [X] power monitoring
