@@ -1,6 +1,21 @@
 # Dotfiles
 
 ## Note:
+* Manually mounting external drives/usb:
+    * `fdisk -l` to find mounting point (generally /dev/sda1)
+    * mount /dev/sda1 /mnt/xxxx
+    * mount would require sudo, and thus subsequent subdirs in external drives' content would require sudo for rw, normally would only get r
+    * Modify /etc/fstab to include:
+        ```
+        # /dev/sda1 (externally connected drives)
+        # for UUID, (Disk identifier: 0xaa8f50de)?
+        # /dev/sda1   /mnt/drive  exfat   rw,auto 0 0 
+        # /dev/sda1   /mnt  auto   rw,auto,umask=000,user,uid=1000 0 0 
+        /dev/sda1   /mnt/drive  auto   rw,auto,user,umask=000 0 0 
+        # /dev/sda1   /mnt/drive  ntfs-3g   rw,auto,user,umask=000 0 0 
+        ```
+    * NOTE: for some reason, mounting without dest after doing above works 
+    %% * NOTE: above works when fs != ntfs, linux supports only read for them, for r+w, refer - https://unix.stackexchange.com/questions/359921/how-do-i-configure-an-arch-linux-system-to-automatic-mount-an-external-harddisk
 * X11 configs tutorial - https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
 * Keychron shortcuts:
     disable auto sleep: fn+s+l+o
@@ -28,6 +43,9 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
+* [ ] vimium 'T' bt? not showing prev history?
+* [ ] vault iam reposization + android integration
+* [ ] conky widgets
 * [ ] Useful tracking embedding todo later:
     * [ ] They're Tracking You! Companies secretly know when you open emails.
             Many emails have a tracking pixel at the end of the email content. It is a lightweight transparent 1x1 pixel image with a unique link. When you open the email, your email client has to make a HTTP call to that URL to fetch that image. Since the image URL is unique the image server can associate the http call with an email open event.
@@ -45,7 +63,7 @@
     * [ ] webcam?
     * [ ] android notifs on pc? 
     * [ ] https://github.com/jersou/mouse-actions later?
-* [O] Wlan0 issue debugging:
+* [O] Wlan0 issue debugging (might not cause issues for non-BITS wifi - non 8021):
     * [X] disabled and stopped iwd (conflicting service with Nm and wpa_supplicant)
     * [X] iw dev wlan0 set power_save off (tried for fix on wifi, lets see) (also created /etc/NetworkManager/conf.d/wifi-powersave-off.conf)
     * [X] created /etc/NetworkManager/conf.d/wifi_rand_mac.conf to disable randomization of MAC address sent to wifi routers (privacy, but unstable nw) (see https://wiki.archlinux.org/title/NetworkManager#Configuring_MAC_address_randomization)
