@@ -46,6 +46,9 @@
 * [ ] vimium 'T' bt? not showing prev history?
 * [ ] vault iam reposization + android integration
 * [ ] conky widgets
+    * [ ] todo - remove if useless:
+    * [ ] sudo pacman -S imagemagick
+    * [ ] sudo pacman -S kdialog
 * [ ] Useful tracking embedding todo later:
     * [ ] They're Tracking You! Companies secretly know when you open emails.
             Many emails have a tracking pixel at the end of the email content. It is a lightweight transparent 1x1 pixel image with a unique link. When you open the email, your email client has to make a HTTP call to that URL to fetch that image. Since the image URL is unique the image server can associate the http call with an email open event.
