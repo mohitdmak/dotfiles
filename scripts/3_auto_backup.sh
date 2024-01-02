@@ -133,6 +133,7 @@ SEM32="/home/mohitdmak/vault/sem_3_2"
 SEM31="/home/mohitdmak/vault/semester::3:1"
 SEM22="/home/mohitdmak/vault/sem-2-2"
 ALGOS="/home/mohitdmak/algos"
+WIKI="/home/mohitdmak/vault/wiki"
 
 # Send system wide warning
 notify-send -u critical "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Auto Backing up System Critical GIT Locations; Avoid ShutDown."
@@ -144,6 +145,7 @@ paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
 # Start backing up . . .
 auto_backup ${DOTFILES}
 auto_backup ${SEM41}
+auto_backup ${WIKI}
 # auto_backup ${SEM32}
 # auto_backup ${SEM31}
 # auto_backup ${SEM22}

@@ -4,7 +4,7 @@ Wants=autoBackup.timer
 
 [Service]
 ; ExecStart=/home/mohitdmak/dotfiles/scripts/auto_backup.sh
-ExecStart=/home/arch/legacy_dotfiles/scripts/auto_backup.sh
+ExecStart=/home/arch/legacy_dotfiles/scripts/3_auto_backup.sh
 
 [Install]
 ; WantedBy=multi-user.target
