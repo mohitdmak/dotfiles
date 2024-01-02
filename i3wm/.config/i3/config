@@ -42,6 +42,8 @@ exec_always --no-startup-id killall -q dunst && while pgrep -u $UID -x dunst >/d
 # Copyq clipboard (ARCH)
 # bindsym $mod+a exec /usr/bin/diodon
 exec_always --no-startup-id copyq
+# Automounting external drives using 'udiskie'
+exec_always --no-startup-id udiskie
 bindsym $mod+a exec copyq menu
 # Display time
 # bindsym $mod+t exec /home/mohitdmak/.config/rofi/bin/applet_time

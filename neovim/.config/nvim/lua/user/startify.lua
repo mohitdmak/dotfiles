@@ -21,7 +21,7 @@ vim.cmd[[
                 \ { 'T': '~/.local/share/nvim/site/pack/packer/start/tokyonight.nvim'},
                 \ { 'R': '~/.config/rofi'},
                 \ { 'C': '~/legacy_dotfiles/colorls'},
-                \ { 'p': '~/.config/polybar/cuts'},
+                \ { 'p': '~/.config/polybar/launch.sh'},
                 \ { 'w': '/home/mohitdmak/vault/iam/bio/'}]
 
     let g:startify_lists = [

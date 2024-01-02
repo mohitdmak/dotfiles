@@ -1,0 +1,5 @@
+# ACTION=="add", KERNEL=="sd[b-z][0-9]", ENV{ID_FS_UUID}=="a59332c2-07ba-4c52-afb5-20e361bdf71a", RUN+="/bin/mount -t auto -o rw,noauto,sync,dirsync,noexec,nodev,noatime /dev/%k /symbiosis/utopia", OPTIONS="last_rule"
+# ACTION=="add", KERNEL=="sda1", RUN+="/bin/mount  /dev/%k /mnt/drive", OPTIONS="last_rule"
+# ACTION=="add", KERNEL=="sda1", RUN+="/bin/mount  /dev/%k /mnt/drive"
+ACTION=="add", KERNEL=="sda1", RUN+="/home/arch/legacy_dotfiles/scripts/misc/mount_ext_drive.sh"
+ACTION=="remove", KERNEL=="sda1", RUN+="/home/arch/legacy_dotfiles/scripts/misc/mount_ext_drive.sh"

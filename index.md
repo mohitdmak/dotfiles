@@ -1,6 +1,11 @@
 # Dotfiles
 
 ## Note:
+* Mounting usbc's:
+    * Using jmtpfs
+        * `jmtpfs -l` to list devices
+        * `jmtpfs /mnt/usbc` to mount
+        * `fusermount -u /mnt/usbc` to unmount
 * Manually mounting external drives/usb:
     * `fdisk -l` to find mounting point (generally /dev/sda1)
     * mount /dev/sda1 /mnt/xxxx
@@ -14,8 +19,9 @@
         /dev/sda1   /mnt/drive  auto   rw,auto,user,umask=000 0 0 
         # /dev/sda1   /mnt/drive  ntfs-3g   rw,auto,user,umask=000 0 0 
         ```
-    * NOTE: for some reason, mounting without dest after doing above works 
     %% * NOTE: above works when fs != ntfs, linux supports only read for them, for r+w, refer - https://unix.stackexchange.com/questions/359921/how-do-i-configure-an-arch-linux-system-to-automatic-mount-an-external-harddisk
+    * NOTE: for some reason, mounting without dest after doing above works (mount /dev/sda1)
+* Dissolved above shit entirely - using tui-types 'udiskie' (but still gotta have entries for diff usb slots on /etc/fstab)
 * X11 configs tutorial - https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
 * Keychron shortcuts:
     disable auto sleep: fn+s+l+o
@@ -25,6 +31,10 @@
 
 ## Vim 
 * [New bindings](vim_learnings)
+
+## Tuts
+* [Udev](udev_tut)
+* Follow here to maintain pacman regularly - https://wiki.archlinux.org/title/Pacman/Package_signing#Upgrade_system_regularly
 
 ## Reminders for new machines
 * [X] Remember to set "filter_ignored" property of function M.setup(opts) in ~/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/lua/nvim-tree/populate.lua to false
@@ -43,8 +53,26 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
+* [ ] Automate toggling of sys keyboard using udev
+* [ ] notifs for terminal outputs upon command exits
+* [ ] common session buddy timeline of tabs in android-arch? (synced whenever arch sleeps)
+* [X] SCRCPY - android - arch control
+    * debug performance - https://github.com/Genymobile/scrcpy/issues/4548#issuecomment-1868851015 
+    * If you experience performance issues, check if your device has another h264 encoder which provides better performance (scrcpy --list-encoders). 
+    * Then, to reduce latency, you can reduce the resolution and bit rate (scrcpy -m1024 -b2M).
+* [o] daily session-buddy backup 
+    * [ ] check backup download folder loc
+    * [X] check same for gdrive -- UPDATE: able to sync btw browsers based on google login
+* [X] fix pacman pkg untrusted pgp and marginal trust issues - https://wiki.archlinux.org/title/Pacman/Package_signing#Upgrade_system_regularly
+* [O] Booting to emergency mode after editing /etc/fstab to automount ext drive!!!:
+    * [X] https://bbs.archlinux.org/viewtopic.php?id=147478 - if ext drive isn't connected during boot up, systemd fails after not finding it for timeout (~90s) and fallbacks to emergency mode
+    * [X] Modified /etc/fstab to include 'noauto' directive - to always manually mount ext drives
+    * [X] TODO: look into creating a `/etc/rc.local` to maybe automount during boot (`nofail` directive in above would work as well) -- UPDATE: rc.local is outdated, look for alternatives
+    * [X] TODO: write udev to automate mounting/unmounting DURING a session (not booting a new one) -- UPDATE: switched to tui - udiskie instead
+    * [ ] TODO: anything to do with udiskie?
 * [ ] vimium 'T' bt? not showing prev history?
-* [ ] vault iam reposization + android integration
+* [X] vault iam reposization + android integration
+* [ ] look walls - https://github.com/dharmx/walls - https://github.com/adi1090x?tab=repositories
 * [ ] conky widgets
     * [ ] todo - remove if useless:
     * [ ] sudo pacman -S imagemagick

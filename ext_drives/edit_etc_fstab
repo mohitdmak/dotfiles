@@ -1,0 +1,17 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p8
+UUID=8abca53f-c190-47f1-a90d-d4ac108d0b51	/         	ext4      	rw,relatime	0 1
+
+# /dev/nvme0n1p7
+UUID=f4939cd8-6100-44d1-a7db-e37a01a62632	/home     	ext4      	rw,relatime	0 2
+
+# /dev/sda1 (externally connected drives)
+# for UUID, (Disk identifier: 0xaa8f50de)?
+# /dev/sda1   /mnt/drive  exfat   rw,auto 0 0 
+# /dev/sda1   /mnt  auto   rw,auto,umask=000,user,uid=1000 0 0 
+# NOTE: NEVER USE 'auto' directive for removable media here - refer to my troubleshooting of this issue in dots index
+/dev/sda1   /mnt/drive  auto   rw,noauto,user,umask=000 0 0 
+# /dev/sda1   /mnt/drive  ntfs-3g   rw,auto,user,umask=000 0 0 
