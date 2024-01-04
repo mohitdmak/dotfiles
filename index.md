@@ -56,6 +56,7 @@
 * [ ] Automate toggling of sys keyboard using udev
 * [ ] notifs for terminal outputs upon command exits
 * [ ] common session buddy timeline of tabs in android-arch? (synced whenever arch sleeps)
+* [ ] what to do of snap apps? slack/wa?
 * [X] SCRCPY - android - arch control
     * debug performance - https://github.com/Genymobile/scrcpy/issues/4548#issuecomment-1868851015 
     * If you experience performance issues, check if your device has another h264 encoder which provides better performance (scrcpy --list-encoders). 
