@@ -61,6 +61,7 @@
     * debug performance - https://github.com/Genymobile/scrcpy/issues/4548#issuecomment-1868851015 
     * If you experience performance issues, check if your device has another h264 encoder which provides better performance (scrcpy --list-encoders). 
     * Then, to reduce latency, you can reduce the resolution and bit rate (scrcpy -m1024 -b2M).
+    * NOTE: shortcuts specs - https://github.com/Genymobile/scrcpy/blob/master/doc/shortcuts.md
 * [o] daily session-buddy backup 
     * [ ] check backup download folder loc
     * [X] check same for gdrive -- UPDATE: able to sync btw browsers based on google login
