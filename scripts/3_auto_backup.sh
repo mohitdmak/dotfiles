@@ -144,8 +144,8 @@ paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
 
 # Start backing up . . .
 auto_backup ${DOTFILES}
-auto_backup ${SEM41}
-auto_backup ${WIKI}
+auto_backup_restore ${SEM41}
+auto_backup_restore ${WIKI}
 # auto_backup ${SEM32}
 # auto_backup ${SEM31}
 # auto_backup ${SEM22}
