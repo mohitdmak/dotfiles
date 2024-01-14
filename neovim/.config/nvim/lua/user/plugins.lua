@@ -64,7 +64,10 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim" -- helpful keybindings guider
   use "godlygeek/tabular" -- helpful syntactical sugar
-  use "lukas-reineke/indent-blankline.nvim" -- indentline
+  use {
+	"lukas-reineke/indent-blankline.nvim", -- indentline
+	version = "2.20.8",
+  }
   use "JoosepAlviste/nvim-ts-context-commentstring" -- helps to mark comment strings for commenting binding
   use "tpope/vim-surround" -- #TODO: Bindings for this
   use {

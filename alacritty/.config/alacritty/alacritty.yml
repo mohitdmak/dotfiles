@@ -11,14 +11,24 @@ env:
   TERM: xterm-256color
 
 window:
-  opacity: 0.97
+  # opacity: 0.97 # arch linux
+  blur: true # for macos
+  opacity: 0.8 # for macos
   # Spread additional padding evenly around the terminal content.
   padding:
     x: 5
     y: 5
   dynamic_title: true
-  # Remove buttons
-  decorations: none
+      # Remove buttons for macos::
+  decorations: buttonless
+  # decorations = "Full" | "None" | "Transparent" | "Buttonless"
+  # Following Window decorations.
+  # Full: Borders and title bar.
+  # None: Neither borders nor title bar.
+  # Transparent (macOS only): Title bar, transparent background and title bar buttons.
+  # Buttonless (macOS only): Title bar, transparent background and no title bar buttons.
+  # Default: "Full"
+  # decorations: none
   # Open in full screen 
   # startup_mode: SimpleFullscreen
   # Dimensions if not SimpleFullscreen

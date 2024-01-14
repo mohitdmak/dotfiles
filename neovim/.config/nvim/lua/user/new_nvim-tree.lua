@@ -4,7 +4,7 @@ if not config_status_ok then
 end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-    require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
+    require('nvim-tree').setup { -- BEGIN_DEFAULT_OPTS
       auto_reload_on_write = true,
       create_in_closed_folder = false,
       disable_netrw = false,

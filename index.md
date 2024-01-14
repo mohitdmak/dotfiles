@@ -1,6 +1,5 @@
 # Dotfiles
 
-
 ## Vim 
 * [New bindings](vim_learnings)
 
@@ -24,7 +23,31 @@ Auto sleep in 10mins: Press fn+s+l+r for four seconds
 Auto sleep in 20mins: Press fn+s+l+t for four seconds
 Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
+## Macos
+### Note:
+* cmd + w / cmd + q / cmd + m uses
+* navigating desktop spaces/workspaces shortcuts using ctrl + shift + hjkl (customized)
+* Press Shift-Command-3. 
+* Press Shift-Command-4, then move the crosshair pointer to where you want to start the screenshot. 
+* Press the mouse or trackpad button, drag over the area you want to capture, then release the mouse or trackpad button.
+* Press Shift-Command-4, then press the Space bar.
+
+### Todo:
+- [ ] auto backup scripts
+- [X] Karabiner
+- [X] bottom
+- [ ] SketchyBar ?
+- [X] show/hide docks based on desktop spaces shown currently - hidemydock
+- [X] alacritty picom alternative for macos
+- [X] colorls
+- [X] Git sshs
+- [X] Vimium
+- [X] Tab session manager
+
 ## Todo
+* [ ] spicetify
+    * https://spicetify.app/docs/getting-started
+    * https://github.com/spicetify/spicetify-cli
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [X] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script

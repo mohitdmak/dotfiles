@@ -11,10 +11,13 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=$HOME/.config/rofi/bin:$PATH
 # add useful util scripts to path
 export PATH=$HOME/dotfiles/scripts:$PATH
+# add MACOS nvim executable
+export PATH=$HOME/Downloads/nvim-macos/bin:$PATH
 # Add go binaries to path for some plugins dependant on it 
 export PATH=/usr/local/go/bin:$PATH
 # theme for bat
-export BAT_THEME=ansi-dark
+# export BAT_THEME=ansi-dark # (this is deprecated)
+export BAT_THEME=ansi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -22,7 +25,8 @@ export BAT_THEME=ansi-dark
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 # Using POWERLINE FONT
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="jonathan" # for macos
 POWERLEVEL9K_MODE="nerdfont-complete"
 # Configuring airline for terminal
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir docker_machine dir_writable)
@@ -105,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # 4) -o : same as -l, except no group info provided
 # 5) -g : same as -l, except no owner info provided
 # 6) --hyperlink : to provide links to files/dir which when clicked with ctrl, opens them up. very useful.
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 unalias ls
 unalias ll
 unalias la
@@ -113,15 +117,23 @@ alias ls="colorls --hyperlink --gs"
 alias ll="colorls --hyperlink --gs -l"
 alias la="colorls --hyperlink --gs -A"
 alias lla="colorls --hyperlink --gs -Al"
+# When colorls not installed
+# alias ll="ls -l"
+# alias la="ls -A"
+# alias lla="ls -Al"
 
 # FZF ALIASES
 alias fzf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down --padding=0 --margin=0"
 
 
 # User configuration
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# changed for mac
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -177,3 +189,4 @@ unset __conda_setup
 # exec xmodmap -e "keysym Caps_Lock = BackSpace" 
 # # increase keystroke input speed and reduce delay/repeat times
 # exec xset r rate 200 35
+export PATH=$PATH:/Users/mmakwana/.spicetify
