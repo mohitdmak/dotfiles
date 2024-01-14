@@ -8,7 +8,7 @@ CYAN='\033[0;36m'
 die(){
   echo -e "${RED}AUTO BACKUP FAILED :"
   echo "$*" 1>&2
-  notify-send -u critical "[SYSTEMD SERVICE ERROR] AutoBackup Failed: $*"
+  # notify-send -u critical "[SYSTEMD SERVICE ERROR] AutoBackup Failed: $*"
   # exit 1
 }
 
@@ -17,7 +17,9 @@ echo -e "${CYAN}[ENTER] Home @ mohitdmak > > >"
 cd && pwd
 
 # add personal gitlab ssh key
-PERSONAL_GITLAB_SSH_KEY_LOCATION="$HOME/.ssh/id_personal_gitlab_ed25519"
+# PERSONAL_GITLAB_SSH_KEY_LOCATION="$HOME/.ssh/id_personal_gitlab_ed25519"
+PERSONAL_GITLAB_SSH_KEY_LOCATION="$HOME/.ssh/gitlab_ssh"
+PERSONAL_GITHUB_SSH_KEY_LOCATION="$HOME/.ssh/github_ssh"
 echo -e "${CYAN}[SETUP] Starting SSH-AGENT and adding Personal GitLab SSH Key > > >"
 if eval "$(ssh-agent -s)"
 then 
@@ -25,13 +27,13 @@ then
 else
     die "[ERROR SETUP]:Could not start SSH-AGENT."
 fi
-if ssh-add ${PERSONAL_GITLAB_SSH_KEY_LOCATION} 
-then
-    :
-else
-    die "[ERROR SETUP]:Could not add personal gitlab ssh key for regular backup."
-fi
-echo -e "${CYAN}[SETUP] SSH-AGENT and GitLab SSH Keys setup < < <"
+# if ssh-add ${PERSONAL_GITLAB_SSH_KEY_LOCATION} 
+# then
+#     :
+# else
+#     die "[ERROR SETUP]:Could not add personal gitlab ssh key for regular backup."
+# fi
+echo -e "${CYAN}[SETUP] SSH-AGENT and GitLab/GitHub SSH Keys setup < < <"
 
 # function to enter repository provided by 1st arg, and send updates to upsream if any
 auto_backup () {
@@ -127,21 +129,21 @@ auto_backup_restore () {
 
 # system critical locations
 DOTFILES="$HOME/dotfiles"
-SEM32="$HOME/vault/sem_3_2"
-SEM31="$HOME/vault/semester::3:1"
-SEM22="$HOME/vault/sem-2-2"
-ALGOS="$HOME/algos"
+# SEM32="$HOME/vault/sem_3_2"
+# SEM31="$HOME/vault/semester::3:1"
+# SEM22="$HOME/vault/sem-2-2"
+WIKI="$HOME/vault/wiki"
 
 # Send system wide warning
-notify-send -u critical "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Auto Backing up System Critical GIT Locations; Avoid ShutDown."
+# notify-send -u critical "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Auto Backing up System Critical GIT Locations; Avoid ShutDown."
 # Notification with pulse
-SOUND_TO_PLAY="$HOME/dotfiles/batteryPopup/.config/batteryPopup/battery-popup.wav"
-SOUND_VOLUME=65536
-paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
+# SOUND_TO_PLAY="$HOME/dotfiles/batteryPopup/.config/batteryPopup/battery-popup.wav"
+# SOUND_VOLUME=65536
+# paplay "$SOUND_TO_PLAY" --volume $SOUND_VOLUME
 
 # Start backing up . . .
 auto_backup ${DOTFILES}
-auto_backup ${SEM32}
-auto_backup ${SEM31}
-auto_backup ${SEM22}
-auto_backup_restore ${ALGOS}
+# auto_backup ${SEM32}
+# auto_backup ${SEM31}
+# auto_backup ${SEM22}
+auto_backup_restore ${WIKI}
