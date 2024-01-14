@@ -27,12 +27,18 @@ then
 else
     die "[ERROR SETUP]:Could not start SSH-AGENT."
 fi
-# if ssh-add ${PERSONAL_GITLAB_SSH_KEY_LOCATION} 
-# then
-#     :
-# else
-#     die "[ERROR SETUP]:Could not add personal gitlab ssh key for regular backup."
-# fi
+if ssh-add --apple-use-keychain ${PERSONAL_GITLAB_SSH_KEY_LOCATION} 
+then
+    :
+else
+    die "[ERROR SETUP]:Could not add personal gitlab ssh key for regular backup."
+fi
+if ssh-add --apple-use-keychain ${PERSONAL_GITHUB_SSH_KEY_LOCATION} 
+then
+    :
+else
+    die "[ERROR SETUP]:Could not add personal github ssh key for regular backup."
+fi
 echo -e "${CYAN}[SETUP] SSH-AGENT and GitLab/GitHub SSH Keys setup < < <"
 
 # function to enter repository provided by 1st arg, and send updates to upsream if any
@@ -56,7 +62,7 @@ auto_backup () {
             die "[ERROR ADD]:Could not add git diff @ ${1} !"
         fi
         echo -e "${CYAN}[COMMIT] Committing Diffs : "
-        if git commit -m "add: regular backup" 
+        if git commit -m "add: regular backup from mac intel" 
         then 
             :
         else 
@@ -102,7 +108,7 @@ auto_backup_restore () {
             die "[ERROR ADD]:Could not add git diff @ ${1} !"
         fi
         echo -e "${CYAN}[COMMIT] Committing Diffs : "
-        if git commit -m "add: regular backup" 
+        if git commit -m "add: regular backup from mac intel" 
         then 
             :
         else 
