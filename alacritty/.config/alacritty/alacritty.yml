@@ -13,7 +13,7 @@ env:
 window:
   # opacity: 0.97 # arch linux
   blur: true # for macos
-  opacity: 0.8 # for macos
+  opacity: 0.75 # for macos
   # Spread additional padding evenly around the terminal content.
   padding:
     x: 5
@@ -622,7 +622,8 @@ schemes:
       white:   '0xe6d5ae'
 
 # Apply the color scheme.
-colors: *gruvbox_material_hard_dark # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
+# colors: *gruvbox_material_hard_dark # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
+colors: *gruvbox_material_soft_dark # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
 # ENDS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # TOKYONIGHT COLOR SCHEME ::::::::::::::::::::::::::::
