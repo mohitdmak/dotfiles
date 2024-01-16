@@ -4,6 +4,7 @@ require "user.keymaps"
 require "user.plugins"
 require "user.colorscheme"
 -- require "user.neosolarized"
+-- TEST WITH MASON?
 require "user.cmp"
 require "user.lsp"
 require "user.telescope"
