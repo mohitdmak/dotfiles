@@ -36,7 +36,15 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 - [ ] auto backup scripts
 - [X] Karabiner
 - [X] bottom
+- [ ] fix 'path' keyword issue (now commented) in mason default config
+- [X] fix shortcuts etc for mason
+- [ ] Fix formatters for mason
+- [ ] ranger image preview
+- [ ] https://github.com/VonHeikemen/lsp-zero.nvim ? https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/ ?
 - [ ] SketchyBar ?
+- [o] migration to mason from deprecated lsp-installer
+    - [X] installation/autostart
+    - [ ] customize lsp servers
 - [X] show/hide docks based on desktop spaces shown currently - hidemydock
 - [X] alacritty picom alternative for macos
 - [X] colorls

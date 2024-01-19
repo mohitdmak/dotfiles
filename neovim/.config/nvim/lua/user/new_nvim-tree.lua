@@ -1,19 +1,63 @@
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
-local tree_cb = nvim_tree_config.nvim_tree_callback
+-- local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+-- if not config_status_ok then
+--   return
+-- end
+-- local tree_cb = nvim_tree_config.nvim_tree_callback
 
-    require('nvim-tree').setup { -- BEGIN_DEFAULT_OPTS
+local function my_on_attach(bufnr)
+    local api = require('nvim-tree.api')
+
+    local function opts(desc)
+      return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    end
+
+    -- copy default mappings here from defaults in next section
+    -- vim.keymap.set('n', '<C-]>', api.tree.change_root_to_node,          opts('CD'))
+    -- vim.keymap.set('n', '<C-e>', api.node.open.replace_tree_buffer,     opts('Open: In Place'))
+    ---
+    -- OR use all default mappings
+    api.config.mappings.default_on_attach(bufnr)
+
+    -- remove a default
+    vim.keymap.del('n', '<C-]>', { buffer = bufnr })
+
+    -- override a default
+    -- vim.keymap.set('n', '<C-e>', api.tree.reload,                       opts('Refresh'))
+    vim.keymap.set('n', 'l',       api.node.open.edit,                  opts('Open'))
+    vim.keymap.set('n', 't',   api.node.open.tab,                   opts('Open: New Tab'))
+    vim.keymap.set('n', 'h',    api.node.navigate.parent_close,      opts('Close Directory'))
+    vim.keymap.set('n', 'H',       api.node.navigate.parent,            opts('Parent Directory'))
+    vim.keymap.set('n', 'i',   api.node.open.vertical,              opts('Open: Vertical Split'))
+    vim.keymap.set('n', 's',   api.node.open.horizontal,            opts('Open: Horizontal Split'))
+    vim.keymap.set('n', 'u',       api.tree.toggle_hidden_filter,       opts('Toggle Filter: Dotfiles'))
+    vim.keymap.set('n', 'U',       api.tree.toggle_gitignore_filter,    opts('Toggle Filter: Git Ignore'))
+    vim.keymap.set('n', 'K',      api.node.navigate.git.prev,          opts('Prev Git'))
+    vim.keymap.set('n', 'L',      api.node.navigate.git.next,          opts('Next Git'))
+    vim.keymap.set('n', 'c',       api.fs.copy.filename,                opts('Copy Name'))
+    vim.keymap.set('n', 'C',       api.fs.copy.node,                    opts('Copy'))
+    vim.keymap.set('n', 'J',   api.node.show_info_popup,            opts('Info'))
+    vim.keymap.set('n', 'R',       api.tree.reload,                     opts('Refresh'))
+    vim.keymap.set('n', 'd',       api.fs.remove,                       opts('Delete'))
+    vim.keymap.set('n', 'D',       api.fs.trash,                        opts('Trash'))
+    vim.keymap.set('n', 'r',       api.fs.rename_full,                  opts('Rename: Full Path'))
+
+
+    -- add your mappings
+    vim.keymap.set('n', '?',     api.tree.toggle_help,                  opts('Help'))
+    ---
+  end
+
+require('nvim-tree').setup { -- BEGIN_DEFAULT_OPTS
+      on_attach = my_on_attach,
       auto_reload_on_write = true,
       create_in_closed_folder = false,
       disable_netrw = false,
       hijack_cursor = false,
       hijack_netrw = true,
       hijack_unnamed_buffer_when_opening = false,
-      ignore_buffer_on_setup = false,
-      open_on_setup = false,
-      open_on_setup_file = false,
+      -- ignore_buffer_on_setup = false,
+      -- open_on_setup = false,
+      -- open_on_setup_file = false,
       open_on_tab = false,
       sort_by = "name",
       root_dirs = {},
@@ -25,36 +69,36 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
         adaptive_size = false, -- Resize the window on each draw based on the longest line.
         centralize_selection = false, -- when opening the sidebar, "zz" to current file location
         width = 40, -- width of sidebar
-        height = 30, -- height of sidebar
-        hide_root_folder = false, -- whether to hide top line denoting root location
+        -- height = 30, -- height of sidebar
+        -- hide_root_folder = false, -- whether to hide top line denoting root location
         side = "right", -- sidebar location
         preserve_window_proportions = true, -- FIXME: whether to change windows' size for windows other than sidebar
         number = false, -- whether to print line no.s in sidebar
         relativenumber = false, -- same as above
         signcolumn = "yes", -- having a sign column
-        mappings = { -- add your custom mappings here
-          custom_only = false,
-          list = {
-            -- MY CUSTOM MAPPINGS
-            -- R will refresh the tree
-            -- <C-k> to view file info of time updated, created, etc
-            -- f to run a life filter on listed files
-            -- < / > to move between siblings of curr parent dir
-            { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-            { key = "h", cb = tree_cb "close_node" },
-            { key = "i", cb = tree_cb "vsplit" },
-            { key = "s", cb = tree_cb "split" },
-            { key = "t", cb = tree_cb "tabnew" },
-            { key = "p", cb = tree_cb "dir_up" },
-            { key = "H", cb = tree_cb "parent_node" },
-            { key = "u", cb = tree_cb "toggle_dotfiles" },
-            { key = "U", cb = tree_cb "toggle_git_ignored" },
-            { key = "L", cb = tree_cb "next_git_item" },
-            { key = "K", cb = tree_cb "prev_git_item" },
-            { key = "c", cb = tree_cb "copy_name" },
-            { key = "C", cb = tree_cb "copy_absolute_path" },
-          },
-        },
+        -- mappings = { -- add your custom mappings here
+        --   custom_only = false,
+        --   list = {
+        --     -- MY CUSTOM MAPPINGS
+        --     -- R will refresh the tree
+        --     -- <C-k> to view file info of time updated, created, etc
+        --     -- f to run a life filter on listed files
+        --     -- < / > to move between siblings of curr parent dir
+        --     { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+        --     { key = "h", cb = tree_cb "close_node" },
+        --     { key = "i", cb = tree_cb "vsplit" },
+        --     { key = "s", cb = tree_cb "split" },
+        --     { key = "t", cb = tree_cb "tabnew" },
+        --     { key = "p", cb = tree_cb "dir_up" },
+        --     { key = "H", cb = tree_cb "parent_node" },
+        --     { key = "u", cb = tree_cb "toggle_dotfiles" },
+        --     { key = "U", cb = tree_cb "toggle_git_ignored" },
+        --     { key = "L", cb = tree_cb "next_git_item" },
+        --     { key = "K", cb = tree_cb "prev_git_item" },
+        --     { key = "c", cb = tree_cb "copy_name" },
+        --     { key = "C", cb = tree_cb "copy_absolute_path" },
+        --   },
+        -- },
       },
       renderer = {
         add_trailing = true, -- add trailing "/" to folders
@@ -126,7 +170,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
         update_root = true,
         ignore_list = {},
       },
-      ignore_ft_on_setup = {},
+      -- ignore_ft_on_setup = {},
       system_open = {
         cmd = "",
         args = {},

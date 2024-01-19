@@ -180,9 +180,9 @@ local mappings = {
       "<cmd>Telescope diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr> :%s/\r//g<CR> ", "Format" },
+    f = { "<cmd>lua vim.lsp.buf.format()<cr> :%s/\r//g<CR> ", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+    I = { ":Mason<cr>", "Installer Info" },
     j = {
       "<cmd>lua vim.diagnostic.goto_next()<CR>",
       "Next Diagnostic",

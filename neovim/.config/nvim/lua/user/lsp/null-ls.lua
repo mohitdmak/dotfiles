@@ -17,6 +17,7 @@ null_ls.setup({
 		formatting.prettier.with({ extra_args = {   "--jsx-single-quote", "--tab-width 4", "--no-semi"  }}),
 		formatting.black.with({extra_args = {"--line-length", "90"}}),
 		formatting.stylua,
+        formatting.gofumpt
     -- diagnostics.flake8
 	},
 })

@@ -139,6 +139,7 @@ DOTFILES="$HOME/dotfiles"
 # SEM31="$HOME/vault/semester::3:1"
 # SEM22="$HOME/vault/sem-2-2"
 WIKI="$HOME/vault/wiki"
+ALGOS="$HOME/vault/algos"
 
 # Send system wide warning
 # notify-send -u critical "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Auto Backing up System Critical GIT Locations; Avoid ShutDown."
@@ -153,3 +154,4 @@ auto_backup ${DOTFILES}
 # auto_backup ${SEM31}
 # auto_backup ${SEM22}
 auto_backup_restore ${WIKI}
+auto_backup_restore ${ALGOS}
