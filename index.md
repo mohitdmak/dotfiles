@@ -4,6 +4,7 @@
 * [New bindings](vim_learnings)
 
 ## Reminders for new machines
+* [ ] NOTEEE! - don't upgrade neovim any later than v0.9.5 (null-ls has been archived, and might break)
 * [X] Remember to set "filter_ignored" property of function M.setup(opts) in ~/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/lua/nvim-tree/populate.lua to false
 * [ ] Remind nvm bt solved by writing export 3lines tozshrc orbashrc
 * [X] Remind stow ignore list
