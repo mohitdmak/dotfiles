@@ -39,10 +39,12 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 - [X] bottom
 - [ ] fix 'path' keyword issue (now commented) in mason default config
 - [X] fix shortcuts etc for mason
-- [ ] Fix formatters for mason
+- [X] Fix formatters for mason
 - [ ] ranger image preview
 - [ ] https://github.com/VonHeikemen/lsp-zero.nvim ? https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/ ?
 - [ ] SketchyBar ?
+- [ ] bettertouchtool paid (free alt?) ~gesture mods
+- [ ] svim? (~vimium for safari)
 - [o] migration to mason from deprecated lsp-installer
     - [X] installation/autostart
     - [ ] customize lsp servers
@@ -57,6 +59,9 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * [ ] spicetify
     * https://spicetify.app/docs/getting-started
     * https://github.com/spicetify/spicetify-cli
+* [ ] Imports from macos intel config - to be used pan os
+    * [ ] remove lazydocker, use buffer navigation keymapms (import from macos intel config)
+    * [ ] migration to mason and related lsp/formatters stuff
 * [X] TODO: REMOVE BOTTOM LUALINE -- NEVER REALLY USE IT
 * [X] browser open ranger for file upload download
     * [ ] upload multiple files? - lel prolly too complex as of now - has to do with creating a re modded kdialog script

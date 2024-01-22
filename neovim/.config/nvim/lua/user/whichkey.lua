@@ -96,7 +96,8 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   -- ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
   -- ["y"] = { "<cmd>Telescope resume<cr>", "Resume Telescope"},
-  ["d"] = { "<cmd>lua _LAZYDOCKER_TOGGLE()<CR>", "Lazydocker"},
+  -- ["d"] = { "<cmd>lua _LAZYDOCKER_TOGGLE()<CR>", "Lazydocker"}, -- no longer require lazydocker pan os/platforms
+  ["d"] = { "<cmd>Telescope buffers<cr>", "Buffers"},
   ["r"] = { "<cmd>lua _RANGER_TOGGLE()<CR>", "Ranger"},
   ["G"] = { "<cmd>lua _LAZYGIT_TOGGLE()<CR> :NvimTreeRefresh<CR>", "Lazygit" },
   ["j"] = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
