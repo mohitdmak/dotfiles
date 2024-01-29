@@ -37,6 +37,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 - [ ] auto backup scripts
 - [X] Karabiner
 - [X] bottom
+- [ ] FIX: 'gr' gotoreference list does not open concerned file
 - [ ] fix 'path' keyword issue (now commented) in mason default config
 - [X] fix shortcuts etc for mason
 - [X] Fix formatters for mason

@@ -22,9 +22,12 @@ export BAT_THEME=ansi
 # include lsp servers by mason in path
 export PATH=$HOME/.local/share/nvim/mason/bin:$PATH
 # alias golangci-lint="golangci-lint-langserver" # instead copied golangci-lint-langserver as golangci-lint in binary
+
 # Cisco repos permanent env vars 
 source ~/gh/cspe-phanes/envConfiguration.sh
 source ~/gh/cspe-phanes/envSecrets.sh
+# env vars for caduceus artifactory and npm repos, docker registry access
+source ~/gh/caducues_secrets.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
