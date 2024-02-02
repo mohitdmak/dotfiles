@@ -37,6 +37,8 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 - [ ] auto backup scripts
 - [X] Karabiner
 - [X] bottom
+- [ ] keymap to show Copyclip menu
+- [ ] FIX: telescope for ranger / lazygit - truecolors? keymaps?
 - [ ] FIX: 'gr' gotoreference list does not open concerned file
 - [ ] fix 'path' keyword issue (now commented) in mason default config
 - [X] fix shortcuts etc for mason
@@ -56,7 +58,10 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 - [X] Vimium
 - [X] Tab session manager
 
-## Todo
+
+## Arch / Gen
+
+### Todo
 * [ ] spicetify
     * https://spicetify.app/docs/getting-started
     * https://github.com/spicetify/spicetify-cli
