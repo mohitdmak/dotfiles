@@ -34,6 +34,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 * Press Shift-Command-4, then press the Space bar.
 
 ### Todo:
+- [ ] fix auto backup etc scripts on ANDOIRD / OBSIDIAN side based on recent issue with merge overwriting
 - [ ] auto backup scripts
 - [X] Karabiner
 - [X] bottom
