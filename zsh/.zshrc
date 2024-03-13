@@ -105,6 +105,15 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+# TMP: To solve history-substring-search
+HISTSIZE=1000
+SAVEHIST=50000
+HISTFILE=${XDG_STATE_HOME:-$HOME/.local/state}/.zsh_history
+setopt appendhistory
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+
 plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search)
 # plugins=(dirhistory sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
@@ -123,14 +132,20 @@ source $ZSH/oh-my-zsh.sh
 unalias ls
 unalias ll
 unalias la
-alias ls="colorls --hyperlink --gs"
-alias ll="colorls --hyperlink --gs -l"
-alias la="colorls --hyperlink --gs -A"
-alias lla="colorls --hyperlink --gs -Al"
-# When colorls not installed
-# alias ll="ls -l"
-# alias la="ls -A"
-# alias lla="ls -Al"
+# alias ls="colorls --hyperlink --gs"
+# alias ll="colorls --hyperlink --gs -l"
+# alias la="colorls --hyperlink --gs -A"
+# alias lla="colorls --hyperlink --gs -Al"
+# exa settings
+# include exa release from gh
+export PATH=$HOME/tools/bin:$PATH
+export EXA_ICON_SPACING=2
+
+# When colorls not installed (installed much faster exa due to slow fucking intel mac - although exa better)
+alias ls="exa --icons"
+alias ll="exa -l --header --group --icons"
+alias la="exa -a --icons"
+alias lla="exa -al --header --group --icons"
 
 # FZF ALIASES
 alias fzf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down --padding=0 --margin=0"
