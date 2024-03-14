@@ -115,6 +115,7 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
 plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search)
+# plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search zsh-fzf-history-search)
 # plugins=(dirhistory sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 # bindkey "^[[Z" history-beginning-search-forward
