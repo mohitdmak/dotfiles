@@ -9,6 +9,9 @@ vim.g["vimwiki_list"] = {
     {
       path = '/Users/mmakwana/gh/', path_html = '~/gh', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
+    {
+      path = '/Users/mmakwana/vault/algos/my/docs/', path_html = '~/vault/algos/my', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+    },
   }
 
   -- VIMWIKI SETTINGS
