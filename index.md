@@ -26,6 +26,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 
 ## Macos
 ### Note:
+* Use https://codeforces.com/blog/entry/109017 for cpp setup
 * cmd + w / cmd + q / cmd + m uses
 * navigating desktop spaces/workspaces shortcuts using ctrl + shift + hjkl (customized)
 * Press Shift-Command-3. 
