@@ -14,10 +14,14 @@ vim.g.maplocalleader = " "
 
 -- FILE SPECIFIC KEYMAPS ---------------------------------------------------------
 -- Working with cpp files and dsa setup
--- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
+-- NOTE!!!!!!!: below for mac intel arch
 vim.cmd([[
-autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !g++ % -fsanitize=address 2>my/cpp/log.txt -o %:r && timeout -k9 -v 1 %:r < my/cpp/input.txt > my/cpp/output.txt 2>my/cpp/log.txt && rm %:r<CR><CR>
+autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !g++-13 % -march=native 2>log.txt -o %:r && timeout -k9 -v 1 ./%:r < input.txt > output.txt 2>log.txt && rm %:r<CR><CR>
 ]])
+-- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
+-- vim.cmd([[
+-- autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !g++ % -fsanitize=address 2>my/cpp/log.txt -o %:r && timeout -k9 -v 1 %:r < my/cpp/input.txt > my/cpp/output.txt 2>my/cpp/log.txt && rm %:r<CR><CR>
+-- ]])
 -- FOR LEETCODING (PYTHON3)
 vim.cmd([[
 autocmd filetype python nnoremap <silent> <leader>b :w<CR> :!timeout -k9 -v 1 python3 % < my/py/input.txt > my/py/output.txt 2>my/py/log.txt<CR><CR>
