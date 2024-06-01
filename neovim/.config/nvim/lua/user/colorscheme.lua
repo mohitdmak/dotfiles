@@ -72,7 +72,7 @@ require("tokyonight").setup({
 -- 2) GRUVBOX MATERIAL THEME (RUSTY) :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 -- TODO: GITSIGNS VERY BRIGHT HERE!
 vim.cmd[[
-    set background=dark
+    set background=light
     let g:gruvbox_material_palette = 'material'
     let g:gruvbox_material_foreground = 'material'
     let g:gruvbox_material_background ='medium'
