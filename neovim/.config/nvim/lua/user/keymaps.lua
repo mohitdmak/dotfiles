@@ -18,6 +18,9 @@ vim.g.maplocalleader = " "
 vim.cmd([[
 autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !g++-13 % -march=native 2>log.txt -o %:r && timeout -k9 -v 1 ./%:r < input.txt > output.txt 2>log.txt && rm %:r<CR><CR>
 ]])
+vim.cmd([[
+autocmd filetype cpp nnoremap <silent> <leader>B :w <bar> !cat template.cpp > a.cpp && tail -n +6 % >> a.cpp<CR><CR>
+]])
 -- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
 -- vim.cmd([[
 -- autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !g++ % -fsanitize=address 2>my/cpp/log.txt -o %:r && timeout -k9 -v 1 %:r < my/cpp/input.txt > my/cpp/output.txt 2>my/cpp/log.txt && rm %:r<CR><CR>
