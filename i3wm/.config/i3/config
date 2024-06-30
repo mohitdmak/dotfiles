@@ -277,6 +277,10 @@ assign [class = "Google Play Music Desktop Player"] 
 assign [class = "focuswriter"] 
 # exec --no-startup-id i3-msg '$ws1:Web; exec /usr/bin/firefox'
 
+# scratchpad - minimization functionality imagined from mac?
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+minus move scratchpad
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2

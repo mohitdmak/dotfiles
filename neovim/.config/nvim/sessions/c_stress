@@ -13,18 +13,20 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +511 a1.cpp
-badd +1 a4.cpp
-badd +1 brute.cpp
 badd +1 counter_brute.cpp
 badd +1 generator.cpp
+badd +1 stress_input.txt
+badd +1 counter_brute.txt
+badd +1 brute.txt
+badd +56 brute.cpp
 badd +1 stress_test.sh
+badd +643 template.cpp
 argglobal
 %argdel
-$argadd ./
-edit a1.cpp
+$argadd .
+edit counter_brute.cpp
 argglobal
-balt a4.cpp
+balt generator.cpp
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -34,73 +36,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-1,142fold
-1,142fold
-1,143fold
-1,143fold
-154,174fold
-152,174fold
-177,206fold
-176,206fold
-210,215fold
-210,215fold
-209,215fold
-219,228fold
-219,228fold
-232,269fold
-232,269fold
-274,283fold
-287,319fold
-323,343fold
-323,343fold
-322,343fold
-395,418fold
-395,418fold
-422,425fold
-422,425fold
-429,437fold
-441,450fold
-454,462fold
-466,471fold
-475,477fold
-207,478fold
-150,478fold
-511,512fold
-522,523fold
-522,524fold
-522,525fold
-510,525fold
-510,526fold
-510,526fold
-510,526fold
-528,529fold
-510,537fold
 let &fdl = &fdl
-510
-normal! zo
-510
-normal! zo
-510
-normal! zo
-510
-normal! zo
-510
-normal! zo
-511
-normal! zo
-522
-normal! zo
-522
-normal! zo
-522
-normal! zo
-528
-normal! zo
-let s:l = 530 - ((30 * winheight(0) + 19) / 38)
+let s:l = 1 - ((0 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 530
+keepjumps 1
 normal! 0
 lcd /home/mohitdmak/algos/my/cpp
 tabnext 1
