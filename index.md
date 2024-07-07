@@ -53,6 +53,7 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
+* [ ] automate dark / light mode switching in alacritty + tmux + nvim by some awk / such commands to change file line comment change
 * [ ] Automate toggling of sys keyboard using udev
 * [ ] notifs for terminal outputs upon command exits
 * [ ] common session buddy timeline of tabs in android-arch? (synced whenever arch sleeps)
