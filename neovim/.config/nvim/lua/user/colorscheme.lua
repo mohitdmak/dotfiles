@@ -72,8 +72,8 @@
 -- 2) GRUVBOX MATERIAL THEME (RUSTY) :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 -- TODO: GITSIGNS VERY BRIGHT HERE!
 vim.cmd[[
-    set background=light
-    " set background=dark
+    " set background=light " NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###
+    set background=dark
     let g:gruvbox_material_palette = 'material'
     let g:gruvbox_material_foreground = 'material'
     let g:gruvbox_material_background ='medium'
