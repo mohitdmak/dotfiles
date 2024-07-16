@@ -1,6 +1,7 @@
 # Dotfiles
 
 ## Note:
+* If pacman updates fail after a long period away from arch, reset keyrings - https://wiki.archlinux.org/title/Pacman/Package_signing#Resetting_all_the_keys
 * Mounting usbc's:
     * Using jmtpfs
         * `jmtpfs -l` to list devices

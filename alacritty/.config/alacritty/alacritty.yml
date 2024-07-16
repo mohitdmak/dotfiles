@@ -320,8 +320,8 @@ schemes:
       white:   '0xe6d5ae'
 
 # Apply the color scheme.
-colors: *gruvbox_material_soft_dark # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
-# colors: *gruvbox_material_soft_light # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
+# colors: *gruvbox_material_soft_dark # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
+colors: *gruvbox_material_soft_light # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
 # ENDS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # TOKYONIGHT COLOR SCHEME ::::::::::::::::::::::::::::
