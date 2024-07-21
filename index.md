@@ -54,7 +54,7 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
-* [ ] automate dark / light mode switching in alacritty + tmux + nvim by some awk / such commands to change file line comment change
+* [X] automate dark / light mode switching in alacritty + tmux + nvim by some awk / such commands to change file line comment change
 * [ ] Automate toggling of sys keyboard using udev
 * [ ] notifs for terminal outputs upon command exits
 * [ ] common session buddy timeline of tabs in android-arch? (synced whenever arch sleeps)
@@ -68,6 +68,7 @@
     * [ ] check backup download folder loc
     * [X] check same for gdrive -- UPDATE: able to sync btw browsers based on google login
 * [X] fix pacman pkg untrusted pgp and marginal trust issues - https://wiki.archlinux.org/title/Pacman/Package_signing#Upgrade_system_regularly
+    * SOL: If pacman updates fail after a long period away from arch, reset keyrings - https://wiki.archlinux.org/title/Pacman/Package_signing#Resetting_all_the_keys
 * [O] Booting to emergency mode after editing /etc/fstab to automount ext drive!!!:
     * [X] https://bbs.archlinux.org/viewtopic.php?id=147478 - if ext drive isn't connected during boot up, systemd fails after not finding it for timeout (~90s) and fallbacks to emergency mode
     * [X] Modified /etc/fstab to include 'noauto' directive - to always manually mount ext drives
