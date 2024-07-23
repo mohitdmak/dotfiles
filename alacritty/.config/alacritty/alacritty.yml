@@ -11,8 +11,9 @@
 #import:
 #  - /path/to/alacritty.yml
 import:
-  - "~/.config/alacritty/themes/themes/one_dark.yml"
+  # - "~/.config/alacritty/themes/themes/one_dark.yml"
   # - "~/.config/alacritty/themes/themes/solarized_light.yml"
+  - "~/.config/alacritty/themes/themes/one_dark.yml" # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables

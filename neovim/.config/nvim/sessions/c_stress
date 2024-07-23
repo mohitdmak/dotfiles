@@ -13,20 +13,22 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 counter_brute.cpp
-badd +1 generator.cpp
+badd +25 counter_brute.cpp
+badd +17 generator.cpp
 badd +1 stress_input.txt
 badd +1 counter_brute.txt
 badd +1 brute.txt
-badd +56 brute.cpp
+badd +1 race_data.txt
+badd +1 brute.cpp
 badd +1 stress_test.sh
-badd +643 template.cpp
+badd +219 template.cpp
+badd +1 analyze_reports.py
 argglobal
 %argdel
 $argadd .
 edit counter_brute.cpp
 argglobal
-balt generator.cpp
+balt stress_input.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -36,13 +38,14 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
+1,5fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 18) / 37)
+let s:l = 25 - ((13 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 25
+normal! 07|
 lcd /home/mohitdmak/algos/my/cpp
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

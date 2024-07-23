@@ -9,10 +9,13 @@ LIGHT_DARK_MODE_DATA_FILE=$DOTFILES/scripts/data_current_dark_light_mode
 TMUX_CONFIG_FILE="$DOTFILES/tmux/.tmux.conf.local"
 NVIM_CONFIG_FILE=$DOTFILES/neovim/.config/nvim/lua/user/colorscheme.lua
 ALACRITTY_CONFIG_FILE=$DOTFILES/alacritty/.config/alacritty/alacritty.toml
+ALACRITTY_LIGATURE_CONFIG_FILE=$DOTFILES/alacritty/.config/alacritty/alacritty.yml
 
 ## config settings for elements
 ALACRITTY_DARK="    \"~/.config/alacritty/themes/themes/one_dark.toml\" # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###"
 ALACRITTY_LIGHT="   \"~/.config/alacritty/themes/themes/solarized_light.toml\" # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###"
+ALACRITTY_LIGATURE_DARK="  - \"~/.config/alacritty/themes/themes/one_dark.yml\" # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###"
+ALACRITTY_LIGATURE_LIGHT="  - \"~/.config/alacritty/themes/themes/solarized_light.yml\" # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###"
 NVIM_DARK="    set background=dark \" NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###"
 NVIM_LIGHT="    set background=light \" NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###"
 TMUX_DARK="set -g @tmux-gruvbox 'dark' # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###"
@@ -58,6 +61,7 @@ update_state (){
 
 if [[ $CURR_MODE == "TRUE" ]]; then
     sed -i "/$ANCHOR_TAG/c\\${ALACRITTY_DARK}" $ALACRITTY_CONFIG_FILE
+    sed -i "/$ANCHOR_TAG/c\\${ALACRITTY_LIGATURE_DARK}" $ALACRITTY_LIGATURE_CONFIG_FILE
     sed -i "/$ANCHOR_TAG/c\\${NVIM_DARK}" $NVIM_CONFIG_FILE
     sed -i "/$ANCHOR_TAG/c\\${TMUX_DARK}" $TMUX_CONFIG_FILE
     update_state
@@ -65,6 +69,7 @@ if [[ $CURR_MODE == "TRUE" ]]; then
     notify-send "[SYSTEMD SERVICE NOTIF]: @mohtidmak: Switched alacritty + nvim + tmux to dark"
 elif [[ $CURR_MODE == "FALSE" ]]; then
     sed -i "/$ANCHOR_TAG/c\\${ALACRITTY_LIGHT}" $ALACRITTY_CONFIG_FILE
+    sed -i "/$ANCHOR_TAG/c\\${ALACRITTY_LIGATURE_LIGHT}" $ALACRITTY_LIGATURE_CONFIG_FILE
     sed -i "/$ANCHOR_TAG/c\\${NVIM_LIGHT}" $NVIM_CONFIG_FILE
     sed -i "/$ANCHOR_TAG/c\\${TMUX_LIGHT}" $TMUX_CONFIG_FILE
     update_state
