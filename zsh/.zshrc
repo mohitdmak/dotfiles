@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # adding rofi scripts to path
 export PATH=$HOME/.config/rofi/bin:$PATH
 # add useful util scripts to path
-export PATH=$HOME/dotfiles/scripts:$PATH
+export PATH=$HOME/legacy_dotfiles/scripts:$PATH
 # Add go binaries to path for some plugins dependant on it 
 export PATH=/usr/local/go/bin:$PATH
 # Add ruby gems to path
