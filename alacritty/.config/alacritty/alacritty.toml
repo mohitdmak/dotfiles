@@ -2,9 +2,11 @@
 live_config_reload = true
 
 import = [
-    # "~/.config/alacritty/themes/themes/gruvbox_material_hard_light.toml"
+    # "~/.config/alacritty/themes/themes/gruvbox_light.toml"
+    # "~/.config/alacritty/themes/themes/gruvbox_material_medium_light.toml"
+    # "~/.config/alacritty/themes/themes/papertheme.toml"
+    # "~/.config/alacritty/themes/themes/zenburn.toml"
     # "~/.config/alacritty/themes/themes/everforest_light.toml"
-    # "~/.config/alacritty/themes/themes/github_light_high_contrast.toml"
     # "~/.config/alacritty/themes/themes/noctis-lux.toml" # nice one
     # "~/.config/alacritty/themes/themes/nord_light.toml"
     # "~/.config/alacritty/themes/themes/rose-pine-dawn.toml" # nice one
