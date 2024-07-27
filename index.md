@@ -58,7 +58,7 @@
     * Switched to default stable picom (no blur) and problems no more -> look into a stable version of such alternate backends?
 * [X] automate dark / light mode switching in alacritty + tmux + nvim by some awk / such commands to change file line comment change
 * [ ] Automate toggling of sys keyboard using udev
-* [ ] notifs for terminal outputs upon command exits
+* [X] notifs for terminal outputs upon command exits - use /home/arch/legacy_dotfiles/scripts/7_cli_notifier.sh
 * [ ] common session buddy timeline of tabs in android-arch? (synced whenever arch sleeps)
 * [ ] what to do of snap apps? slack/wa?
 * [X] SCRCPY - android - arch control

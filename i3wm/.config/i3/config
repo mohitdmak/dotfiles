@@ -59,6 +59,11 @@ bindsym Print exec /home/arch/.config/rofi/bin/applet_screenshot
 bindsym $mod+s exec /home/arch/.config/polybar/cuts/scripts/sleep.sh
 # bindsym $mod+Shift+s exec /home/mohitdmak/.config/polybar/cuts/scripts/powermenu.sh
 bindsym $mod+Shift+s exec /home/arch/.config/polybar/cuts/scripts/powermenu.sh
+
+# exec_always --no-startup-id feh --bg-scale /home/arch/walls/centered/102502cccb5151369534f80b1007d728.jpg 
+# exec_always --no-startup-id feh --bg-scale /home/arch/walls/gruvbox/Midmorning_Stadium.jpg
+# exec_always --no-startup-id feh --bg-scale /home/arch/walls/dreamcore/caseen-kyle-registos-JOTO7YjLiO0-unsplash.jpg 
+# exec_always --no-startup-id feh --bg-scale /home/arch/walls/blur_glass_drops_190363_1920x1080.jpg
 # wallpaper
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/falcon_fishing.png
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/fishing.png
@@ -78,7 +83,7 @@ bindsym $mod+Shift+s exec /home/arch/.config/polybar/cuts/scripts/powermenu.sh
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0023.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/wallpapers/0008.jpg
 # exec_always --no-startup-id feh --bg-scale /home/arch/.config/i3/starred_wallpapers/sebastian-boring-Y1N6Gl7K5CQ-unsplash.jpg
-##exec_always --no-startup-id feh --bg-scale /home/arch/legacy_dotfiles/i3wm/.config/i3/wp9741269-dune-2021-wallpapers.jpg
+# exec_always --no-startup-id feh --bg-scale /home/arch/legacy_dotfiles/i3wm/.config/i3/wp9741269-dune-2021-wallpapers.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/statue.jpg
 # exec_always --no-startup-id feh --bg-scale /home/mohitdmak/.config/i3/starred_wallpapers/forest-road.jpg
 # External Walls
@@ -193,8 +198,8 @@ bindsym $mod+d exec /home/arch/.config/rofi/bin/applet_apps
 # bindsym $mod+d exec bash ~/.config/rofi/launchers/misc/launcher.sh 
 # Start compton
 # exec_always --no-startup-id compton --backend glx --vsync opengl --config ~/.config/compton.conf
-# exec_always --no-startup-id picom --experimental-backends # TODO: (24 July 2024) -> this is causing lot of lag and jitters in few hours of uptime -> blur taking a toll? OR update required from gh source code?
-exec_always --no-startup-id picom
+exec_always --no-startup-id picom --experimental-backends # TODO: (24 July 2024) -> this is causing lot of lag and jitters in few hours of uptime -> blur taking a toll? OR update required from gh source code?
+# exec_always --no-startup-id picom
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
