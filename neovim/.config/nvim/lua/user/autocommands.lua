@@ -9,8 +9,12 @@ vim.cmd [[
     " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -fsanitize=address 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
     " ALL => " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -Wall -Wconversion -Wshadow -Wfloat-equal -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -fsanitize=undefined -fsanitize=address -g -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -std=c++17 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
     " Removing 'Wconversion' as too verbose and unnecessary
-    autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -Wall -Wshadow -Wfloat-equal -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -fsanitize=undefined -fsanitize=address -g -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -std=c++17 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
-    " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
+    " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r " without any flags
+    " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -Wall -Wshadow -Wfloat-equal -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -fsanitize=undefined -fsanitize=address -g -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -std=c++17 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r " my goto setting
+    autocmd BufWritePost a*.cpp Dispatch! make compile_%:r
+    " autocmd BufWinEnter log.txt 
+    "    \ :g/usr/d | 
+    "    \ :w
   augroup end
 
   augroup remember_folds
