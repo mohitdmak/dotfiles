@@ -15,8 +15,10 @@ vim.g.maplocalleader = " "
 -- FILE SPECIFIC KEYMAPS ---------------------------------------------------------
 -- Working with cpp files and dsa setup
 -- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
+-- NOTE: [@mohitdmak]: Moved from compiling and execing to only execing, compiling will be done on all saves to a*.cpp via autocmds
 vim.cmd([[
-autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !g++ % -fsanitize=address 2>log.txt -o %:r && timeout -k9 -v 1 ./%:r < input.txt > output.txt 2>log.txt && rm %:r<CR><CR>
+autocmd filetype cpp nnoremap <silent> <leader>b :Dispatch! timeout -k9 -v 1 python3 test.py ./%:r<CR><CR>
+" autocmd filetype cpp nnoremap <silent> <leader>b :Dispatch! timeout -k9 -v 1 ./%:r < input.txt > output.txt 2>log.txt<CR><CR>
 ]])
 vim.cmd([[
 autocmd filetype cpp nnoremap <silent> <leader>B :w <bar> !cat template.cpp > a.cpp && tail -n +6 % >> a.cpp && notify-send "[@mohitdmak]: cpp template + src prepared"<CR><CR>

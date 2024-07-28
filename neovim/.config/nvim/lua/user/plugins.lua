@@ -50,6 +50,7 @@ return packer.startup(function(use)
   -- Utility Plugins
   use "windwp/nvim-autopairs" --Autopairs, integrates with both cmp and treesitter
   --use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "tpope/vim-dispatch" -- for running cmds in nvim sessions asynchronously
   use "terrortylor/nvim-comment" -- easy commenting
   use "kyazdani42/nvim-web-devicons" -- devicon icons for nvim-tree
   use "kyazdani42/nvim-tree.lua" -- file tree manager

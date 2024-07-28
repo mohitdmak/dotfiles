@@ -198,8 +198,8 @@ bindsym $mod+d exec /home/arch/.config/rofi/bin/applet_apps
 # bindsym $mod+d exec bash ~/.config/rofi/launchers/misc/launcher.sh 
 # Start compton
 # exec_always --no-startup-id compton --backend glx --vsync opengl --config ~/.config/compton.conf
-exec_always --no-startup-id picom --experimental-backends # TODO: (24 July 2024) -> this is causing lot of lag and jitters in few hours of uptime -> blur taking a toll? OR update required from gh source code?
-# exec_always --no-startup-id picom
+# exec_always --no-startup-id picom --experimental-backends # TODO: (24 July 2024) -> this is causing lot of lag and jitters in few hours of uptime -> blur taking a toll? OR update required from gh source code?
+exec_always --no-startup-id picom
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.

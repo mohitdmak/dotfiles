@@ -6,6 +6,11 @@ vim.cmd [[
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd BufWinEnter * :set tabstop=4 shiftwidth=4 expandtab
     autocmd FileType qf set nobuflisted
+    " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -fsanitize=address 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
+    " ALL => " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -Wall -Wconversion -Wshadow -Wfloat-equal -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -fsanitize=undefined -fsanitize=address -g -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -std=c++17 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
+    " Removing 'Wconversion' as too verbose and unnecessary
+    autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -Wall -Wshadow -Wfloat-equal -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -fsanitize=undefined -fsanitize=address -g -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -std=c++17 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
+    " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r
   augroup end
 
   augroup remember_folds
@@ -20,6 +25,8 @@ vim.cmd [[
     au BufWinEnter p4.py silent! loadview 1
     au BufWinLeave *.cpp mkview 1
     au BufWinEnter *.cpp silent! loadview 1
+    au BufWinLeave *.md mkview 1
+    au BufWinEnter *.md silent! loadview 1
   augroup END
 
   augroup _git
