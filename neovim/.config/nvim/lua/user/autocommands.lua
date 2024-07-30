@@ -11,7 +11,7 @@ vim.cmd [[
     " Removing 'Wconversion' as too verbose and unnecessary
     " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r " without any flags
     " autocmd BufWritePost a*.cpp Dispatch! g++ <afile> -Wall -Wshadow -Wfloat-equal -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -fsanitize=undefined -fsanitize=address -g -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -std=c++17 2>/home/mohitdmak/algos/my/cpp/log.txt -o %:r " my goto setting
-    autocmd BufWritePost a*.cpp Dispatch! make compile_%:r
+    autocmd BufWritePost a*.cpp Dispatch! make compile_%:r || (make cleanup_logs && exit 1)
     " autocmd BufWinEnter log.txt 
     "    \ :g/usr/d | 
     "    \ :w
