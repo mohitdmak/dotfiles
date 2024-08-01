@@ -128,11 +128,11 @@ auto_backup_restore () {
 # system critical locations
 # DOTFILES="$HOME/dotfiles"
 DOTFILES="$HOME/legacy_dotfiles"
-SEM41="/home/mohitdmak/vault/sem_4_1"
-SEM32="/home/mohitdmak/vault/sem_3_2"
-SEM31="/home/mohitdmak/vault/semester::3:1"
-SEM22="/home/mohitdmak/vault/sem-2-2"
-ALGOS="/home/mohitdmak/algos"
+SEM41="/home/mohitdmak/bitsVault/sem_4_1"
+SEM32="/home/mohitdmak/bitsVault/sem_3_2"
+SEM31="/home/mohitdmak/bitsVault/semester::3:1"
+SEM22="/home/mohitdmak/bitsVault/sem-2-2"
+ALGOS="/home/mohitdmak/vault/algos"
 WIKI="/home/mohitdmak/vault/wiki"
 
 # Send system wide warning
