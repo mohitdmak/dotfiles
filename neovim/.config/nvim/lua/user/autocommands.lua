@@ -31,6 +31,10 @@ vim.cmd [[
     au BufWinEnter *.cpp silent! loadview 1
     au BufWinLeave *.md mkview 1
     au BufWinEnter *.md silent! loadview 1
+    au BufWinLeave *.md mkview 1
+    au BufWinEnter *.md silent! loadview 1
+    au BufWinLeave stress_test.sh mkview 1
+    au BufWinEnter stress_test.sh silent! loadview 1
   augroup END
 
   augroup _git

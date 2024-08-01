@@ -13,24 +13,26 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 counter_brute.cpp
-badd +1 generator.cpp
-badd +1 stress_input.txt
-badd +1 counter_brute.txt
-badd +1 brute.txt
-badd +1 brute.cpp
-badd +1 stress_test.sh
+badd +1 a1.cpp
+badd +1 log.txt
+badd +5 a2.cpp
+badd +1 a3.cpp
+badd +1 a4.cpp
 badd +508 template.cpp
-badd +1 analyze_reports.py
-badd +1 Makefile
-badd +1 test.py
+badd +1 a.cpp
+badd +0 input.txt
+badd +0 output.txt
 argglobal
 %argdel
 $argadd .
-edit counter_brute.cpp
+edit a1.cpp
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 wincmd _ | wincmd |
 split
 1wincmd k
@@ -44,10 +46,13 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 27 + 22) / 45)
-exe '2resize ' . ((&lines * 14 + 22) / 45)
+exe 'vert 1resize ' . ((&columns * 152 + 95) / 190)
+exe '2resize ' . ((&lines * 20 + 22) / 45)
+exe 'vert 2resize ' . ((&columns * 37 + 95) / 190)
+exe '3resize ' . ((&lines * 21 + 22) / 45)
+exe 'vert 3resize ' . ((&columns * 37 + 95) / 190)
 argglobal
-balt test.py
+balt log.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -59,20 +64,20 @@ setlocal fen
 silent! normal! zE
 1,5fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+let s:l = 1 - ((0 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
-normal! 01|
+normal! 0
 lcd /home/mohitdmak/vault/algos/my/cpp
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1", ":p")) | buffer term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1 | else | edit term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1 | endif
+if bufexists(fnamemodify("/home/mohitdmak/vault/algos/my/cpp/input.txt", ":p")) | buffer /home/mohitdmak/vault/algos/my/cpp/input.txt | else | edit /home/mohitdmak/vault/algos/my/cpp/input.txt | endif
 if &buftype ==# 'terminal'
-  silent file term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1
+  silent file /home/mohitdmak/vault/algos/my/cpp/input.txt
 endif
-balt /home/mohitdmak/vault/algos/my/cpp/counter_brute.cpp
+balt /home/mohitdmak/vault/algos/my/cpp/output.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -81,16 +86,45 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 2 - ((1 * winheight(0) + 7) / 14)
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 10) / 20)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 028|
+keepjumps 1
+normal! 0
 lcd /home/mohitdmak/vault/algos/my/cpp
 wincmd w
-exe '1resize ' . ((&lines * 27 + 22) / 45)
-exe '2resize ' . ((&lines * 14 + 22) / 45)
+argglobal
+if bufexists(fnamemodify("/home/mohitdmak/vault/algos/my/cpp/output.txt", ":p")) | buffer /home/mohitdmak/vault/algos/my/cpp/output.txt | else | edit /home/mohitdmak/vault/algos/my/cpp/output.txt | endif
+if &buftype ==# 'terminal'
+  silent file /home/mohitdmak/vault/algos/my/cpp/output.txt
+endif
+balt /home/mohitdmak/vault/algos/my/cpp/input.txt
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 10) / 21)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+lcd /home/mohitdmak/vault/algos/my/cpp
+wincmd w
+exe 'vert 1resize ' . ((&columns * 152 + 95) / 190)
+exe '2resize ' . ((&lines * 20 + 22) / 45)
+exe 'vert 2resize ' . ((&columns * 37 + 95) / 190)
+exe '3resize ' . ((&lines * 21 + 22) / 45)
+exe 'vert 3resize ' . ((&columns * 37 + 95) / 190)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
