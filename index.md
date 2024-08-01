@@ -54,6 +54,7 @@
 * [X] Works for Keychron K3. I presume K2 has the same hotkeys.
 
 ## Todo
+* [ ] TODO: fix the pitch black background for ranger/lazygit float terms in nvim
 * [X] NOTE: the lag/jitter that arch experiences in a few hours of uptime -> not really due to brave using entire RAM as we got a lot of SWAP + free space on 8+4Gi -> issue is due to picom's experimental backend (for blur) that causes slowness in system wide renderings. 
     * Switched to default stable picom (no blur) and problems no more -> look into a stable version of such alternate backends?
 * [X] automate dark / light mode switching in alacritty + tmux + nvim by some awk / such commands to change file line comment change
