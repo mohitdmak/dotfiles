@@ -17,7 +17,8 @@ vim.g.maplocalleader = " "
 -- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
 -- NOTE: [@mohitdmak]: Moved from compiling and execing to only execing, compiling will be done on all saves to a*.cpp via autocmds
 vim.cmd([[
-autocmd filetype cpp nnoremap <silent> <leader>b :Dispatch! timeout -k9 -v 2 python3 test.py %:r<CR>
+autocmd filetype cpp nnoremap <silent> <leader>b :Dispatch! ./test.sh %:r<CR>
+" autocmd filetype cpp nnoremap <silent> <leader>b :Dispatch! timeout -k9 -v 2 python3 test.py %:r<CR>
 " autocmd filetype cpp nnoremap <silent> <leader>b :Dispatch! timeout -k9 -v 1 ./%:r < input.txt > output.txt 2>log.txt<CR><CR>
 ]])
 vim.cmd([[

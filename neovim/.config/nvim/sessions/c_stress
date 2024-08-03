@@ -13,17 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 counter_brute.cpp
-badd +1 generator.cpp
+badd +2 counter_brute.cpp
+badd +3 generator.cpp
 badd +1 stress_input.txt
 badd +1 counter_brute.txt
 badd +1 brute.txt
-badd +1 brute.cpp
+badd +2 brute.cpp
 badd +1 stress_test.sh
-badd +508 template.cpp
-badd +1 analyze_reports.py
+badd +510 template.cpp
+badd +1 test.sh
 badd +1 Makefile
-badd +1 test.py
+badd +1 analyze_reports.py
 argglobal
 %argdel
 $argadd .
@@ -47,7 +47,7 @@ set winwidth=1
 exe '1resize ' . ((&lines * 27 + 22) / 45)
 exe '2resize ' . ((&lines * 14 + 22) / 45)
 argglobal
-balt test.py
+balt generator.cpp
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -57,20 +57,20 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-1,5fold
+2,6fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+let s:l = 2 - ((1 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 2
 normal! 01|
 lcd /home/mohitdmak/vault/algos/my/cpp
 wincmd w
 argglobal
-if bufexists(fnamemodify("term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1", ":p")) | buffer term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1 | else | edit term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1 | endif
+if bufexists(fnamemodify("term:///home/mohitdmak/vault/algos/my/cpp//3101694:/usr/bin/zsh;\#toggleterm\#1", ":p")) | buffer term:///home/mohitdmak/vault/algos/my/cpp//3101694:/usr/bin/zsh;\#toggleterm\#1 | else | edit term:///home/mohitdmak/vault/algos/my/cpp//3101694:/usr/bin/zsh;\#toggleterm\#1 | endif
 if &buftype ==# 'terminal'
-  silent file term:///home/mohitdmak/vault/algos/my/cpp//2100775:/usr/bin/zsh;\#toggleterm\#1
+  silent file term:///home/mohitdmak/vault/algos/my/cpp//3101694:/usr/bin/zsh;\#toggleterm\#1
 endif
 balt /home/mohitdmak/vault/algos/my/cpp/counter_brute.cpp
 setlocal fdm=manual
@@ -86,7 +86,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 2
-normal! 028|
+normal! 030|
 lcd /home/mohitdmak/vault/algos/my/cpp
 wincmd w
 exe '1resize ' . ((&lines * 27 + 22) / 45)
