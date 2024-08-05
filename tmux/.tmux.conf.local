@@ -399,7 +399,7 @@ set -g @plugin 'egel/tmux-gruvbox'
 # set -g @tmux-gruvbox 'light' # or 'light' or 'dark'
 # NORD THEME
 # set -g @plugin "arcticicestudio/nord-tmux"
-set -g @tmux-gruvbox 'dark' # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###
+set -g @tmux-gruvbox 'light' # NOTE: ### MANAGED BY @@@LIGHT_DARK_MODE@@@ TOGGLING SCRIPT ###
 
 
 # /!\ the tpm bindings differ slightly from upstream:
