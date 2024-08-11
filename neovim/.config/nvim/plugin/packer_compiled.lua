@@ -339,6 +339,11 @@ _G.packer_plugins = {
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-dispatch"] = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/vim-dispatch",
+    url = "https://github.com/tpope/vim-dispatch"
+  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/vim-startify",
