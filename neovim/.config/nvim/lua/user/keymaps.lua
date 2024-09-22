@@ -26,7 +26,7 @@ autocmd filetype cpp nnoremap <silent> <leader>B :w <bar> !cat template.cpp > a.
 ]])
 -- FOR LEETCODING (PYTHON3)
 vim.cmd([[
-autocmd filetype python nnoremap <silent> <leader>b :w<CR> :!timeout -k9 -v 1 python3 % < my/py/input.txt > my/py/output.txt 2>my/py/log.txt<CR><CR>
+autocmd filetype python nnoremap <silent> <leader>b :w <bar> :!timeout -k9 -v 1 python3 % < input.txt > output.txt 2>log.txt<CR><CR>
 ]])
 -- FOR CODEFORCES (PYPY2)
 -- vim.cmd([[
