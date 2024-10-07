@@ -13,6 +13,8 @@ export PATH=$HOME/.config/rofi/bin:$PATH
 export PATH=$HOME/legacy_dotfiles/scripts:$PATH
 # Add go binaries to path for some plugins dependant on it 
 export PATH=/usr/local/go/bin:$PATH
+# Add user local go bins
+export PATH=$HOME/go/bin:$PATH
 # Add ruby gems to path
 export PATH=/home/arch/.local/share/gem/ruby/3.0.0/bin:$PATH
 # Add miniconda to path
@@ -41,6 +43,8 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir docker_machine dir_writable)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda virtualenv vcs)
 CONDA_AUTO_ACTIVATE_BASE=false
+### NOTE: below disables venv prefix on term -> temporarily doing it as it messes ohmyzsh's "jonathan"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 
 # Set list of themes to pick from when loading at random
