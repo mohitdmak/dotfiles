@@ -47,10 +47,12 @@ cursor:
 font:
   # Normal (roman) font face
   normal:
+    # family: FiraCode Nerd Font
+    family: MesloLGLDZ Nerd Font # -- COMPLETELY AVAILABLE -- MAJOR FONT -- https://github.com/ryanoasis/nerd-fonts
     # family: Hack Nerd Font
-    family: JetBrainsMono Nerd Font  # -- COMPLETELY AVAILABLE -- MAJOR FONT -- https://github.com/ryanoasis/nerd-fonts
+    # family: JetBrainsMono Nerd Font  # -- COMPLETELY AVAILABLE -- MAJOR FONT -- https://github.com/ryanoasis/nerd-fonts
     # The `style` can be specified to pick a specific face.
-    # style: SemiBold 
+    # style: Retina 
   # Point size
   # size: 10.00 # 9.00 for full screen, else 8.80
   size: 14.00 # 9.00 for full screen, else 8.80
@@ -622,8 +624,8 @@ schemes:
       white:   '0xe6d5ae'
 
 # Apply the color scheme.
-# colors: *gruvbox_material_hard_dark # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
-colors: *gruvbox_material_soft_light # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
+colors: *gruvbox_material_hard_dark # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
+# colors: *gruvbox_material_soft_light # *gruvbox_material_$1_$2 $1 - hard/medium/soft, $2 - dark/light
 # ENDS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # TOKYONIGHT COLOR SCHEME ::::::::::::::::::::::::::::

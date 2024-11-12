@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/vault/algos/my/cpp
+cd ~/vault/algorithms/my/cpp
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,17 +13,39 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 counter_brute.cpp
-badd +1 brute.txt
-badd +1 counter_brute.txt
+badd +2 counter_brute.cpp
+badd +3 generator.cpp
 badd +1 stress_input.txt
-badd +1 generator.cpp
-badd +19 stress_test.sh
-badd +1 brute.cpp
+badd +1 counter_brute.txt
+badd +1 brute.txt
+badd +2 brute.cpp
+badd +115 stress_test.sh
+badd +510 template.cpp
+badd +1 test.sh
+badd +1 Makefile
+badd +1 analyze_reports.py
 argglobal
 %argdel
 $argadd .
-edit stress_test.sh
+edit counter_brute.cpp
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe '1resize ' . ((&lines * 21 + 17) / 35)
+exe '2resize ' . ((&lines * 10 + 17) / 35)
 argglobal
 balt generator.cpp
 setlocal fdm=manual
@@ -35,14 +57,40 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
+2,6fold
 let &fdl = &fdl
-let s:l = 19 - ((18 * winheight(0) + 22) / 45)
+let s:l = 24 - ((14 * winheight(0) + 10) / 21)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 19
-normal! 016|
-lcd ~/vault/algos/my/cpp
+keepjumps 24
+normal! 035|
+lcd ~/vault/algorithms/my/cpp
+wincmd w
+argglobal
+if bufexists(fnamemodify("term://~/vault/algorithms/my/cpp//32513:/bin/zsh;\#toggleterm\#1", ":p")) | buffer term://~/vault/algorithms/my/cpp//32513:/bin/zsh;\#toggleterm\#1 | else | edit term://~/vault/algorithms/my/cpp//32513:/bin/zsh;\#toggleterm\#1 | endif
+if &buftype ==# 'terminal'
+  silent file term://~/vault/algorithms/my/cpp//32513:/bin/zsh;\#toggleterm\#1
+endif
+balt ~/vault/algorithms/my/cpp/counter_brute.cpp
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 10 - ((9 * winheight(0) + 5) / 10)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 10
+normal! 0
+lcd ~/vault/algorithms/my/cpp
+wincmd w
+exe '1resize ' . ((&lines * 21 + 17) / 35)
+exe '2resize ' . ((&lines * 10 + 17) / 35)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -50,6 +98,8 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)

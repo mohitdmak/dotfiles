@@ -10,7 +10,7 @@ vim.g["vimwiki_list"] = {
       path = '/Users/mmakwana/gh/', path_html = '~/gh', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
     {
-      path = '/Users/mmakwana/vault/algos/my/docs/', path_html = '~/vault/algos/my', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
+      path = '/Users/mmakwana/vault/algorithms/my/docs/', path_html = '~/vault/algos/my', syntax = 'markdown', ext = '.md', template_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/vimwiki/autoload/"
     },
   }
 
@@ -23,11 +23,11 @@ vim.cmd([[ autocmd filetype vimwiki set nospell ]])
 vim.cmd([[ let g:vimwiki_conceallevel = 2 ]])
 vim.cmd([[ autocmd filetype vimwiki nmap <C-j> <Plug>VimwikiSplitLink <ESC> ]])
 vim.cmd([[ autocmd filetype vimwiki nmap <C-k> <Plug>VimwikiVSplitLink <ESC> ]])
-vim.cmd([[ autocmd filetype vimwiki nmap <C-t> <Plug>VimwikiTabnewLink <ESC> ]])
+-- vim.cmd([[ autocmd filetype vimwiki nmap <C-t> <Plug>VimwikiTabnewLink <ESC> ]])
 -- vim.cmd([[ autocmd filetype vimwiki nmap <C-n> <Plug>VimikiListChangeSymbolI * ]])
 vim.cmd([[ autocmd filetype vimwiki nnoremap n :lnext <CR> ]])
 vim.cmd([[ autocmd filetype vimwiki nnoremap N :lprevious <CR> ]])
-vim.cmd([[ autocmd filetype vimwiki nnoremap <C-n> :lopen <CR> ]])
+-- vim.cmd([[ autocmd filetype vimwiki nnoremap <C-n> :lopen <CR> ]])
 vim.cmd([[ autocmd filetype vimwiki nmap <leader>d <Plug>VimwikiToggleListItem <ESC> ]])
 -- vim.cmd([[ autocmd filetype vimwiki nmap <leader>D <Plug>VimwikiToggleRejectedListItem <ESC> ]])
 -- vim.cmd([[ autocmd filetype vimwiki nmap <leader>n <Plug>VimwikiIncrementListItem <ESC> ]])
@@ -35,4 +35,21 @@ vim.cmd([[ autocmd filetype vimwiki nmap <leader>d <Plug>VimwikiToggleListItem <
 -- let g:vimwiki_listsyms = '✗○◐●✓'
 -- Toggle item of checkbox list? & all checkbox related plug commands starting :450
 -- Move current table column to left or right?
+
+vim.cmd([[
+    let g:vimwiki_key_mappings =
+    \ {
+    \   'all_maps': 0,
+    \   'global': 0,
+    \   'headers': 1,
+    \   'text_objs': 1,
+    \   'table_format': 1,
+    \   'table_mappings': 1,
+    \   'lists': 1,
+    \   'links': 1,
+    \   'html': 1,
+    \   'mouse': 0,
+    \ }
+]])
+
 -- TODO: VIM WIKI ORGANIZE

@@ -16,10 +16,10 @@ vim.g.maplocalleader = " "
 -- Working with cpp files and dsa setup
 -- NOTE!!!!!!!: below for mac intel arch
 vim.cmd([[
-autocmd filetype cpp nnoremap <silent> <leader>b :w <bar> !g++-13 % -march=native 2>log.txt -o %:r && timeout -k9 -v 1 ./%:r < input.txt > output.txt 2>log.txt && rm %:r<CR><CR>
+autocmd filetype cpp nnoremap <silent> <leader>b :Dispatch! bash test.sh %:r<CR><CR>
 ]])
 vim.cmd([[
-autocmd filetype cpp nnoremap <silent> <leader>B :w <bar> !cat template.cpp > a.cpp && tail -n +6 % >> a.cpp<CR><CR>
+autocmd filetype cpp nnoremap <silent> <leader>B :w <bar> !cat template.cpp > a.cpp && tail -n +6 % >> a.cpp && terminal-notifier -title @MOHITDMAK_SUB_PREPARED -message "template + sol: $?" -activate com.apple.Terminal<CR><CR>
 ]])
 -- Hotkey to save the file, compile and run it against ainput and aoutput txt files, modify results to corresponding files, send error logs to log txt file in repo.
 -- vim.cmd([[
@@ -27,7 +27,7 @@ autocmd filetype cpp nnoremap <silent> <leader>B :w <bar> !cat template.cpp > a.
 -- ]])
 -- FOR LEETCODING (PYTHON3)
 vim.cmd([[
-autocmd filetype python nnoremap <silent> <leader>b :w<CR> :!timeout -k9 -v 1 python3 % < my/py/input.txt > my/py/output.txt 2>my/py/log.txt<CR><CR>
+autocmd filetype python nnoremap <silent> <leader>b :Dispatch! timeout -k9 -v 1 python3 % < input.txt > output.txt 2>log.txt<CR><CR>
 ]])
 -- FOR CODEFORCES (PYPY2)
 -- vim.cmd([[

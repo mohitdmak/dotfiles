@@ -6,6 +6,7 @@ vim.cmd [[
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd BufWinEnter * :set tabstop=4 shiftwidth=4 expandtab
     autocmd FileType qf set nobuflisted
+    autocmd BufWritePost a*.cpp Dispatch! make compile_%:r || (make cleanup_logs && exit 1)
   augroup end
 
   augroup remember_folds
@@ -20,6 +21,8 @@ vim.cmd [[
     au BufWinEnter p4.py silent! loadview 1
     au BufWinLeave *.cpp mkview 1
     au BufWinEnter *.cpp silent! loadview 1
+    au BufWinLeave *.sh mkview 1
+    au BufWinEnter *.sh silent! loadview 1
   augroup END
 
   augroup _git
@@ -30,7 +33,7 @@ vim.cmd [[
 
   augroup _markdown
     autocmd!
-    autocmd FileType markdown setlocal wrap
+    autocmd FileType markdown setlocal nowrap
     autocmd FileType markdown setlocal spell
   augroup end
 

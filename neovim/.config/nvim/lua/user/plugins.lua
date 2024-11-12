@@ -50,6 +50,7 @@ return packer.startup(function(use)
   -- Utility Plugins
   use "windwp/nvim-autopairs" --Autopairs, integrates with both cmp and treesitter
   --use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "tpope/vim-dispatch" -- for running cmds in nvim sessions asynchronously
   use "terrortylor/nvim-comment" -- easy commenting
   use "kyazdani42/nvim-web-devicons" -- devicon icons for nvim-tree
   use "kyazdani42/nvim-tree.lua" -- file tree manager
@@ -62,7 +63,12 @@ return packer.startup(function(use)
   -- use "goolord/alpha-nvim" -- startup dashboard (currently use startify instead)
   use "mhinz/vim-startify" -- vim startify, dashboard manager for bookmarks, settings, mru, history, etc
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim" -- helpful keybindings guider
+  use {
+    "folke/which-key.nvim", -- helpful keybindings guider
+	version = "v1.6.1",
+	-- version = "3.13.2",
+  }
+  use "echasnovski/mini.nvim" -- a new req for whichkey
   use "godlygeek/tabular" -- helpful syntactical sugar
   use {
 	"lukas-reineke/indent-blankline.nvim", -- indentline
@@ -147,7 +153,11 @@ return packer.startup(function(use)
   -- }
 
   -- Git
-  use "lewis6991/gitsigns.nvim" -- git sign support near line number
+  use {
+    "lewis6991/gitsigns.nvim", -- git sign support near line number
+	version = "0.7",
+	-- version = "0.9.0",
+  }
 
   -- for mac - tmux inside nvim
   -- use "hkupty/nvimux"

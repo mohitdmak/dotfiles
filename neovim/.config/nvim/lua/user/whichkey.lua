@@ -161,7 +161,8 @@ local mappings = {
     },
   },
 
-  t = {
+  ["t"] = { "<cmd>ToggleTerm size=14 direction=horizontal<CR>", "vim terminal" },
+  T = {
     name = "Dev Hunks",
     a = { ":TodoTelescope<CR>", "All Hunks" },
     n = { ":TodoTelescope keywords=NOTE<CR>", "NOTEs" },

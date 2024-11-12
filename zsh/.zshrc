@@ -8,16 +8,24 @@ title() { export TITLE="$*" }
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # adding rofi scripts to path
-export PATH=$HOME/.config/rofi/bin:$PATH
+# export PATH=$HOME/.config/rofi/bin:$PATH
 # add useful util scripts to path
 export PATH=$HOME/dotfiles/scripts:$PATH
+# add conda to path
+export PATH=/opt/anaconda3/bin:$PATH
 # add MACOS nvim executable
-export PATH=$HOME/Downloads/nvim-macos/bin:$PATH
+export PATH=$HOME/dotfiles/neovim/nvim-macos-arm64/bin:$PATH
 # Add go binaries to path for some plugins dependant on it 
 export PATH=/usr/local/go/bin:$PATH
 # theme for bat
 # export BAT_THEME=ansi-dark # (this is deprecated)
 export BAT_THEME=ansi
+
+# Add go libraries
+export PATH=$HOME/go/bin:$PATH
+
+# Mac alacritty terminal notifier:
+alias notiff='terminal-notifier -title @mohitdmak -message "term execed; exit stat: $?" -activate com.apple.Terminal -sound default'
 
 # include lsp servers by mason in path
 export PATH=$HOME/.local/share/nvim/mason/bin:$PATH
@@ -27,7 +35,7 @@ export PATH=$HOME/.local/share/nvim/mason/bin:$PATH
 source ~/gh/cspe-phanes/envConfiguration.sh
 source ~/gh/cspe-phanes/envSecrets.sh
 # env vars for caduceus artifactory and npm repos, docker registry access
-source ~/gh/caducues_secrets.sh
+source ~/gh/caduceus_secrets.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -39,8 +47,8 @@ source ~/gh/caducues_secrets.sh
 ZSH_THEME="jonathan" # for macos
 POWERLEVEL9K_MODE="nerdfont-complete"
 # Configuring airline for terminal
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir docker_machine dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda virtualenv vcs)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir docker_machine dir_writable)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda virtualenv vcs)
 CONDA_AUTO_ACTIVATE_BASE=false
 
 
@@ -114,8 +122,8 @@ setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
-plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search)
-# plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search zsh-fzf-history-search)
+# plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search)
+plugins=(dirhistory sudo zsh-syntax-highlighting history-substring-search zsh-fzf-history-search)
 # plugins=(dirhistory sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 # bindkey "^[[Z" history-beginning-search-forward
@@ -142,24 +150,30 @@ unalias la
 export PATH=$HOME/tools/bin:$PATH
 export EXA_ICON_SPACING=2
 
+### NOTE: exa not maintained anymore by original author, using newer community maintained eza
 # When colorls not installed (installed much faster exa due to slow fucking intel mac - although exa better)
-alias ls="exa --icons"
-alias ll="exa -l --header --group --icons"
-alias la="exa -a --icons"
-alias lla="exa -al --header --group --icons"
+alias ls="eza --icons"
+alias ll="eza -l --header --group --icons"
+alias la="eza -a --icons"
+alias lla="eza -al --header --group --icons"
 
 # FZF ALIASES
 alias fzf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down --padding=0 --margin=0"
 
 
 # User configuration
+
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # changed for mac
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# changed again for mac m3pro
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -192,18 +206,19 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux -u
 fi
 # fzf settings
+source <(fzf --zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mohitdmak/tools/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/mohitdmak/tools/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mohitdmak/tools/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/mohitdmak/tools/miniconda3/bin:$PATH"
+        export PATH="/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
