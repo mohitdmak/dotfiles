@@ -1,3 +1,18 @@
+### BEGIN STRIPE
+# All Stripe related shell configuration
+# is at ~/.stripe/shellinit/zshrc and is
+# persistently managed by Chef. You shouldn't
+# remove this unless you don't want to load
+# Stripe specific shell configurations.
+#
+# Feel free to add your customizations in this
+# file (~/.zshrc) after the Stripe config
+# is sourced.
+if [[ -f ~/.stripe/shellinit/zshrc ]]; then
+  source ~/.stripe/shellinit/zshrc
+fi
+### END STRIPE
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export TERM="xterm-256color"
@@ -30,12 +45,6 @@ alias notiff='terminal-notifier -title @mohitdmak -message "term execed; exit st
 # include lsp servers by mason in path
 export PATH=$HOME/.local/share/nvim/mason/bin:$PATH
 # alias golangci-lint="golangci-lint-langserver" # instead copied golangci-lint-langserver as golangci-lint in binary
-
-# Cisco repos permanent env vars 
-source ~/gh/cspe-phanes/envConfiguration.sh
-source ~/gh/cspe-phanes/envSecrets.sh
-# env vars for caduceus artifactory and npm repos, docker registry access
-source ~/gh/caduceus_secrets.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -224,10 +233,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Pro keychron k2v2 keyboard setup
-# make caps lock another backspace key
-# exec xmodmap -e "clear lock"
-# exec xmodmap -e "keysym Caps_Lock = BackSpace" 
-# # increase keystroke input speed and reduce delay/repeat times
-# exec xset r rate 200 35
-export PATH=$PATH:/Users/mmakwana/.spicetify

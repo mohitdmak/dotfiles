@@ -27,6 +27,7 @@ Auto sleep in 30mins: Press fn+s+l+y for four seconds
 ## Macos
 
 ### M3 Pro:
+* [ ] magic trackpad gestures setup
 * [X] TODO: gitsigns + whichkey depreciations
 * [ ] TODO: cleanup PATH later
 * Newly employed for term alerts - https://github.com/julienXX/terminal-notifier
